@@ -403,7 +403,10 @@ const coinReadDataUtils = {
                             return sortOrder;
                         }
                     })
-                    if (!sortOrder[1]) {
+                    if (!sortOrder[0]) {
+                        sortOrder.splice(0, 1);
+                    }
+                    else if (!sortOrder[1]) {
                         sortOrder.splice(1, 1);
                     }
                 }
@@ -416,6 +419,10 @@ const coinReadDataUtils = {
                 } else if (sortOrder[0] === 'upbitSym') {
                     calper = ((cal - parseFloat(coinStateDatas[coin].upbitPrice)) / cal * 100).toFixed(2)
                 }
+                /*
+                                if (coin === 'DGB') {
+                                    console.log(coin, cal, calper, sortOrder);
+                                }*/
 
                 if (coin !== "") {
                     coinStateDatas[coin] = {
