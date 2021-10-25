@@ -463,6 +463,7 @@ const coinReadDataUtils = {
                     imgsrc: imgsrc
                 }
             } else if (moneySym === "USDT") {
+
                 var cal = (parseFloat(data['USDT'].upbitUSDTPrice) * parseFloat(names[name].korean)).toFixed(1)
                 data[shortSym] = {
                     ...data[shortSym],
@@ -472,7 +473,9 @@ const coinReadDataUtils = {
                     calKoUSDT: cal
                 }
             } else if (moneySym === "BTC") {
-                var cal = (parseFloat(data['BTC'].upbitPrice) * parseFloat(names[name].korean)).toFixed(1)
+
+                var cal = (parseFloat(data['BTC'].upbitPrice) * parseFloat(names[name].korean)).toFixed(2)
+
                 data[shortSym] = {
                     ...data[shortSym],
                     upbitBTCPrice: names[name].korean,
