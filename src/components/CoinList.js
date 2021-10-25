@@ -31,7 +31,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
     }
 
     var USDTplus = "";
-    if (one_coin.USDTper > 0) {
+    if (one_coin.upbitUSDT_start_per > 0) {
         USDTplus = "USDTplus-per";
     } else {
         USDTplus = "USDTminus-per";
@@ -201,7 +201,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                     }
                     {one_coin.upbitUSDT ?
                         <p className={USDTplus} >
-                            {one_coin.USDTper}%
+                            {one_coin.upbitUSDT_start_per}%
                         </p>
 
                         :

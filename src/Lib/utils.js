@@ -234,7 +234,7 @@ const coinReadDataUtils = {
             let shortSym = name.code.split("-")[1];
             let moneySym = name.code.split("-")[0];
             let nowPrice = name.trade_price;
-
+            var sortOrder = [];
             if (typeof (nowPrice) === 'string')
                 nowPrice = parseFloat(nowPrice);
 
@@ -252,18 +252,52 @@ const coinReadDataUtils = {
                 }
             } else if (moneySym === "USDT") {
                 var cal = (parseFloat(coinStateDatas['USDT'].upbitUSDTPrice) * parseFloat(nowPrice)).toFixed(1)
+
+                //!
+                if (coinStateDatas[shortSym]) {
+                    Object.keys(coinStateDatas[shortSym]).filter((list) => {
+                        if (list === 'upbitSym') {
+                            sortOrder[0] = 'upbitSym';
+                            return sortOrder;
+                        } else if (list === 'upbitUSDT') {
+                            sortOrder[1] = 'upbitUSDT';
+                            return sortOrder;
+                        }
+                        else if (list === 'upbitBTC') {
+                            sortOrder[2] = 'upbitBTC';
+                            return sortOrder;
+                        }
+                    })
+                    if (!sortOrder[0]) {
+                        sortOrder.splice(0, 1);
+                    }
+                    else if (!sortOrder[1]) {
+                        sortOrder.splice(1, 1);
+                    }
+                }
+
+                //if (shortSym === 'DGB')
+                //    console.log(shortSym, sortOrder[0], sortOrder[1], sortOrder[2]);
+                if (sortOrder[0] === 'upbitSym') {
+                    var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2)
+                } else if (sortOrder[1] === 'upbitBTC') {
+
+                    var calper = ((cal - parseFloat(coinStateDatas[shortSym].calKoupbitBTC)) / cal * 100).toFixed(2)
+                    //console.log('ok', calper);
+                } else {
+                    var calper = "None";
+                }
+
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
                     upbitUSDTPrice: nowPrice,
 
+                    upbitUSDT_start_per: calper,
                     calKoupbitUSDT: cal
                 }
             } else if (moneySym === "BTC") {
                 var origin = parseFloat(coinStateDatas['BTC'].upbitPrice);
                 var cal = (origin * parseFloat(nowPrice)).toFixed(2)
-                if (shortSym === 'COMP') {
-                    console.log('comp', origin, cal, coinStateDatas['BTC']);
-                }
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
                     upbitBTCPrice: nowPrice,
