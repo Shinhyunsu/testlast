@@ -255,15 +255,19 @@ const coinReadDataUtils = {
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
                     upbitUSDTPrice: nowPrice,
-                    upbitPrice: "",
+
                     calKoupbitUSDT: cal
                 }
             } else if (moneySym === "BTC") {
-                var cal = (parseFloat(coinStateDatas['BTC'].upbitPrice) * parseFloat(nowPrice)).toFixed(1)
+                var origin = parseFloat(coinStateDatas['BTC'].upbitPrice);
+                var cal = (origin * parseFloat(nowPrice)).toFixed(2)
+                if (shortSym === 'COMP') {
+                    console.log('comp', origin, cal, coinStateDatas['BTC']);
+                }
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
                     upbitBTCPrice: nowPrice,
-                    upbitPrice: "",
+
                     calKoupbitBTC: cal
                 }
             }
