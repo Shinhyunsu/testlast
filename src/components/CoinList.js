@@ -49,7 +49,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.upbitSym ? <img className="exchange-img" src={upbitimgsrc} /> :
                     <div></div>
                 }
-                <div className="coin-data">
+                <div className="coin-data coin-pair-one">
                     {one_coin.upbitSym ?
                         <p className="coin-price">
                             {one_coin.upbitSym}
@@ -58,11 +58,9 @@ function CoinList({ one_coin, one_coin_Sym }) {
                         </span>
                     }
                     {one_coin.upbitSym ?
-                        <div className="coin-price-before">
-                            <p className="coin-price">
-                                {one_coin.upbitPrice}
-                            </p>
-                        </div>
+                        <p className="coin-price">
+                            {one_coin.upbitPrice}
+                        </p>
                         :
                         <span>
                         </span>
@@ -71,7 +69,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.bithumbSym ? <img className="exchange-img" src={bithumbimgsrc} /> :
                     <div></div>
                 }
-                <div classame="coin-data">
+                <div className="coin-data coin-pair-one">
                     {one_coin.bithumbSym ?
                         <p className="coin-price">
                             {one_coin.bithumbSym}
@@ -80,7 +78,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                         </span>
                     }
                     {one_coin.bithumbSym ?
-                        <p className="coin-price">
+                        <p className="coin-price ">
                             {one_coin.bithumbPrice}
                         </p> :
                         <span>
@@ -91,7 +89,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.upbitBTC ? <img className="exchange-img" src={upbitimgsrc} /> :
                     <div></div>
                 }
-                <div classame="coin-data">
+                <div className="coin-data coin-pair-two">
                     {one_coin.upbitBTC ?
                         <p className="coin-price">
                             {one_coin.upbitBTC}
@@ -119,7 +117,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.bithumbBTC ? <img className="exchange-img" src={bithumbimgsrc} /> :
                     <div></div>
                 }
-                <div classame="coin-data">
+                <div className="coin-data coin-pair-two">
                     {one_coin.bithumbBTC ?
                         <p className="coin-price">
                             {one_coin.bithumbBTC}
@@ -138,7 +136,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.binanBTCSym ? <img className="exchange-img" src={binanceimgsrc} /> :
                     <div></div>
                 }
-                <div classame="coin-data">
+                <div className="coin-data coin-pair-two">
                     {one_coin.binanBTCSym ?
                         <p className="coin-price">
                             {one_coin.binanBTCSym}
@@ -175,7 +173,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.upbitUSDT ? <img className="exchange-img" src={upbitimgsrc} /> :
                     <div></div>
                 }
-                <div classame="coin-data">
+                <div className="coin-data coin-pair-three">
                     {one_coin.upbitUSDT ?
                         <p className="coin-price">
                             {one_coin.upbitUSDT}
@@ -214,7 +212,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.binanUSDTSym ? <img className="exchange-img" src={binanceimgsrc} /> :
                     <div></div>
                 }
-                <div classame="coin-data">
+                <div className="coin-data coin-pair-three">
                     {one_coin.binanUSDTSym ?
                         <p className="coin-price">
                             {one_coin.binanUSDTSym}
@@ -254,7 +252,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.binanBNBSym ? <img className="exchange-img" src={binanceimgsrc} /> :
                     <div></div>
                 }
-                <div classame="coin-data">
+                <div className="coin-data">
                     {one_coin.binanBNBSym ?
                         <p className="coin-price">
                             {one_coin.binanBNBSym}
@@ -270,11 +268,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
 
                         </span>
                     }
-
                 </div>
-
-
-
             </div>
         </div>
     )
