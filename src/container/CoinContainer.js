@@ -18,6 +18,17 @@ function CoinContainer() {
 
     if (!binanceUsdt) return null;
     if (!coinTotal) return null;
+
+
+    upbitCoinList.sort((next, prev) => {
+        if (parseFloat(coinTotal.data[next].upbitPrice) > parseFloat(coinTotal.data[prev].upbitPrice)) {
+            return -1;
+        } else
+            return 0;
+    });
+
+
+
     return (
 
         <div>

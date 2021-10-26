@@ -188,19 +188,6 @@ const coinReadDataUtils = {
     //✅
     mixExchangeUpdates: (one_names, two_names, three_names, gecko_data, state) => {
         const coinStateDatas = state.Coin.marketNames.data;
-        //✅ gecko
-        /* Object.keys(gecko_data).map(name => {
-             let shortSym = CoinMarketData.find((coinsym) => {
-                 if (coinsym.totalName === name)
-                     return coinsym;
-             })
- 
-             coinStateDatas[shortSym.symbol] = {
-                 ...coinStateDatas[shortSym.symbol],
-                 gecko: gecko_data[name].usd
-             }
-         });*/
-
         //✅ bithumb
         two_names.forEach(name => {
             let shortSym = name.symbol.split("_")[0];
