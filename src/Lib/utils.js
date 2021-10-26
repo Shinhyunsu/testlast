@@ -245,6 +245,7 @@ const coinReadDataUtils = {
                 nowPrice = nowPrice.toFixed(1);
             }
 
+
             if (moneySym === "KRW") {
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
@@ -275,9 +276,6 @@ const coinReadDataUtils = {
                     }
                 }
 
-                if (shortSym === 'DGB')
-                    console.log("1", cal);
-
                 if (sortOrder[0] === 'upbitSym') {
                     var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2)
                 } else if (sortOrder[0] === 'upbitUSDT') {
@@ -307,6 +305,7 @@ const coinReadDataUtils = {
             }
 
             if (coinStateDatas['BTC'].upbitPrice) {
+                //@
                 var upbitusdtkrw = (coinStateDatas['BTC'].upbitPrice / coinStateDatas['BTC'].upbitUSDTPrice).toFixed(1);
 
                 coinStateDatas['USDT'] = {
@@ -499,13 +498,21 @@ const coinReadDataUtils = {
                     upbitSym: name,
                 }
             } else if (shortSym === "BTC" && moneySym === "USDT") {
-                data['USDT'] = {
-                    ...data['USDT'],
+                data[shortSym] = {
+                    ...data[shortSym],
                     upbitUSDTPrice: names[name].korean,
                     upbitUSDT: name,
                 }
             }
         })
+
+        var upbitusdtkrw = (data['BTC'].upbitPrice / data['BTC'].upbitUSDTPrice).toFixed(1);
+
+        data['USDT'] = {
+            ...data['USDT'],
+            upbitUSDTPrice: upbitusdtkrw,
+            upbitUSDT: 'USDTKRW',
+        }
 
         Object.keys(names).forEach(name => {
 
@@ -526,24 +533,23 @@ const coinReadDataUtils = {
                 }
             } else if (moneySym === "USDT") {
 
-                var cal = (parseFloat(data['USDT'].upbitUSDTPrice) * parseFloat(names[name].korean)).toFixed(1)
+
                 data[shortSym] = {
                     ...data[shortSym],
                     upbitUSDTPrice: names[name].korean,
                     upbitUSDT: name,
                     imgsrc: imgsrc,
-                    calKoUSDT: cal
+                    calKoupbitUSDT: (parseFloat(data['USDT'].upbitUSDTPrice) * parseFloat(names[name].korean)).toFixed(1)
                 }
             } else if (moneySym === "BTC") {
 
-                var cal = (parseFloat(data['BTC'].upbitPrice) * parseFloat(names[name].korean)).toFixed(2)
 
                 data[shortSym] = {
                     ...data[shortSym],
                     upbitBTCPrice: names[name].korean,
                     upbitBTC: name,
                     imgsrc: imgsrc,
-                    calKoupbitBTC: cal
+                    calKoupbitBTC: (parseFloat(data['BTC'].upbitPrice) * parseFloat(names[name].korean)).toFixed(2)
                 }
             }
         });
