@@ -298,10 +298,40 @@ const coinReadDataUtils = {
             } else if (moneySym === "BTC") {
                 var origin = parseFloat(coinStateDatas['BTC'].upbitPrice);
                 var cal = (origin * parseFloat(nowPrice)).toFixed(2);
-                var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2);
 
-                /*if (shortSym === 'SNT')
-                    console.log(cal, calper);*/
+
+                if (coinStateDatas[shortSym]) {
+                    Object.keys(coinStateDatas[shortSym]).filter((list) => {
+                        if (list === 'upbitSym') {
+                            sortOrder[0] = 'upbitSym';
+                            return sortOrder;
+                        } else if (list === 'upbitUSDT') {
+                            sortOrder[1] = 'upbitUSDT';
+                            return sortOrder;
+                        }
+                        else if (list === 'upbitBTC') {
+                            sortOrder[2] = 'upbitBTC';
+                            return sortOrder;
+                        }
+                    })
+                    if (!sortOrder[0] && !sortOrder[1]) {
+                        sortOrder.splice(0, 2);
+                    }
+                    else if (!sortOrder[0]) {
+                        sortOrder.splice(0, 1);
+                    }
+                    else if (!sortOrder[1]) {
+                        sortOrder.splice(1, 1);
+                    }
+                }
+
+                if (sortOrder[0] === 'upbitBTC') {
+                    var calper = 'prepare';
+                    //var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2);
+                } else {
+                    var calper = 'prepare';
+                }
+
 
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
