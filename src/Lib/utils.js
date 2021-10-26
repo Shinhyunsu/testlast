@@ -323,7 +323,7 @@ const coinReadDataUtils = {
         three_names.forEach(name => {
             let nowPrice = name.price;
 
-            if (name.symbol === 'SUNBTC' || name.symbol === 'BTTBTC') {
+            if (name.symbol === 'DENTBTC' || name.symbol === 'MFTBTC' || name.symbol === 'SUNBTC' || name.symbol === 'BTTBTC') {
                 return coinStateDatas;
             }
 
