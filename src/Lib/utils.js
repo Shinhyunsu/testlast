@@ -276,6 +276,8 @@ const coinReadDataUtils = {
                     }
                 }
 
+
+
                 if (sortOrder[0] === 'upbitSym') {
                     var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2)
                 } else if (sortOrder[0] === 'upbitUSDT') {
@@ -283,7 +285,7 @@ const coinReadDataUtils = {
                 } else if (sortOrder[1] === 'upbitBTC') {
                     var calper = ((cal - parseFloat(coinStateDatas[shortSym].calKoupbitBTC)) / cal * 100).toFixed(2)
                 } else {
-                    var calper = "None";
+                    var calper = "Prepare";
                 }
 
                 coinStateDatas[shortSym] = {
@@ -295,12 +297,18 @@ const coinReadDataUtils = {
                 }
             } else if (moneySym === "BTC") {
                 var origin = parseFloat(coinStateDatas['BTC'].upbitPrice);
-                var cal = (origin * parseFloat(nowPrice)).toFixed(2)
+                var cal = (origin * parseFloat(nowPrice)).toFixed(2);
+                var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2);
+
+                /*if (shortSym === 'SNT')
+                    console.log(cal, calper);*/
+
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
                     upbitBTCPrice: nowPrice,
-
-                    calKoupbitBTC: cal
+                    //!
+                    calKoupbitBTC: cal,
+                    upbitBTC_start_per: calper
                 }
             }
 
@@ -367,18 +375,14 @@ const coinReadDataUtils = {
                     else if (!sortOrder[1]) {
                         sortOrder.splice(1, 1);
                     }
-                }/*
-                if (coin === 'DGB') {
-                    //!
-                    console.log(sortOrder);
-                }*/
+                }
                 var calper;
                 if (sortOrder[0] === 'upbitBTC') {
                     calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
                 }
                 else if (sortOrder[0] === "upbitUSDT") {
-                    calper = "prepare";
-                    //alper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
+                    //calper = "prepare";
+                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
                 } else if (sortOrder[0] === 'upbitSym') {
                     calper = ((cal - parseFloat(coinStateDatas[coin].upbitPrice)) / cal * 100).toFixed(2)
                 }

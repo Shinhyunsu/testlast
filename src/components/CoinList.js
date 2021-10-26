@@ -37,6 +37,14 @@ function CoinList({ one_coin, one_coin_Sym }) {
         USDTplus = "USDTminus-per";
     }
 
+
+    var UPBITBTCplus = "";
+    if (one_coin.upbitBTC_start_per > 0) {
+        UPBITBTCplus = "USDTplus-per";
+    } else {
+        UPBITBTCplus = "USDTminus-per";
+    }
+
     return (
         <div className='coin-container'>
             <div className="coin-row" >
@@ -108,6 +116,14 @@ function CoinList({ one_coin, one_coin_Sym }) {
                     {one_coin.upbitBTC ?
                         <p className="coin-price">
                             K-{one_coin.calKoupbitBTC}
+                        </p> :
+                        <span>
+
+                        </span>
+                    }
+                    {one_coin.upbitBTC ?
+                        <p className={UPBITBTCplus}>
+                            {one_coin.upbitBTC_start_per}%
                         </p> :
                         <span>
 
