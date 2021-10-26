@@ -253,7 +253,6 @@ const coinReadDataUtils = {
             } else if (moneySym === "USDT") {
                 var cal = (parseFloat(coinStateDatas['USDT'].upbitUSDTPrice) * parseFloat(nowPrice)).toFixed(1)
 
-                //!
                 if (coinStateDatas[shortSym]) {
                     Object.keys(coinStateDatas[shortSym]).filter((list) => {
                         if (list === 'upbitSym') {
@@ -276,14 +275,15 @@ const coinReadDataUtils = {
                     }
                 }
 
-                //if (shortSym === 'DGB')
-                //    console.log(shortSym, sortOrder[0], sortOrder[1], sortOrder[2]);
+                if (shortSym === 'DGB')
+                    console.log("1", cal);
+
                 if (sortOrder[0] === 'upbitSym') {
                     var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2)
-                } else if (sortOrder[1] === 'upbitBTC') {
-
+                } else if (sortOrder[0] === 'upbitUSDT') {
                     var calper = ((cal - parseFloat(coinStateDatas[shortSym].calKoupbitBTC)) / cal * 100).toFixed(2)
-                    //console.log('ok', calper);
+                } else if (sortOrder[1] === 'upbitBTC') {
+                    var calper = ((cal - parseFloat(coinStateDatas[shortSym].calKoupbitBTC)) / cal * 100).toFixed(2)
                 } else {
                     var calper = "None";
                 }
@@ -323,6 +323,10 @@ const coinReadDataUtils = {
         three_names.forEach(name => {
             let nowPrice = name.price;
 
+            if (name.symbol === 'SUNBTC' || name.symbol === 'BTTBTC') {
+                return coinStateDatas;
+            }
+
             if (typeof (nowPrice) === 'string')
                 nowPrice = parseFloat(nowPrice);
 
@@ -355,18 +359,27 @@ const coinReadDataUtils = {
                             return sortOrder;
                         }
                     })
-                    if (!sortOrder[1]) {
+                    if (!sortOrder[0] && !sortOrder[1]) {
+                        sortOrder.splice(0, 2);
+                    }
+                    else if (!sortOrder[0]) {
+                        sortOrder.splice(0, 1);
+                    }
+                    else if (!sortOrder[1]) {
                         sortOrder.splice(1, 1);
                     }
-                }
-
+                }/*
+                if (coin === 'DGB') {
+                    //!
+                    console.log(sortOrder);
+                }*/
                 var calper;
-
                 if (sortOrder[0] === 'upbitBTC') {
                     calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
                 }
                 else if (sortOrder[0] === "upbitUSDT") {
                     calper = "prepare";
+                    //alper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
                 } else if (sortOrder[0] === 'upbitSym') {
                     calper = ((cal - parseFloat(coinStateDatas[coin].upbitPrice)) / cal * 100).toFixed(2)
                 }
@@ -403,7 +416,10 @@ const coinReadDataUtils = {
                             return sortOrder;
                         }
                     })
-                    if (!sortOrder[0]) {
+                    if (!sortOrder[0] && !sortOrder[1]) {
+                        sortOrder.splice(0, 2);
+                    }
+                    else if (!sortOrder[0]) {
                         sortOrder.splice(0, 1);
                     }
                     else if (!sortOrder[1]) {
@@ -412,7 +428,8 @@ const coinReadDataUtils = {
                 }
 
                 if (sortOrder[0] === 'upbitBTC') {
-                    calper = "prepare";
+
+                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
                 }
                 else if (sortOrder[0] === "upbitUSDT") {
                     calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitUSDT)) / cal * 100).toFixed(2)
