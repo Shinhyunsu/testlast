@@ -20,15 +20,12 @@ function CoinContainer() {
     if (!coinTotal) return null;
 
 
-    upbitCoinList.sort((next, prev) => {
-        if (parseFloat(coinTotal.data[next].upbitPrice) > parseFloat(coinTotal.data[prev].upbitPrice)) {
-            return -1;
-        } else if (parseFloat(coinTotal.data[next].upbitPrice) < parseFloat(coinTotal.data[prev].upbitPrice)) {
-            return 0;
-        }
 
+    upbitCoinList.sort((next, prev) => {
+        if (parseFloat(coinTotal.data[next].totalPer) < parseFloat(coinTotal.data[prev].totalPer))
+            return -1;
         else
-            return 1;
+            return 0;
     });
 
 

@@ -1,7 +1,7 @@
 import { takeEvery, call, put, select, flush, delay } from "redux-saga/effects";
 import axios from "axios";
 import CoinMarketData from "../Api/CoinMarketData.json";
-import { conforms } from "lodash";
+import { conforms, max } from "lodash";
 
 const coinListDataUtils = {
     marketNames: (names) => {
@@ -375,7 +375,7 @@ const coinReadDataUtils = {
         three_names.forEach(name => {
             let nowPrice = name.price;
 
-            if (name.symbol === 'DENTBTC' || name.symbol === 'MFTBTC' || name.symbol === 'SUNBTC' || name.symbol === 'BTTBTC') {
+            if (name.symbol === 'STORJBUSD' || name.symbol === 'DENTBTC' || name.symbol === 'MFTBTC' || name.symbol === 'SUNBTC' || name.symbol === 'BTTBTC') {
                 return coinStateDatas;
             }
 
@@ -566,6 +566,44 @@ const coinReadDataUtils = {
             }
         });
 
+        //✅ Max per search
+        Object.keys(coinStateDatas).forEach((coin) => {
+            var read = coinStateDatas[coin];
+            var keyread = Object.keys(read);
+
+            // bithumbKRW_start_per
+            // binBUSD_start_per
+            // upbitBTC_start_per
+            // upbitUSDT_start_per
+            // BTCper
+            // binUSDT_start_per
+
+            var maxPer = 0.0;
+            keyread.forEach((name) => {
+                var per;
+                if (name === 'bithumbKRW_start_per') {
+                    per = parseFloat(coinStateDatas[coin].bithumbKRW_start_per);
+                }
+                else if (name === 'binBUSD_start_per') {
+                    per = parseFloat(coinStateDatas[coin].binBUSD_start_per);
+                } else if (name === 'upbitBTC_start_per') {
+                    per = parseFloat(coinStateDatas[coin].upbitBTC_start_per);
+                } else if (name === 'upbitUSDT_start_per') {
+                    per = parseFloat(coinStateDatas[coin].upbitUSDT_start_per);
+                } else if (name === 'BTCper') {
+                    per = parseFloat(coinStateDatas[coin].BTCper);
+                } else if (name === 'binUSDT_start_per') {
+                    per = parseFloat(coinStateDatas[coin].binUSDT_start_per);
+                }
+                if (per > maxPer) {
+                    maxPer = per;
+                }
+            })
+            coinStateDatas[coin] = {
+                ...coinStateDatas[coin],
+                totalPer: maxPer
+            }
+        });
         return coinStateDatas;
     },
     //
