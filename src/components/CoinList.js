@@ -45,6 +45,13 @@ function CoinList({ one_coin, one_coin_Sym }) {
         UPBITBTCplus = "USDTminus-per";
     }
 
+    var BINUSDplus = "";
+    if (one_coin.binBUSD_start_per > 0) {
+        BINUSDplus = "BINBUSDTplus-per";
+    } else {
+        BINUSDplus = "BINBUSDTminus-per";
+    }
+
     return (
         <div className='coin-container'>
             <div className="coin-row" >
@@ -268,7 +275,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 {one_coin.binanBNBSym ? <img className="exchange-img" src={binanceimgsrc} /> :
                     <div></div>
                 }
-                <div className="coin-data">
+                <div className="coin-data coin-pair-one">
                     {one_coin.binanBNBSym ?
                         <p className="coin-price">
                             {one_coin.binanBNBSym}
@@ -282,6 +289,23 @@ function CoinList({ one_coin, one_coin_Sym }) {
                         </p> :
                         <span>
 
+                        </span>
+                    }
+                    {one_coin.binanBNBSym ?
+                        <p className="coin-price">
+                            K-{one_coin.calKoBUSD}
+                        </p> :
+                        <span>
+
+                        </span>
+                    }
+                    {one_coin.binanBNBSym ?
+                        <p className={BINplus} >
+                            {one_coin.binBUSD_start_per}%
+                        </p>
+
+                        :
+                        <span>
                         </span>
                     }
                 </div>
