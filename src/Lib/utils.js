@@ -375,7 +375,7 @@ const coinReadDataUtils = {
         three_names.forEach(name => {
             let nowPrice = name.price;
 
-            if (name.symbol === 'STORJBUSD' || name.symbol === 'DENTBTC' || name.symbol === 'MFTBTC' || name.symbol === 'SUNBTC' || name.symbol === 'BTTBTC') {
+            if (name.symbol === 'REPBUSD' || name.symbol === 'STORJBUSD' || name.symbol === 'DENTBTC' || name.symbol === 'MFTBTC' || name.symbol === 'SUNBTC' || name.symbol === 'BTTBTC') {
                 return coinStateDatas;
             }
 
@@ -579,6 +579,7 @@ const coinReadDataUtils = {
             // binUSDT_start_per
 
             var maxPer = 0.0;
+            var minPer = 0.0;
             keyread.forEach((name) => {
                 var per;
                 if (name === 'bithumbKRW_start_per') {
@@ -598,10 +599,14 @@ const coinReadDataUtils = {
                 if (per > maxPer) {
                     maxPer = per;
                 }
+                if (per < minPer) {
+                    minPer = per;
+                }
             })
             coinStateDatas[coin] = {
                 ...coinStateDatas[coin],
-                totalPer: maxPer
+                totalPer: maxPer,
+                totalminPer: minPer
             }
         });
         return coinStateDatas;
