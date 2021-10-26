@@ -52,6 +52,13 @@ function CoinList({ one_coin, one_coin_Sym }) {
         BINUSDplus = "BINBUSDTminus-per";
     }
 
+    var BITHUMBKRWplus = "";
+    if (one_coin.bithumbKRW_start_per > 0) {
+        BITHUMBKRWplus = "BITHUMBKRWplus-per";
+    } else {
+        BITHUMBKRWplus = "BITHUMBKRWminus-per";
+    }
+
     return (
         <div className='coin-container'>
             <div className="coin-row" >
@@ -93,8 +100,16 @@ function CoinList({ one_coin, one_coin_Sym }) {
                         </span>
                     }
                     {one_coin.bithumbSym ?
-                        <p className="coin-price ">
+                        <p className="coin-price">
                             {one_coin.bithumbPrice}
+                        </p> :
+                        <span>
+
+                        </span>
+                    }
+                    {one_coin.bithumbSym ?
+                        <p className={BITHUMBKRWplus}>
+                            {one_coin.upbitBTC_start_per}%
                         </p> :
                         <span>
 
@@ -155,6 +170,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                         <span>
                         </span>
                     }
+
                 </div>
                 {one_coin.binanBTCSym ? <img className="exchange-img" src={binanceimgsrc} /> :
                     <div></div>

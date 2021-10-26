@@ -64,16 +64,15 @@
     width: 130px;
     color: #00e5ff;
 }
-
 .minus-per{
     width: 130px;
     color: red;
 }
+
 .BTCplus-per{
     width: 130px;
     color: #00e5ff;
 }
-
 .BTCminus-per{
     width: 130px;
     color: red;
@@ -83,7 +82,6 @@
     width: 130px;
     color: #00e5ff;
 }
-
 .USDTminus-per{
     width: 130px;
     color: red;
@@ -92,13 +90,24 @@
     width: 130px;
     color: #00e5ff;
 }
-
 .BINminus-per{
     width: 130px;
     color: red;
 }
 
 .BINBUSDTplus-per{
+    width: 130px;
+    color: #00e5ff;
+}
+.BINBUSDTminus-per{
+    width: 130px;
+    color: red;
+}
+.BITHUMBKRWplus-per{
+    width: 130px;
+    color: #00e5ff;
+}
+.BITHUMBKRWminus-per{
     width: 130px;
     color: red;
 }

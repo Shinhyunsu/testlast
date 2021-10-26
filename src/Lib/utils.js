@@ -206,6 +206,7 @@ const coinReadDataUtils = {
             let shortSym = name.symbol.split("_")[0];
             let moneySym = name.symbol.split("_")[1];
             let nowPrice = name.closePrice;
+            var sortOrder = [];
             if (typeof (nowPrice) === 'string')
                 nowPrice = parseFloat(nowPrice);
 
@@ -216,10 +217,37 @@ const coinReadDataUtils = {
                 nowPrice = nowPrice.toFixed(1);
             }
 
+            if (coinStateDatas[shortSym]) {
+                Object.keys(coinStateDatas[shortSym]).filter((list) => {
+                    if (list === 'upbitSym') {
+                        sortOrder[0] = 'upbitSym';
+                        return sortOrder;
+                    } else if (list === 'upbitUSDT') {
+                        sortOrder[1] = 'upbitUSDT';
+                        return sortOrder;
+                    }
+                    else if (list === 'upbitBTC') {
+                        sortOrder[2] = 'upbitBTC';
+                        return sortOrder;
+                    }
+                })
+                if (!sortOrder[0]) {
+                    sortOrder.splice(0, 1);
+                }
+                else if (!sortOrder[1]) {
+                    sortOrder.splice(1, 1);
+                }
+            }
+
             if (moneySym === "KRW") {
+                if (sortOrder[0] === 'upbitSym') {
+                    var calper = ((nowPrice - parseFloat(coinStateDatas[shortSym].upbitPrice)) / nowPrice * 100).toFixed(2)
+                }
+
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
-                    bithumbPrice: nowPrice
+                    bithumbPrice: nowPrice,
+                    bithumbKRW_start_per: calper
                 }
             }
             else if (moneySym === "BTC") {
@@ -276,8 +304,6 @@ const coinReadDataUtils = {
                     }
                 }
 
-
-
                 if (sortOrder[0] === 'upbitSym') {
                     var calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2)
                 } else if (sortOrder[0] === 'upbitUSDT') {
@@ -325,10 +351,6 @@ const coinReadDataUtils = {
                     else if (!sortOrder[1]) {
                         sortOrder.splice(1, 1);
                     }
-                }
-
-                if (shortSym === 'ETH') {
-                    console.log('ETH', sortOrder);
                 }
 
                 if (sortOrder[0] === 'upbitBTC') {
@@ -648,6 +670,7 @@ const coinReadDataUtils = {
                     ...coinStateDatas[shortSym],
                     bithumbBTCPrice: names[name].korean,
                     bithumbBTC: name,
+                    calKobithumbBTC: (parseFloat(coinStateDatas['BTC'].upbitPrice) * parseFloat(names[name].korean)).toFixed(2)
                 }
             }
         })
