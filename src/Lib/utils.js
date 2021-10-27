@@ -596,6 +596,9 @@ const coinReadDataUtils = {
                 } else if (name === 'binUSDT_start_per') {
                     per = parseFloat(coinStateDatas[coin].binUSDT_start_per);
                 }
+                else if (name === 'binBTC_start_per') {
+                    per = parseFloat(coinStateDatas[coin].binBTC_start_per);
+                }
                 if (per > maxPer) {
                     maxPer = per;
                 }
