@@ -24,7 +24,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
     }
 
     var BTCplus = "";
-    if (one_coin.BTCper > 0) {
+    if (one_coin.binBTC_start_per > 0) {
         BTCplus = "BTCplus-per";
     } else {
         BTCplus = "BTCminus-per";
