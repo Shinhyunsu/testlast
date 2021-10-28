@@ -21,6 +21,7 @@ function App() {
   useEffect(async () => {
     authService.onAuthStateChanged((user) => {
       if (user) {
+        const logdBoolean = Boolean;
         const authCheck = async () => {
           const ipData = await fetch('https://geolocation-db.com/json/');
           const locationIp = await ipData.json();
@@ -29,16 +30,16 @@ function App() {
           console.log("ipv4", ipv4);
           const db = await getFirestore();
           const querySnapshot = await getDocs(collection(db, "users"));
-          const logdBoolean = Boolean;
+
           querySnapshot.forEach((doc) => {
             if (doc.data().useremail === user.email) {
               if (doc.data().ipaddress === ipv4) {
                 console.log("already email but ok");
                 logdBoolean = true;
-                setIsLoggedIn(true);
+                //setIsLoggedIn(true);
               } else {
                 console.log(" email error");
-                setIsLoggedIn(false);
+                //setIsLoggedIn(false);
                 logdBoolean = false;
               }
             } else {
