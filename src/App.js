@@ -5,7 +5,7 @@ import { startInit, getMarketNameSaga, startInitAsync } from './Reducer/coinRedu
 import "./App.css";
 import { authService } from "fbase";
 import AppRouter from "./Router";
-import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore"
+import { doc, collection, addDoc, getFirestore, getDocs, updateDoc, setDoc } from "firebase/firestore"
 
 function App() {
 
@@ -29,31 +29,42 @@ function App() {
           const ipv4 = locationIp.IPv4;
 
           console.log("ipv4", ipv4);
+
+
           const db = await getFirestore();
           const querySnapshot = await getDocs(collection(db, "users"));
-
-          querySnapshot.forEach((doc) => {
-            //console.log("email", doc.data().useremail);
-            //console.log("ip", doc.data().ipaddress);
-            if (doc.data().useremail === user.email) {
-              if (doc.data().ipaddress === ipv4) {
-                console.log("already email but ok");
-                logdBoolean = true;
-                return;
+          let check = ""; let checkID = "";
+          querySnapshot.forEach((docc) => {
+            if (docc.data().useremail === user.email) {
+              check = "emailOK";
+              if (docc.data().ipaddress === ipv4) {
+                check = "ipOK";
+              }
+              else if (docc.data().ipaddress === 'init') {
+                check = "NEW";
+                checkID = docc.id;
               } else {
-                console.log(" email error");
-                //setIsLoggedIn(false);
-                logdBoolean = false;
-                return;
+                check = "FAIL";
               }
             }
+
           });
-          console.log("123", logdBoolean);
-          if (logdBoolean === true)
+
+          if (check === 'ipOK')
             setIsLoggedIn(true);
-          else if (logdBoolean === false)
+          else if (check === 'NEW') {
+
+            const washingtonRef = doc(db, "users", checkID);
+            await updateDoc(washingtonRef, {
+              ipaddress: ipv4
+            });
+
+          } else if (check === 'FAIL')
             setIsLoggedIn(false);
+
         }
+
+
 
 
         //setIsLoggedIn(true);

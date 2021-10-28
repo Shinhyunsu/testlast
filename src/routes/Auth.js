@@ -24,19 +24,7 @@ const Auth = () => {
             email = data.user.email;
         }
 
-        const db = await getFirestore();
-        const querySnapshot = await getDocs(collection(db, "users"));
-        querySnapshot.forEach((doc) => {
-            /*if (doc.data().email === email) {
-                console.log("already email");
-                if (doc.data().ipaddress === ipv4) {
-                    console.log("ok");
-                } else {
-                    console.log("error!!!");
-                }
-            }*/
 
-        });
 
         /*
                 const docRef = await addDoc(collection(db, "users"), {
