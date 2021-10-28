@@ -26,7 +26,7 @@ function App() {
           const locationIp = await ipData.json();
           const ipv4 = locationIp.IPv4;
 
-
+          console.log("ipv4", ipv4);
           const db = await getFirestore();
           const querySnapshot = await getDocs(collection(db, "users"));
           querySnapshot.forEach((doc) => {
