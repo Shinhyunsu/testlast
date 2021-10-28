@@ -44,7 +44,7 @@ function App() {
               }
             } else {
               console.log("New");
-              logdBoolean = false;
+              logdBoolean = true;
             }
           });
         }
