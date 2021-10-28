@@ -49,15 +49,15 @@ function App() {
           });
         }
 
-        authCheck();
-        setIsLoggedIn(true);
-        /*
+
+        //setIsLoggedIn(true);
+
         authCheck();
         console.log("123", logdBoolean);
         if (logdBoolean === true)
           setIsLoggedIn(true);
         else if (logdBoolean === false)
-          setIsLoggedIn(false);*/
+          setIsLoggedIn(false);
 
       } else {
         setIsLoggedIn(false);
