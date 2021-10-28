@@ -48,7 +48,8 @@ function App() {
             }
           });
         }
-        //authCheck();
+        authCheck();
+        console.log("123");
         if (logdBoolean === true)
           setIsLoggedIn(true);
         else if (logdBoolean === false)
