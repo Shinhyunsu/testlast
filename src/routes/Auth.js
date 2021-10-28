@@ -38,12 +38,12 @@ const Auth = () => {
 
         });
 
-
-        const docRef = await addDoc(collection(db, "users"), {
-            useremail: email,
-            ipaddress: ipv4
-        });
-        console.log(docRef.id);
+        /*
+                const docRef = await addDoc(collection(db, "users"), {
+                    useremail: email,
+                    ipaddress: ipv4
+                });
+                console.log(docRef.id);*/
     }
 
 
