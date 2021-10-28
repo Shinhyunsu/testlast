@@ -29,22 +29,29 @@ function App() {
           console.log("ipv4", ipv4);
           const db = await getFirestore();
           const querySnapshot = await getDocs(collection(db, "users"));
+          const logdBoolean = Boolean;
           querySnapshot.forEach((doc) => {
             if (doc.data().useremail === user.email) {
-
               if (doc.data().ipaddress === ipv4) {
                 console.log("already email but ok");
+                logdBoolean = true;
                 setIsLoggedIn(true);
               } else {
                 console.log(" email error");
                 setIsLoggedIn(false);
+                logdBoolean = false;
               }
             } else {
-              console.log("new email");
-              setIsLoggedIn(true);
+              console.log("New");
+              logdBoolean = false;
             }
           });
         }
+        //authCheck();
+        if (logdBoolean === true)
+          setIsLoggedIn(true);
+        else if (logdBoolean === false)
+          setIsLoggedIn(false);
 
       } else {
         setIsLoggedIn(false);
