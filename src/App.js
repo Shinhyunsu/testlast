@@ -31,18 +31,21 @@ function App() {
           const querySnapshot = await getDocs(collection(db, "users"));
           querySnapshot.forEach((doc) => {
             if (doc.data().useremail === user.email) {
-              console.log("already email");
-              if (doc.data().ipaddress === ipv4) {
-                console.log("ok");
-              } else {
-                console.log("error!!!");
-              }
-            }
 
+              if (doc.data().ipaddress === ipv4) {
+                console.log("already email but ok");
+                setIsLoggedIn(true);
+              } else {
+                console.log(" email error");
+                setIsLoggedIn(false);
+              }
+            } else {
+              console.log("new email");
+              setIsLoggedIn(true);
+            }
           });
         }
-        authCheck();
-        setIsLoggedIn(true);
+
       } else {
         setIsLoggedIn(false);
       }
