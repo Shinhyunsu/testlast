@@ -21,8 +21,9 @@ function App() {
   useEffect(async () => {
     authService.onAuthStateChanged((user) => {
       if (user) {
-        var logdBoolean = Boolean;
+
         const authCheck = async () => {
+          var logdBoolean;
           const ipData = await fetch('https://geolocation-db.com/json/');
           const locationIp = await ipData.json();
           const ipv4 = locationIp.IPv4;
@@ -47,17 +48,19 @@ function App() {
               }
             }
           });
+          console.log("123", logdBoolean);
+          if (logdBoolean === true)
+            setIsLoggedIn(true);
+          else if (logdBoolean === false)
+            setIsLoggedIn(false);
         }
 
 
         //setIsLoggedIn(true);
 
         authCheck();
-        console.log("123", logdBoolean);
-        if (logdBoolean === true)
-          setIsLoggedIn(true);
-        else if (logdBoolean === false)
-          setIsLoggedIn(false);
+
+
 
       } else {
         setIsLoggedIn(false);
