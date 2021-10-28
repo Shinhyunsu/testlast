@@ -21,7 +21,7 @@ function App() {
   useEffect(async () => {
     authService.onAuthStateChanged((user) => {
       if (user) {
-        const logdBoolean = Boolean;
+        var logdBoolean = Boolean;
         const authCheck = async () => {
           const ipData = await fetch('https://geolocation-db.com/json/');
           const locationIp = await ipData.json();
@@ -32,28 +32,32 @@ function App() {
           const querySnapshot = await getDocs(collection(db, "users"));
 
           querySnapshot.forEach((doc) => {
+            //console.log("email", doc.data().useremail);
+            //console.log("ip", doc.data().ipaddress);
             if (doc.data().useremail === user.email) {
               if (doc.data().ipaddress === ipv4) {
                 console.log("already email but ok");
                 logdBoolean = true;
-                //setIsLoggedIn(true);
+                return;
               } else {
                 console.log(" email error");
                 //setIsLoggedIn(false);
                 logdBoolean = false;
+                return;
               }
-            } else {
-              console.log("New");
-              logdBoolean = true;
             }
           });
         }
+
         authCheck();
-        console.log("123");
+        setIsLoggedIn(true);
+        /*
+        authCheck();
+        console.log("123", logdBoolean);
         if (logdBoolean === true)
           setIsLoggedIn(true);
         else if (logdBoolean === false)
-          setIsLoggedIn(false);
+          setIsLoggedIn(false);*/
 
       } else {
         setIsLoggedIn(false);
