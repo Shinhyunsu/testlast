@@ -22,7 +22,7 @@ function CoinContainer() {
 
     // if (parseFloat(coinTotal.data[next].totalminPer) < parseFloat(coinTotal.data[prev].totalminPer))
     upbitCoinList.sort((next, prev) => {
-        if (parseFloat(coinTotal.data[next].totalPer) > parseFloat(coinTotal.data[prev].totalPer))
+        if (parseFloat(coinTotal.data[next].totalminPer) < parseFloat(coinTotal.data[prev].totalminPer))
             return -1;
         else
             return 0;
