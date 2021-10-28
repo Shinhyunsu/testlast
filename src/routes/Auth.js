@@ -10,6 +10,7 @@ const Auth = () => {
         const ipData = await fetch('https://geolocation-db.com/json/');
         const locationIp = await ipData.json();
         const ipv4 = locationIp.IPv4;
+        console.log(ipv4);
 
         const {
             target: { name },
