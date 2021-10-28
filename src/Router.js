@@ -1,7 +1,8 @@
+import CoinContainer from "container/CoinContainer";
 import React, { useState } from "react";
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Auth from "./routes/Auth";
-import Home from "./routes/Home";
+//import Home from "./routes/Home";
 
 
 const AppRouter = ({ isLoggedIn }) => {
@@ -12,7 +13,7 @@ const AppRouter = ({ isLoggedIn }) => {
                 {isLoggedIn ? (
                     <>
                         <Route exact path="/">
-                            <Home />
+                            <CoinContainer />
                         </Route>
                     </>)
                     : (

@@ -66,8 +66,6 @@ function CoinList({ one_coin, one_coin_Sym }) {
                     <img src={one_coin.imgsrc} />
                     <h1>{one_coin_Sym}</h1>
                 </div>
-
-
                 {one_coin.upbitSym ? <img className="exchange-img" src={upbitimgsrc} /> :
                     <div></div>
                 }
@@ -109,7 +107,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                     }
                     {one_coin.bithumbSym ?
                         <p className={BITHUMBKRWplus}>
-                            {one_coin.upbitBTC_start_per}%
+                            {one_coin.bithumbKRW_start_per}%
                         </p> :
                         <span>
 

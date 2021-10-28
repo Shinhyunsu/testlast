@@ -27,10 +27,6 @@ function App() {
           const ipData = await fetch('https://geolocation-db.com/json/');
           const locationIp = await ipData.json();
           const ipv4 = locationIp.IPv4;
-
-          console.log("ipv4", ipv4);
-
-
           const db = await getFirestore();
           const querySnapshot = await getDocs(collection(db, "users"));
           let check = ""; let checkID = "";
@@ -63,33 +59,19 @@ function App() {
             setIsLoggedIn(false);
 
         }
-
-
-
-
-        //setIsLoggedIn(true);
-
         authCheck();
-
-
 
       } else {
         setIsLoggedIn(false);
       }
       setInit(true);
-      //console.log(user);
     });
   }, [])
 
-  /*
-<div className="coin-app">
-      <CoinContainer />
-    </div>
-  */
   return (
     <>
       {init ? <AppRouter isLoggedIn={isLoggedIn} /> : 'Initializing....'}
-      <footer>&copy; Ncrypto {new Date().getFullYear()} </footer>
+      <footer>&copy; Crypto {new Date().getFullYear()} </footer>
     </>
   );
 }

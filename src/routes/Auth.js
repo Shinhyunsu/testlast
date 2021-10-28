@@ -1,7 +1,7 @@
 import React from "react";
 import { authService, authGoogleProvider, authsignInWithPopup } from "fbase";
 import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore"
-
+import './Auth.css';
 
 
 const Auth = () => {
@@ -15,7 +15,7 @@ const Auth = () => {
             target: { name },
         } = event;
         let provider;
-        if (name === 'google') {
+        if (name === 'Crypto total Price') {
             provider = new authGoogleProvider();
         }
         const data = await authsignInWithPopup(authService, provider);
@@ -23,22 +23,13 @@ const Auth = () => {
         if (data) {
             email = data.user.email;
         }
-
-
-
-        /*
-                const docRef = await addDoc(collection(db, "users"), {
-                    useremail: email,
-                    ipaddress: ipv4
-                });
-                console.log(docRef.id);*/
     }
 
 
     return (
-        <div>
-            <button onClick={onSocialClick} name='google'>
-                Continue wih Google
+        <div className="authStyle">
+            <button className="authButton" onClick={onSocialClick} name='Crypto total Price'>
+                Crypto total Price
            </button>
         </div>
     )

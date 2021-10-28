@@ -1,0 +1,35 @@
+
+
+.authStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.authButton{
+    background: none;
+    border: 2px solid;
+    line-height: 1;
+    margin: 0.3em;
+    padding: 1em 2em;
+    
+    position: relative;
+    
+    font-size: 5em;
+    cursor: pointer;
+    
+
+    transition: 0.25s;
+    color:#60fff4;
+}
+
+
+
+
+  .authButton:hover,
+.authButton:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #60fff4;
+  transform: translateY(-0.25em);
+}
