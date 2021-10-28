@@ -5,12 +5,11 @@ import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore"
 
 
 const Auth = () => {
-
     const onSocialClick = async (event) => {
         const ipData = await fetch('https://geolocation-db.com/json/');
         const locationIp = await ipData.json();
         const ipv4 = locationIp.IPv4;
-        console.log(ipv4);
+
 
         const {
             target: { name },
@@ -28,14 +27,15 @@ const Auth = () => {
         const db = await getFirestore();
         const querySnapshot = await getDocs(collection(db, "users"));
         querySnapshot.forEach((doc) => {
-            if (doc.data().email === email) {
+            /*if (doc.data().email === email) {
                 console.log("already email");
                 if (doc.data().ipaddress === ipv4) {
                     console.log("ok");
                 } else {
                     console.log("error!!!");
                 }
-            }
+            }*/
+
         });
 
 
