@@ -23,7 +23,7 @@ function App() {
       if (user) {
 
         const authCheck = async () => {
-          var logdBoolean;
+          var logdBoolean = false;
           const ipData = await fetch('https://geolocation-db.com/json/');
           const locationIp = await ipData.json();
           const ipv4 = locationIp.IPv4;
