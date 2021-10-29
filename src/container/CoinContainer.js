@@ -28,13 +28,14 @@ function CoinContainer() {
         });
         */
 
-    upbitCoinList.sort((next, prev) => {
-        if (parseFloat(coinTotal.data[next].testper) > parseFloat(coinTotal.data[prev].testper))
-            return -1;
-        else
-            return 0;
-    });
-
+    /*
+        upbitCoinList.sort((next, prev) => {
+            if (parseFloat(coinTotal.data[next].testper) > parseFloat(coinTotal.data[prev].testper))
+                return -1;
+            else
+                return 0;
+        });
+    */
     return (
         <div>
             <div className='coin-container'>

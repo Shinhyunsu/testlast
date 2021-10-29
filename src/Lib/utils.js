@@ -484,9 +484,11 @@ const coinReadDataUtils = {
                 }
             })
             sortExchange = Array.from(new Set(sortExchange));
-            /* if (coin === 'PSG') {
-                 console.log('PSG price check', minPer, maxPer, minExchange);
-             }*/
+            /*
+            if (coin === 'CHZ') {
+                console.log('CHZ price check', minPer, maxPer, lastminExchange);
+            }
+            */
             var result = 0.0;
             if (sortExchange.length <= 1) {
                 minPer = 0;
@@ -503,17 +505,28 @@ const coinReadDataUtils = {
                                 minPer = 0;
                                 maxPer = 0;
                                 result = 0;
+
+                                return;
                             }
                         } else if (lastminExchange === 'bithumbWithdraw') {
                             minPer = (parseFloat(name.bithumbWithdraw) * parseFloat(minPer)) + minPer;
+
+                            /*if (coin === 'CHZ') {
+                                console.log('CHZ price cal', minPer, name.bithumbWithdraw, parseFloat(name.bithumbWithdraw), parseFloat(minPer));
+                            }*/
                         }
                     }
                 })
-                result = ((maxPer - minPer) / minPer * 100).toFixed(1);
-                if (result < 0) {
+                if (!(minPer <= 0 || maxPer === 0))
+                    result = ((maxPer - minPer) / minPer * 100).toFixed(1);
+                else {
                     result = 0;
                 }
             }
+            /*
+                        if (coin === 'TUSD') {
+                            console.log('TUSD price check', minPer, maxPer, lastminExchange, result, ((maxPer - minPer) / minPer * 100));
+                        }*/
 
             coinStateDatas[coin] = {
                 ...coinStateDatas[coin],
