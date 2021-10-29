@@ -66,6 +66,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                     <img src={one_coin.imgsrc} />
                     <h1>{one_coin_Sym}</h1>
                 </div>
+                <div>{one_coin.testper}</div>
                 {one_coin.upbitSym ? <img className="exchange-img" src={upbitimgsrc} /> :
                     <div></div>
                 }
@@ -164,6 +165,13 @@ function CoinList({ one_coin, one_coin_Sym }) {
                     {one_coin.bithumbBTC ?
                         <p className="coin-price">
                             {one_coin.bithumbBTCPrice}
+                        </p> :
+                        <span>
+                        </span>
+                    }
+                    {one_coin.bithumbBTC ?
+                        <p className="coin-price">
+                            K-{one_coin.calKobithumbBTC}
                         </p> :
                         <span>
                         </span>

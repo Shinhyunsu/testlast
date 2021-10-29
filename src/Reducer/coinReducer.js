@@ -1,8 +1,6 @@
-
-import React from 'react';
-import { takeEvery, call, put, select, flush, delay } from "redux-saga/effects";
+import { takeEvery, select, } from "redux-saga/effects";
 import { upbitoinApi, bithumbcoinApi, binancecoinApi } from "../Api/api";
-import { createConnectSocketSaga, createRequestSaga, requestActions, createInitRequestSaga, connectBithumbSocketThunk, bitcreateConnectSocketSaga } from '../Lib/asyncUtil';
+import { createConnectSocketSaga, createRequestSaga, requestActions, createInitRequestSaga } from '../Lib/asyncUtil';
 import { coinListDataUtils, coinReadDataUtils } from '../Lib/utils';
 
 const START_INIT = "START_INIT";
@@ -27,10 +25,6 @@ const GET_BITHUMB_MARKET_BTC_NAMES_ERROR = "GET_BITHUMB_MARKET_BTC_NAMES_ERROR";
 const CONNECT_UPBIT_SOCKET = "CONNECT_UPBIT_SOCKET";
 const CONNECT_UPBIT_SOCKET_SUCCESS = "CONNECT_UPBIT_SOCKET_SUCCESS";
 const CONNECT_UPBIT_SOCKET_ERROR = "CONNECT_UPBIT_SOCKET_ERROR";
-
-const CONNECT_BITHUMB_SOCKET = "CONNECT_BITHUMB_SOCKET";
-const CONNECT_BITHUMB_SOCKET_SUCCESS = "CONNECT_BITHUMB_SOCKET_SUCCESS";
-const CONNECT_BITHUMB_SOCKET_ERROR = "CONNECT_BITHUMB_SOCKET_ERROR";
 
 const CREATE_UPBIT_INIT = "CREATE_UPBIT_INIT";
 const CREATE_UPBIT_INIT_SUCCESS = "CREATE_UPBIT_INIT_SUCCESS";
@@ -82,12 +76,6 @@ const connectUpbitSocketSaga = createConnectSocketSaga(
     CONNECT_UPBIT_SOCKET,
     "ticker",
     coinReadDataUtils.upbitUpdates
-);
-//✅ 빗썸 소켓 연결
-const connectBithumbSocketSaga = bitcreateConnectSocketSaga(
-    CONNECT_BITHUMB_SOCKET,
-    "ticker",
-    coinReadDataUtils.bithumbUpdates
 );
 
 const createUpbitInitSocketSaga = createInitRequestSaga(

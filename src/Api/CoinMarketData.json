@@ -14,776 +14,1190 @@
   {
     "symbol": "BTC",
     "imgsrc": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579",
-    "totalName": "bitcoin"
+    "totalName": "bitcoin",
+    "upbitWithdraw": "0.009",
+    "bithumbWithdraw": "0.001"
   },
   {
     "symbol": "ETH",
     "imgsrc": "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880",
-    "totalName": "ethereum"
+    "totalName": "ethereum",
+    "upbitWithdraw": "0.018",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "LTC",
     "imgsrc": "https://assets.coingecko.com/coins/images/2/small/litecoin.png?1547033580",
-    "totalName": "litecoin"
+    "totalName": "litecoin",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "XRP",
     "imgsrc": "https://assets.coingecko.com/coins/images/44/small/xrp-symbol-white-128.png?1605778731",
-    "totalName": "ripple"
+    "totalName": "ripple",
+    "upbitWithdraw": "1",
+    "bithumbWithdraw": "1"
   },
   {
     "symbol": "ETC",
     "imgsrc": "https://assets.coingecko.com/coins/images/453/small/ethereum-classic-logo.png?1547034169",
-    "totalName": "ethereum-classic"
+    "totalName": "ethereum-classic",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "OMG",
     "imgsrc": "https://assets.coingecko.com/coins/images/776/small/OMG_Network.jpg?1591167168",
-    "totalName": "omisego"
+    "totalName": "omisego",
+    "upbitWithdraw": "2.5",
+    "bithumbWithdraw": "3.7"
   },
   {
     "symbol": "CVC",
     "imgsrc": "https://assets.coingecko.com/coins/images/788/small/civic.png?1547034556",
-    "totalName": "civic"
+    "totalName": "civic",
+    "upbitWithdraw": "30"
   },
   {
     "symbol": "DGB",
     "imgsrc": "https://assets.coingecko.com/coins/images/63/small/digibyte.png?1547033717",
-    "totalName": "digibyte"
+    "totalName": "digibyte",
+    "upbitWithdraw": "0.2"
   },
   {
     "symbol": "SC",
     "imgsrc": "https://assets.coingecko.com/coins/images/289/small/siacoin.png?1548386465",
-    "totalName": "siacoin"
+    "totalName": "siacoin",
+    "upbitWithdraw": "0.1"
   },
   {
     "symbol": "SNT",
     "imgsrc": "https://assets.coingecko.com/coins/images/779/small/status.png?1548610778",
-    "totalName": "status"
+    "totalName": "status",
+    "upbitWithdraw": "130",
+    "bithumbWithdraw": "73"
   },
   {
     "symbol": "WAVES",
     "imgsrc": "https://assets.coingecko.com/coins/images/425/small/waves.png?1548386117",
-    "totalName": "waves"
+    "totalName": "waves",
+    "upbitWithdraw": "0.002"
   },
   {
     "symbol": "NMR",
     "imgsrc": "https://s2.coinmarketcap.com/static/img/coins/64x64/1732.png",
-    "totalName": "numeraire"
+    "totalName": "numeraire",
+    "upbitWithdraw": "0.4",
+    "bithumbWithdraw": "0.4"
   },
   {
     "symbol": "XEM",
     "imgsrc": "https://assets.coingecko.com/coins/images/242/small/NEM_Logo_256x256.png?1598687029",
-    "totalName": "nem"
+    "totalName": "nem",
+    "upbitWithdraw": "4",
+    "bithumbWithdraw": "4"
   },
   {
     "symbol": "QTUM",
     "imgsrc": "https://assets.coingecko.com/coins/images/684/small/qtum.png?1547034438",
-    "totalName": "qtum"
+    "totalName": "qtum",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "BAT",
     "imgsrc": "https://static.upbit.com/logos/BAT.png",
-    "totalName": "basic-attention-token"
+    "totalName": "basic-attention-token",
+    "upbitWithdraw": "20",
+    "bithumbWithdraw": "9.5"
   },
   {
     "symbol": "LSK",
     "imgsrc": "https://assets.coingecko.com/coins/images/385/small/Lisk_Symbol_-_Blue.png?1573444104",
-    "totalName": "lisk"
+    "totalName": "lisk",
+    "upbitWithdraw": "0.1"
   },
   {
     "symbol": "STEEM",
     "imgsrc": "https://assets.coingecko.com/coins/images/398/small/steem.png?1547034126",
-    "totalName": "steem"
+    "totalName": "steem",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "DOGE",
     "imgsrc": "https://assets.coingecko.com/coins/images/5/small/dogecoin.png?1547792256",
-    "totalName": "dogecoin"
+    "totalName": "dogecoin",
+    "upbitWithdraw": "20",
+    "bithumbWithdraw": "20"
   },
   {
     "symbol": "BNT",
     "imgsrc": "https://assets.coingecko.com/coins/images/736/small/bancor-bnt.png?1628822309",
-    "totalName": "bancor"
+    "totalName": "bancor",
+    "upbitWithdraw": "3",
+    "bithumbWithdraw": "4.6"
   },
   {
     "symbol": "XLM",
     "imgsrc": "https://assets.coingecko.com/coins/images/100/small/Stellar_symbol_black_RGB.png?1552356157",
-    "totalName": "stellar"
+    "totalName": "stellar",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "ARDR",
     "imgsrc": "https://assets.coingecko.com/coins/images/525/small/Ardor_Vertical_1.png?1606797362",
-    "totalName": "ardor"
+    "totalName": "ardor",
+    "upbitWithdraw": "2"
   },
   {
     "symbol": "ARK",
     "imgsrc": "https://assets.coingecko.com/coins/images/613/small/ark.png?1547034308",
-    "totalName": "ark"
+    "totalName": "ark",
+    "upbitWithdraw": "0.1"
   },
   {
     "symbol": "STORJ",
     "imgsrc": "https://assets.coingecko.com/coins/images/949/small/storj.png?1547034811",
-    "totalName": "storj"
+    "totalName": "storj",
+    "upbitWithdraw": "5"
   },
   {
     "symbol": "GRS",
     "imgsrc": "https://assets.coingecko.com/coins/images/71/small/image001.png?1547033733",
-    "totalName": "groestlcoin"
+    "totalName": "groestlcoin",
+    "upbitWithdraw": "0.2"
   },
   {
     "symbol": "REP",
     "imgsrc": "https://assets.coingecko.com/coins/images/309/small/REP.png?1596339859",
-    "totalName": "augur"
+    "totalName": "augur",
+    "upbitWithdraw": "0.045",
+    "bithumbWithdraw": "0.3"
   },
   {
     "symbol": "RLC",
     "imgsrc": "https://static.upbit.com/logos/RLC.png",
-    "totalName": "iexec-rlc"
+    "totalName": "iexec-rlc",
+    "upbitWithdraw": "6.5",
+    "bithumbWithdraw": "3"
   },
   {
     "symbol": "NEO",
     "imgsrc": "https://assets.coingecko.com/coins/images/480/small/NEO_512_512.png?1594357361",
-    "totalName": "neo"
+    "totalName": "neo",
+    "upbitWithdraw": "0.1"
   },
   {
     "symbol": "MTL",
     "imgsrc": "https://assets.coingecko.com/coins/images/763/small/Metal.png?1592195010",
-    "totalName": "metal"
+    "totalName": "metal",
+    "upbitWithdraw": "3",
+    "bithumbWithdraw": "2.7"
   },
   {
     "symbol": "ADA",
     "imgsrc": "https://assets.coingecko.com/coins/images/975/small/cardano.png?1547034860",
-    "totalName": "cardano"
+    "totalName": "cardano",
+    "upbitWithdraw": "0.5",
+    "bithumbWithdraw": "0.5"
   },
   {
     "symbol": "MANA",
     "imgsrc": "https://assets.coingecko.com/coins/images/878/small/decentraland-mana.png?1550108745",
-    "totalName": "decentraland"
+    "totalName": "decentraland",
+    "upbitWithdraw": "35",
+    "bithumbWithdraw": "14"
   },
   {
     "symbol": "SBD",
     "imgsrc": "https://static.upbit.com/logos/SBD.png",
-    "totalName": "starbound"
+    "totalName": "starbound",
+    "upbitWithdraw": "0.01"
   },
   {
     "symbol": "POWR",
     "imgsrc": "https://static.upbit.com/logos/POWR.png",
-    "totalName": "power-ledger"
+    "totalName": "power-ledger",
+    "upbitWithdraw": "28",
+    "bithumbWithdraw": "73"
   },
   {
     "symbol": "BTG",
     "imgsrc": "https://static.upbit.com/logos/BTG.png",
-    "totalName": "bitcoin-gold"
+    "totalName": "bitcoin-gold",
+    "upbitWithdraw": "0.001",
+    "bithumbWithdraw": "0.001"
   },
   {
     "symbol": "DNT",
     "imgsrc": "https://assets.coingecko.com/coins/images/849/small/district0x.png?1547223762",
-    "totalName": "district0x"
+    "totalName": "district0x",
+    "upbitWithdraw": "60"
   },
   {
     "symbol": "ZRX",
     "imgsrc": "https://static.upbit.com/logos/ZRX.png",
-    "totalName": "0x"
+    "totalName": "0x",
+    "upbitWithdraw": "10",
+    "bithumbWithdraw": "19"
   },
   {
     "symbol": "TRX",
     "imgsrc": "https://assets.coingecko.com/coins/images/1094/small/tron-logo.png?1547035066",
-    "totalName": "tron"
+    "totalName": "tron",
+    "upbitWithdraw": "1",
+    "bithumbWithdraw": "0"
   },
   {
     "symbol": "TUSD",
     "imgsrc": "https://static.upbit.com/logos/TUSD.png",
-    "totalName": "true-usd"
+    "totalName": "true-usd",
+    "upbitWithdraw": "NO",
+    "bithumbWithdraw": "4"
   },
   {
     "symbol": "LRC",
     "imgsrc": "https://assets.coingecko.com/coins/images/913/small/LRC.png?1572852344",
-    "totalName": "loopring"
+    "totalName": "loopring",
+    "upbitWithdraw": "30",
+    "bithumbWithdraw": "40"
   },
   {
     "symbol": "ICX",
     "imgsrc": "https://assets.coingecko.com/coins/images/1060/small/icon-icx-logo.png?1547035003",
-    "totalName": "icon"
+    "totalName": "icon",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0"
   },
   {
     "symbol": "EOS",
     "imgsrc": "https://assets.coingecko.com/coins/images/738/small/eos-eos-logo.png?1547034481",
-    "totalName": "eos"
+    "totalName": "eos",
+    "upbitWithdraw": "0",
+    "bithumbWithdraw": "0.1"
   },
   {
     "symbol": "POLY",
     "imgsrc": "https://assets.coingecko.com/coins/images/2784/small/inKkF01.png?1605007034",
-    "totalName": "polymath"
+    "totalName": "polymath",
+    "upbitWithdraw": "30"
   },
   {
     "symbol": "ONT",
     "imgsrc": "https://assets.coingecko.com/coins/images/3447/small/ONT.png?1583481820",
-    "totalName": "ontology"
+    "totalName": "ontology",
+    "upbitWithdraw": "0.5",
+    "bithumbWithdraw": "1"
   },
   {
     "symbol": "ZIL",
     "imgsrc": "https://assets.coingecko.com/coins/images/2687/small/Zilliqa-logo.png?1547036894",
-    "totalName": "zilliqa"
+    "totalName": "zilliqa",
+    "upbitWithdraw": "0.5",
+    "bithumbWithdraw": "0.1"
   },
   {
     "symbol": "LOOM",
     "imgsrc": "https://static.upbit.com/logos/LOOM.png",
-    "totalName": "loom-network-new"
+    "totalName": "loom-network-new",
+    "upbitWithdraw": "90",
+    "bithumbWithdraw": "70"
   },
   {
     "symbol": "BCH",
     "imgsrc": "https://static.upbit.com/logos/BCH.png",
-    "totalName": "bitcoin-cash"
+    "totalName": "bitcoin-cash",
+    "upbitWithdraw": "0.001",
+    "bithumbWithdraw": "0.001"
   },
   {
     "symbol": "MFT",
     "imgsrc": "https://assets.coingecko.com/coins/images/3293/small/hifi_logo.png?1613102742",
-    "totalName": "mainframe"
+    "totalName": "mainframe",
+    "upbitWithdraw": "600"
   },
   {
     "symbol": "IOST",
     "imgsrc": "https://static.upbit.com/logos/IOST.png",
-    "totalName": "iostoken"
+    "totalName": "iostoken",
+    "upbitWithdraw": "0",
+    "bithumbWithdraw": "1"
   },
   {
     "symbol": "RFR",
     "imgsrc": "https://assets.coingecko.com/coins/images/2102/small/refereum.png?1548608001",
-    "totalName": "refereum"
+    "totalName": "refereum",
+    "upbitWithdraw": "450"
   },
   {
     "symbol": "IQ",
     "imgsrc": "https://assets.coingecko.com/coins/images/5010/small/YAIS3fUh.png?1626267646",
-    "totalName": "everipedia"
+    "totalName": "everipedia",
+    "upbitWithdraw": "0"
   },
   {
     "symbol": "IOTA",
     "imgsrc": "https://assets.coingecko.com/coins/images/692/small/IOTA_Swirl.png?1604238557",
-    "totalName": "iota"
+    "totalName": "iota",
+    "upbitWithdraw": "110"
   },
   {
     "symbol": "RVN",
     "imgsrc": "https://assets.coingecko.com/coins/images/3412/small/ravencoin.png?1548386057",
-    "totalName": "ravencoin"
+    "totalName": "ravencoin",
+    "upbitWithdraw": "0.1"
   },
   {
     "symbol": "GO",
     "imgsrc": "https://assets.coingecko.com/coins/images/3286/small/GoChain.png?1557381951",
-    "totalName": "tron-go"
+    "totalName": "tron-go",
+    "upbitWithdraw": "0.01"
   },
   {
     "symbol": "UPP",
     "imgsrc": "https://static.upbit.com/logos/UPP.png",
-    "totalName": "unipump"
+    "totalName": "unipump",
+    "upbitWithdraw": "60"
   },
   {
     "symbol": "ENJ",
     "imgsrc": "https://assets.coingecko.com/coins/images/1102/small/enjin-coin-logo.png?1547035078",
-    "totalName": "enjincoin"
+    "totalName": "enjincoin",
+    "upbitWithdraw": "13",
+    "bithumbWithdraw": "5.4"
   },
   {
     "symbol": "ONG",
     "imgsrc": "https://assets.coingecko.com/coins/images/5716/small/ONG_logo.png?1583481389",
-    "totalName": "ong"
+    "totalName": "ong",
+    "upbitWithdraw": "1",
+    "bithumbWithdraw": "5"
   },
   {
     "symbol": "GAS",
     "imgsrc": "https://assets.coingecko.com/coins/images/858/small/GAS_512_512.png?1594358948",
-    "totalName": "gas"
+    "totalName": "gas",
+    "upbitWithdraw": "0.5"
   },
   {
     "symbol": "ELF",
     "imgsrc": "https://assets.coingecko.com/coins/images/1371/small/aelf-logo.png?1547035397",
-    "totalName": "aelf"
+    "totalName": "aelf",
+    "upbitWithdraw": "40",
+    "bithumbWithdraw": "10"
   },
   {
     "symbol": "KNC",
     "imgsrc": "https://static.upbit.com/logos/KNC.png",
-    "totalName": "kyber-network-crystal"
+    "totalName": "kyber-network-crystal",
+    "upbitWithdraw": "7",
+    "bithumbWithdraw": "3.7"
   },
   {
     "symbol": "MOC",
     "imgsrc": "https://assets.coingecko.com/coins/images/2374/small/moc.png?1547036557",
-    "totalName": "momocash"
+    "totalName": "momocash",
+    "upbitWithdraw": "25"
   },
   {
     "symbol": "BSV",
     "imgsrc": "https://static.upbit.com/logos/BSV.png",
-    "totalName": "bitcoin-cash-sv"
+    "totalName": "bitcoin-cash-sv",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.001"
   },
   {
     "symbol": "THETA",
     "imgsrc": "https://static.upbit.com/logos/THETA.png",
-    "totalName": "theta-token"
+    "totalName": "theta-token",
+    "upbitWithdraw": "0.5"
   },
   {
     "symbol": "DENT",
     "imgsrc": "https://assets.coingecko.com/coins/images/1152/small/gLCEA2G.png?1604543239",
-    "totalName": "dent"
+    "totalName": "dent",
+    "upbitWithdraw": "1500"
   },
   {
     "symbol": "QKC",
     "imgsrc": "https://static.upbit.com/logos/QKC.png",
-    "totalName": "quark-chain"
+    "totalName": "quark-chain",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "BTT",
     "imgsrc": "https://static.upbit.com/logos/BTT.png",
-    "totalName": "bittorrent-2"
+    "totalName": "bittorrent-2",
+    "upbitWithdraw": "50",
+    "bithumbWithdraw": "100"
   },
   {
     "symbol": "SOLVE",
     "imgsrc": "https://static.upbit.com/logos/SOLVE.png",
-    "totalName": "solve-care"
+    "totalName": "solve-care",
+    "upbitWithdraw": "30"
   },
   {
     "symbol": "NKN",
     "imgsrc": "https://assets.coingecko.com/coins/images/3375/small/nkn.png?1548329212",
-    "totalName": "nkn"
+    "totalName": "nkn",
+    "upbitWithdraw": "50"
   },
   {
     "symbol": "META",
     "imgsrc": "https://assets.coingecko.com/coins/images/5247/small/META_Logo_black.png?1548833790",
-    "totalName": "the-metaonez"
+    "totalName": "the-metaonez",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "1"
   },
   {
     "symbol": "ANKR",
     "imgsrc": "https://assets.coingecko.com/coins/images/4324/small/U85xTl2.png?1608111978",
-    "totalName": "ankr"
+    "totalName": "ankr",
+    "upbitWithdraw": "150",
+    "bithumbWithdraw": "85"
   },
   {
     "symbol": "CRO",
     "imgsrc": "https://static.upbit.com/logos/CRO.png",
-    "totalName": "crypto-com-chain"
+    "totalName": "crypto-com-chain",
+    "upbitWithdraw": "10",
+    "bithumbWithdraw": "10"
   },
   {
     "symbol": "TFUEL",
     "imgsrc": "https://static.upbit.com/logos/TFUEL.png",
-    "totalName": "theta-fuel"
+    "totalName": "theta-fuel",
+    "upbitWithdraw": "2",
+    "bithumbWithdraw": "2"
   },
   {
     "symbol": "ORBS",
     "imgsrc": "https://assets.coingecko.com/coins/images/4630/small/Orbs.jpg?1547039896",
-    "totalName": "orbs"
+    "totalName": "orbs",
+    "upbitWithdraw": "70",
+    "bithumbWithdraw": "77"
   },
   {
     "symbol": "AREGO",
     "imgsrc": "https://assets.coingecko.com/coins/images/15477/small/argo.jpeg?1620995773",
-    "totalName": "argo"
+    "totalName": "argo",
+    "upbitWithdraw": "50",
+    "bithumbWithdraw": "40"
   },
   {
     "symbol": "ATOM",
     "imgsrc": "https://assets.coingecko.com/coins/images/1481/small/cosmos_hub.png?1555657960",
-    "totalName": "cosmos"
+    "totalName": "cosmos",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.1"
   },
   {
     "symbol": "TT",
     "imgsrc": "https://static.upbit.com/logos/TT.png",
-    "totalName": "thunder-token"
+    "totalName": "thunder-token",
+    "upbitWithdraw": "1"
   },
   {
     "symbol": "CRE",
     "imgsrc": "https://assets.coingecko.com/coins/images/3994/small/Carry.png?1592402610",
-    "totalName": "carry"
+    "totalName": "carry",
+    "upbitWithdraw": "300"
   },
   {
     "symbol": "STPT",
     "imgsrc": "https://static.upbit.com/logos/STPT.png",
-    "totalName": "stp-network"
+    "totalName": "stp-network",
+    "upbitWithdraw": "250",
+    "bithumbWithdraw": "200"
   },
   {
     "symbol": "MBL",
     "imgsrc": "https://assets.coingecko.com/coins/images/8460/small/MBL_Logo.png?1628258374",
-    "totalName": "moviebloc"
+    "totalName": "moviebloc",
+    "upbitWithdraw": "600",
+    "bithumbWithdraw": "200"
   },
   {
     "symbol": "LUNA",
     "imgsrc": "https://static.upbit.com/logos/LUNA.png",
-    "totalName": "terra-luna"
+    "totalName": "terra-luna",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.02"
   },
   {
     "symbol": "DAI",
     "imgsrc": "https://assets.coingecko.com/coins/images/9956/small/dai-multi-collateral-mcd.png?1574218774",
-    "totalName": "dai"
+    "totalName": "dai",
+    "upbitWithdraw": "15",
+    "bithumbWithdraw": "15"
   },
   {
     "symbol": "MKR",
     "imgsrc": "https://assets.coingecko.com/coins/images/1364/small/Mark_Maker.png?1585191826",
-    "totalName": "maker"
+    "totalName": "maker",
+    "upbitWithdraw": "0.005",
+    "bithumbWithdraw": "0.004"
   },
   {
     "symbol": "BORA",
     "imgsrc": "https://assets.coingecko.com/coins/images/7646/small/LDqRyofe_400x400.jpg?1548926877",
-    "totalName": "bora"
+    "totalName": "bora",
+    "upbitWithdraw": "50",
+    "bithumbWithdraw": "0"
   },
   {
     "symbol": "WAXP",
     "imgsrc": "https://assets.coingecko.com/coins/images/1372/small/WAX_Coin_Tickers_P_512px.png?1602812260",
-    "totalName": "wax"
+    "totalName": "wax",
+    "upbitWithdraw": "0",
+    "bithumbWithdraw": "5"
   },
   {
     "symbol": "HBAR",
     "imgsrc": "https://static.upbit.com/logos/LUNA.png",
-    "totalName": "hedera-hashgraph"
+    "totalName": "hedera-hashgraph",
+    "upbitWithdraw": "0.01"
   },
   {
     "symbol": "MED",
     "imgsrc": "https://assets.coingecko.com/coins/images/1374/small/medibloc_basic.png?1570607623",
-    "totalName": "medibloc"
+    "totalName": "medibloc",
+    "upbitWithdraw": "1.1"
   },
   {
     "symbol": "MLK",
     "imgsrc": "https://static.upbit.com/logos/MLK.png",
-    "totalName": "milk-alliance"
+    "totalName": "milk-alliance",
+    "upbitWithdraw": "0.05",
+    "bithumbWithdraw": "3"
   },
   {
     "symbol": "VET",
     "imgsrc": "https://assets.coingecko.com/coins/images/1167/small/VeChain-Logo-768x725.png?1547035194",
-    "totalName": "vechain"
+    "totalName": "vechain",
+    "upbitWithdraw": "100",
+    "bithumbWithdraw": "100"
   },
   {
     "symbol": "CHZ",
     "imgsrc": "https://assets.coingecko.com/coins/images/8834/small/Chiliz.png?1561970540",
-    "totalName": "chiliz"
+    "totalName": "chiliz",
+    "upbitWithdraw": "27"
   },
   {
     "symbol": "FX",
     "imgsrc": "https://static.upbit.com/logos/FX.png",
-    "totalName": "fx-coin"
+    "totalName": "fx-coin",
+    "upbitWithdraw": "30",
+    "bithumbWithdraw": "32"
   },
   {
     "symbol": "OGN",
     "imgsrc": "https://static.upbit.com/logos/OGN.png",
-    "totalName": "origin-protocol"
+    "totalName": "origin-protocol",
+    "upbitWithdraw": "10"
   },
   {
     "symbol": "XTZ",
     "imgsrc": "https://assets.coingecko.com/coins/images/976/small/Tezos-logo.png?1547034862",
-    "totalName": "tezos"
+    "totalName": "tezos",
+    "upbitWithdraw": "0.1",
+    "bithumbWithdraw": "0.3"
   },
   {
     "symbol": "HIVE",
     "imgsrc": "https://assets.coingecko.com/coins/images/10840/small/logo_transparent_4x.png?1584623184",
-    "totalName": "hive"
+    "totalName": "hive",
+    "upbitWithdraw": "NO",
+    "bithumbWithdraw": "0.01"
   },
   {
     "symbol": "HBD",
     "imgsrc": "https://static.upbit.com/logos/HBD.png",
-    "totalName": "hive_dollar"
+    "totalName": "hive_dollar",
+    "upbitWithdraw": "NO"
   },
   {
     "symbol": "OBSR",
     "imgsrc": "https://static.upbit.com/logos/OBSR.png",
-    "totalName": "observer-coin"
+    "totalName": "observer-coin",
+    "upbitWithdraw": "400",
+    "bithumbWithdraw": "540"
   },
   {
     "symbol": "DKA",
     "imgsrc": "https://assets.coingecko.com/coins/images/11875/small/bVD0g0dlmrEOPIkt943KZIBZ086eCshyY0jIQFti4zxYdOlFltU8tKa6uJlcA14HvNjX4bc7dxdMvlpoW5NFMND85oG4aiiCbFRhI6eowDfKEBY3BoSVY0IrBbA9SFGIxh_IYrkNC5uNdG-roZ0_TlGO3098now6Tbzga0p4IDqVk6lnaX3TuRC7pgnAYWZM15RD-uEIHr3O_3OoIIWP-.jpg?1595563347",
-    "totalName": "dkargo"
+    "totalName": "dkargo",
+    "upbitWithdraw": "50"
   },
   {
     "symbol": "STMX",
     "imgsrc": "https://assets.coingecko.com/coins/images/1369/small/StormX.png?1603113002",
-    "totalName": "storm"
+    "totalName": "storm",
+    "upbitWithdraw": "310"
   },
   {
     "symbol": "AHT",
     "imgsrc": "https://assets.coingecko.com/coins/images/12158/small/wNvPf1wZ_400x400.jpg?1597703442",
-    "totalName": "ahatoken"
+    "totalName": "ahatoken",
+    "upbitWithdraw": "200"
   },
   {
     "symbol": "PCI",
     "imgsrc": "https://static.upbit.com/logos/PCI.png",
-    "totalName": "pay-coin"
+    "totalName": "pay-coin",
+    "upbitWithdraw": "3",
+    "bithumbWithdraw": "1.5"
   },
   {
     "symbol": "LINK",
     "imgsrc": "https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png?1547034700",
-    "totalName": "chainlink"
+    "totalName": "chainlink",
+    "upbitWithdraw": "0.6",
+    "bithumbWithdraw": "4"
   },
   {
     "symbol": "KAVA",
     "imgsrc": "https://assets.coingecko.com/coins/images/9761/small/Kava-icon.png?1585636197",
-    "totalName": "kava"
+    "totalName": "kava",
+    "upbitWithdraw": "1.7"
   },
   {
     "symbol": "JST",
     "imgsrc": "https://assets.coingecko.com/coins/images/11095/small/JUST.jpg?1588175394",
-    "totalName": "just"
+    "totalName": "just",
+    "upbitWithdraw": "30",
+    "bithumbWithdraw": "25"
   },
   {
     "symbol": "CHR",
     "imgsrc": "https://static.upbit.com/logos/CHR.png",
-    "totalName": "chromaway"
+    "totalName": "chromaway",
+    "upbitWithdraw": "NO",
+    "bithumbWithdraw": "36"
   },
   {
     "symbol": "DAD",
     "imgsrc": "https://static.upbit.com/logos/DAD.png",
-    "totalName": "decentralized-advertising"
+    "totalName": "decentralized-advertising",
+    "upbitWithdraw": "NO",
+    "bithumbWithdraw": "36"
   },
   {
     "symbol": "TON",
     "imgsrc": "https://assets.coingecko.com/coins/images/12334/small/ton.jpg?1599128436",
-    "totalName": "tontoken"
+    "totalName": "tontoken",
+    "upbitWithdraw": "2"
   },
   {
     "symbol": "CTSI",
     "imgsrc": "https://assets.coingecko.com/coins/images/11038/small/cartesi.png?1592288021",
-    "totalName": "cartesi"
+    "totalName": "cartesi",
+    "upbitWithdraw": "45",
+    "bithumbWithdraw": "27"
   },
   {
     "symbol": "DOT",
     "imgsrc": "https://assets.coingecko.com/coins/images/12171/small/aJGBjJFU_400x400.jpg?1597804776",
-    "totalName": "polkadot"
+    "totalName": "polkadot",
+    "upbitWithdraw": "0.25",
+    "bithumbWithdraw": "0.15"
   },
   {
     "symbol": "COMP",
     "imgsrc": "https://static.upbit.com/logos/COMP.png",
-    "totalName": "compound-coin"
+    "totalName": "compound-coin",
+    "upbitWithdraw": "0.04",
+    "bithumbWithdraw": "0.03"
   },
   {
     "symbol": "SXP",
     "imgsrc": "https://assets.coingecko.com/coins/images/9368/small/swipe.png?1566792311",
-    "totalName": "swipe"
+    "totalName": "swipe",
+    "upbitWithdraw": "5",
+    "bithumbWithdraw": "2.7"
   },
   {
     "symbol": "HUNT",
     "imgsrc": "https://static.upbit.com/logos/HUNT.png",
-    "totalName": "hunt-token"
+    "totalName": "hunt-token",
+    "upbitWithdraw": "40"
   },
   {
     "symbol": "ONIT",
     "imgsrc": "https://assets.coingecko.com/coins/images/12252/small/d4suDHSzEZjDXc0uxFGPZXfDFp0L1tfoEusBx03zB1bvMLLbxa7Yq5naXAOutkirIlLXacFRRebX_hF2Ez69_fIPUfr2LuN0Z_UrXTLYds4aT95C6eHGXsZnezMHKAaOmjLpKto0xPTiYkXExvEvXrqL7O_J1wecb4eJsgwCoVprMLpm89BdKO9IyMmpNsfbW7JJFMiHgL8vq9fPhaeEi.jpg?1598519096",
-    "totalName": "onbuff"
+    "totalName": "onbuff",
+    "upbitWithdraw": "90"
   },
   {
     "symbol": "CRV",
     "imgsrc": "https://static.upbit.com/logos/CRV.png",
-    "totalName": "curve-dao-token"
+    "totalName": "curve-dao-token",
+    "upbitWithdraw": "5"
   },
   {
     "symbol": "ALGO",
     "imgsrc": "https://assets.coingecko.com/coins/images/4380/small/download.png?1547039725",
-    "totalName": "algorand"
+    "totalName": "algorand",
+    "upbitWithdraw": "0.1",
+    "bithumbWithdraw": "0.1"
   },
   {
     "symbol": "RSR",
     "imgsrc": "https://static.upbit.com/logos/RSR.png",
-    "totalName": "reserve-rights-token"
+    "totalName": "reserve-rights-token",
+    "upbitWithdraw": "214",
+    "bithumbWithdraw": "640"
   },
   {
     "symbol": "OXT",
     "imgsrc": "https://static.upbit.com/logos/OXT.png",
-    "totalName": "orchid-protocol"
+    "totalName": "orchid-protocol",
+    "upbitWithdraw": "25",
+    "bithumbWithdraw": "18"
   },
   {
     "symbol": "PLA",
     "imgsrc": "https://assets.coingecko.com/coins/images/14316/small/54023228.png?1615366911",
-    "totalName": "plair"
+    "totalName": "plair",
+    "upbitWithdraw": "30"
   },
   {
     "symbol": "MARO",
     "imgsrc": "https://static.upbit.com/logos/MARO.png",
-    "totalName": "ttc-protocol"
+    "totalName": "ttc-protocol",
+    "upbitWithdraw": "1"
   },
   {
     "symbol": "SAND",
     "imgsrc": "https://static.upbit.com/logos/SAND.png",
-    "totalName": "the-sandbox"
+    "totalName": "the-sandbox",
+    "upbitWithdraw": "30",
+    "bithumbWithdraw": "22"
   },
   {
     "symbol": "SUN",
     "imgsrc": "https://assets.coingecko.com/coins/images/7420/small/a55e64a9e3eb68cfcd708f956e37ec5c_320x260.png?1547200256",
-    "totalName": "sun"
+    "totalName": "sun",
+    "upbitWithdraw": "1.8",
+    "bithumbWithdraw": "20"
   },
   {
     "symbol": "SRM",
     "imgsrc": "https://assets.coingecko.com/coins/images/11970/small/serum-logo.png?1597121577",
-    "totalName": "serum"
+    "totalName": "serum",
+    "upbitWithdraw": "3",
+    "bithumbWithdraw": "2"
   },
   {
     "symbol": "QTCON",
     "imgsrc": "https://assets.coingecko.com/coins/images/8208/small/QTCON.png?1587543372",
-    "totalName": "quiztok"
+    "totalName": "quiztok",
+    "upbitWithdraw": "130",
+    "bithumbWithdraw": "180"
   },
   {
     "symbol": "MVL",
     "imgsrc": "https://static.upbit.com/logos/MVL.png",
-    "totalName": "mass-vehicle-ledger"
+    "totalName": "mass-vehicle-ledger",
+    "upbitWithdraw": "400"
   },
   {
     "symbol": "GXC",
     "imgsrc": "https://assets.coingecko.com/coins/images/1089/small/26296223.png?1571192241",
-    "totalName": "gxchain"
+    "totalName": "gxchain",
+    "upbitWithdraw": "0.3",
+    "bithumbWithdraw": "0.5"
   },
   {
     "symbol": "AQT",
     "imgsrc": "https://static.upbit.com/logos/AQT.png",
-    "totalName": "alpha-quark-token"
+    "totalName": "alpha-quark-token",
+    "upbitWithdraw": "2",
+    "bithumbWithdraw": "3"
   },
   {
     "symbol": "AXS",
     "imgsrc": "https://static.upbit.com/logos/AXS.png",
-    "totalName": "axie-infinity"
+    "totalName": "axie-infinity",
+    "upbitWithdraw": "1",
+    "bithumbWithdraw": "0.3"
   },
   {
     "symbol": "STRAX",
     "imgsrc": "https://assets.coingecko.com/coins/images/531/small/stratis.png?1547034209",
-    "totalName": "stratis"
+    "totalName": "stratis",
+    "upbitWithdraw": "0.2",
+    "bithumbWithdraw": "0.2"
   },
   {
     "symbol": "GLM",
     "imgsrc": "https://assets.coingecko.com/coins/images/542/small/Golem_Submark_Positive_RGB.png?1606392013",
-    "totalName": "golem"
+    "totalName": "golem",
+    "upbitWithdraw": "25",
+    "bithumbWithdraw": "25"
   },
   {
     "symbol": "FCT2",
     "imgsrc": "https://assets.coingecko.com/coins/images/9892/small/6mHcLurm_400x400.jpg?1573160342",
-    "totalName": "firmachain"
+    "totalName": "firmachain",
+    "upbitWithdraw": "55",
+    "bithumbWithdraw": "64"
   },
   {
     "symbol": "SSX",
     "imgsrc": "https://assets.coingecko.com/coins/images/10089/small/eRu53ijl_400x400.jpg?1590991531",
-    "totalName": "somesing"
+    "totalName": "somesing",
+    "upbitWithdraw": "200",
+    "bithumbWithdraw": "200"
   },
   {
     "symbol": "FIL",
     "imgsrc": "https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933",
-    "totalName": "filecoin"
+    "totalName": "filecoin",
+    "upbitWithdraw": "0.15"
   },
   {
     "symbol": "UNI",
     "imgsrc": "https://assets.coingecko.com/coins/images/12504/small/uniswap-uni.png?1600306604",
-    "totalName": "unicorn-token"
+    "totalName": "unicorn-token",
+    "upbitWithdraw": "0.6",
+    "bithumbWithdraw": "0.4"
   },
   {
     "symbol": "BASIC",
     "imgsrc": "https://assets.coingecko.com/coins/images/11050/small/unTgJN6U_400x400.jpg?1587540882",
-    "totalName": "basic"
+    "totalName": "basic",
+    "upbitWithdraw": "1000",
+    "bithumbWithdraw": "1500"
   },
   {
     "symbol": "INJ",
     "imgsrc": "https://static.upbit.com/logos/INJ.png",
-    "totalName": "injective-protocol"
+    "totalName": "injective-protocol",
+    "upbitWithdraw": "1.2"
   },
   {
     "symbol": "PROM",
     "imgsrc": "https://assets.coingecko.com/coins/images/8825/small/promlogofinal.png?1633713982",
-    "totalName": "prometeus"
+    "totalName": "prometeus",
+    "upbitWithdraw": "1.5"
   },
   {
     "symbol": "VAL",
     "imgsrc": "https://static.upbit.com/logos/VAL.png",
-    "totalName": "radium"
+    "totalName": "radium",
+    "upbitWithdraw": "0.2"
   },
   {
     "symbol": "PSG",
     "imgsrc": "https://static.upbit.com/logos/PSG.png",
-    "totalName": "paris-saint-germain-fan-token"
+    "totalName": "paris-saint-germain-fan-token",
+    "upbitWithdraw": "NO"
   },
   {
     "symbol": "JUV",
     "imgsrc": "https://static.upbit.com/logos/JUV.png",
-    "totalName": "juventus-fan-token"
+    "totalName": "juventus-fan-token",
+    "upbitWithdraw": "NO"
   },
   {
     "symbol": "CBK",
     "imgsrc": "https://static.upbit.com/logos/CBK.png",
-    "totalName": "cobak-token"
+    "totalName": "cobak-token",
+    "upbitWithdraw": "1"
   },
   {
     "symbol": "FOR",
     "imgsrc": "https://static.upbit.com/logos/FOR.png",
-    "totalName": "force-protocol"
+    "totalName": "force-protocol",
+    "upbitWithdraw": "200"
   },
   {
     "symbol": "BFC",
     "imgsrc": "https://assets.coingecko.com/coins/images/4639/small/bifrost_32.png?1608520677",
-    "totalName": "bifrost"
+    "totalName": "bifrost",
+    "upbitWithdraw": "100",
+    "bithumbWithdraw": "32"
   },
   {
     "symbol": "LINA",
     "imgsrc": "https://assets.coingecko.com/coins/images/12509/small/linear.jpg?1606884470",
-    "totalName": "lina"
+    "totalName": "lina",
+    "upbitWithdraw": "200",
+    "bithumbWithdraw": "110"
   },
   {
     "symbol": "HUM",
     "imgsrc": "https://assets.coingecko.com/coins/images/4243/small/Webp.net-resizeimage_%2836%29.png?1547039574",
-    "totalName": "humanscape"
+    "totalName": "humanscape",
+    "upbitWithdraw": "50"
   },
   {
     "symbol": "CELO",
     "imgsrc": "https://assets.coingecko.com/coins/images/11090/small/icon-celo-CELO-color-500.png?1592293590",
-    "totalName": "celo"
+    "totalName": "celo",
+    "upbitWithdraw": "2"
   },
   {
     "symbol": "STX",
     "imgsrc": "https://static.upbit.com/logos/STX.png",
-    "totalName": "stox"
+    "totalName": "stox",
+    "upbitWithdraw": "10"
   },
   {
     "symbol": "NEAR",
     "imgsrc": "https://assets.coingecko.com/coins/images/10365/small/near_icon.png?1601359077",
-    "totalName": "near"
+    "totalName": "near",
+    "upbitWithdraw": "2"
   },
   {
     "symbol": "AUCTION",
     "imgsrc": "https://assets.coingecko.com/coins/images/13860/small/1_KtgpRIJzuwfHe0Rl0avP_g.jpeg?1612412025",
-    "totalName": "auction"
+    "totalName": "auction",
+    "upbitWithdraw": "0.5"
   },
   {
     "symbol": "DAWN",
     "imgsrc": "https://static.upbit.com/logos/DAWN.png",
-    "totalName": "dawn-protocol"
+    "totalName": "dawn-protocol",
+    "upbitWithdraw": "25"
   },
   {
     "symbol": "FLOW",
     "imgsrc": "https://assets.coingecko.com/coins/images/13446/small/5f6294c0c7a8cda55cb1c936_Flow_Wordmark.png?1631696776",
-    "totalName": "flow"
+    "totalName": "flow",
+    "upbitWithdraw": "0.3"
   },
   {
     "symbol": "STRK",
     "imgsrc": "https://assets.coingecko.com/coins/images/14607/small/Jw-36llq_400x400.jpg?1617243607",
-    "totalName": "strike"
+    "totalName": "strike",
+    "upbitWithdraw": "0.011"
   },
   {
     "symbol": "PUNDIX",
     "imgsrc": "https://static.upbit.com/logos/PUNDIX.png",
-    "totalName": "pundi-x-2"
+    "totalName": "pundi-x-2",
+    "upbitWithdraw": "3",
+    "bithumbWithdraw": "2"
   },
   {
     "symbol": "GRT",
     "imgsrc": "https://static.upbit.com/logos/GRT.png",
-    "totalName": ""
+    "totalName": "",
+    "upbitWithdraw": "4",
+    "bithumbWithdraw": "7.3"
   },
   {
     "symbol": "SNX",
     "imgsrc": "https://static.upbit.com/logos/SNX.png",
-    "totalName": "the-graph"
+    "totalName": "the-graph",
+    "upbitWithdraw": "1.2",
+    "bithumbWithdraw": "0.7"
   },
   {
     "symbol": "USDP",
     "imgsrc": "https://static.upbit.com/logos/USDP.png",
-    "totalName": "usdp"
+    "totalName": "usdp",
+    "upbitWithdraw": "NO"
   },
   {
     "symbol": "XEC",
     "imgsrc": "https://assets.coingecko.com/coins/images/16646/small/Logo_final-22.png?1628239446",
-    "totalName": "ecash"
+    "totalName": "ecash",
+    "upbitWithdraw": "1000",
+    "bithumbWithdraw": "10000"
   },
   {
     "symbol": "SOL",
     "imgsrc": "https://assets.coingecko.com/coins/images/4128/small/coinmarketcap-solana-200.png?1616489452",
-    "totalName": "solana"
+    "totalName": "solana",
+    "upbitWithdraw": "0.01",
+    "bithumbWithdraw": "0.03"
   },
   {
     "symbol": "MATIC",
     "imgsrc": "https://static.upbit.com/logos/MATIC.png",
-    "totalName": "matic-network"
+    "totalName": "matic-network",
+    "upbitWithdraw": "15",
+    "bithumbWithdraw": "8"
   },
   {
     "symbol": "NU",
-    "imgsrc": "https://static.upbit.com/logos/NU.png",
-    "totalName": "nucypher"
+    "imgsrc": "https://s2.coinmarketcap.com/static/img/coins/64x64/4761.png",
+    "totalName": "nucypher",
+    "upbitWithdraw": "70",
+    "bithumbWithdraw": "40"
+  },
+  {
+    "symbol": "AAVE",
+    "imgsrc": "https://s2.coinmarketcap.com/static/img/coins/64x64/7278.png",
+    "totalName": "aave",
+    "upbitWithdraw": "0.2",
+    "bithumbWithdraw": "0.04"
+  },
+  {
+    "symbol": "1INCH",
+    "imgsrc": "https://assets.coingecko.com/coins/images/13469/small/1inch-token.png?1608803028",
+    "totalName": "1INCH",
+    "upbitWithdraw": "25",
+    "bithumbWithdraw": "25"
+  },
+  {
+    "symbol": "MASK",
+    "imgsrc": "https://assets.coingecko.com/coins/images/14051/small/Mask_Network.jpg?1614050316",
+    "totalName": "MASK",
+    "upbitWithdraw": "2",
+    "bithumbWithdraw": "25"
+  },
+  {
+    "symbol": "CTXC",
+    "imgsrc": "https://assets.coingecko.com/coins/images/3861/small/2638.png?1523930406",
+    "totalName": "CTXC",
+    "bithumbWithdraw": "2"
+  },
+  {
+    "symbol": "WTC",
+    "imgsrc": "https://assets.coingecko.com/coins/images/1093/small/ggx6nnW.png?1604815811",
+    "totalName": "WTC",
+    "bithumbWithdraw": "0.7"
+  },
+  {
+    "symbol": "COS",
+    "imgsrc": "https://assets.coingecko.com/coins/images/8379/small/4036.png?1561085375",
+    "totalName": "COS",
+    "bithumbWithdraw": "310"
+  },
+  {
+    "symbol": "ARPA",
+    "imgsrc": "https://assets.coingecko.com/coins/images/8506/small/9u0a23XY_400x400.jpg?1559027357",
+    "totalName": "ARPA",
+    "bithumbWithdraw": "120"
+  },
+  {
+    "symbol": "YFI",
+    "imgsrc": "https://assets.coingecko.com/coins/images/11849/small/yfi-192x192.png?1598325330",
+    "totalName": "YFI",
+    "bithumbWithdraw": "0.003"
+  },
+  {
+    "symbol": "UMA",
+    "imgsrc": "https://assets.coingecko.com/coins/images/10951/small/UMA.png?1586307916",
+    "totalName": "UMA",
+    "bithumbWithdraw": "0.6"
+  },
+  {
+    "symbol": "BAL",
+    "imgsrc": "https://assets.coingecko.com/coins/images/11683/small/Balancer.png?1592792958",
+    "totalName": "BAL",
+    "bithumbWithdraw": "0.9"
+  },
+  {
+    "symbol": "BEL",
+    "imgsrc": "https://assets.coingecko.com/coins/images/12478/small/Bella.png?1602230054",
+    "totalName": "BEL",
+    "bithumbWithdraw": "2.5"
+  },
+  {
+    "symbol": "MIR",
+    "imgsrc": "https://assets.coingecko.com/coins/images/13295/small/mirror_logo_transparent.png?1611554658",
+    "totalName": "MIR",
+    "bithumbWithdraw": "1.6"
+  },
+  {
+    "symbol": "LPT",
+    "imgsrc": "https://assets.coingecko.com/coins/images/7137/small/logo-circle-green.png?1619593365",
+    "totalName": "LPT",
+    "bithumbWithdraw": "0.4"
+  },
+  {
+    "symbol": "SUSHI",
+    "imgsrc": "https://assets.coingecko.com/coins/images/12271/small/512x512_Logo_no_chop.png?1606986688",
+    "totalName": "SUSHI",
+    "bithumbWithdraw": "0.8"
+  },
+  {
+    "symbol": "CELR",
+    "imgsrc": "https://assets.coingecko.com/coins/images/4379/small/Celr.png?1554705437",
+    "totalName": "BEL",
+    "bithumbWithdraw": "270"
+  },
+  {
+    "symbol": "OCAEN",
+    "imgsrc": "https://assets.coingecko.com/coins/images/3687/small/ocean-protocol-logo.jpg?1547038686",
+    "totalName": "OCEAN",
+    "bithumbWithdraw": "11"
+  },
+  {
+    "symbol": "ALICE",
+    "imgsrc": "https://assets.coingecko.com/coins/images/14375/small/alice_logo.jpg?1615782968",
+    "totalName": "ALICE",
+    "bithumbWithdraw": "1"
+  },
+  {
+    "symbol": "CAKE",
+    "imgsrc": "https://assets.coingecko.com/coins/images/12632/small/pancakeswap-cake-logo_%281%29.png?1629359065",
+    "totalName": "CAKE",
+    "bithumbWithdraw": "0.8"
+  },
+  {
+    "symbol": "XVS",
+    "imgsrc": "https://assets.coingecko.com/coins/images/12677/small/venus.png?1618319812",
+    "totalName": "XVS",
+    "bithumbWithdraw": "0.6"
+  },
+  {
+    "symbol": "BAKE",
+    "imgsrc": "https://assets.coingecko.com/coins/images/12588/small/bakerytoken_logo.jpg?1600940032",
+    "totalName": "BAKE",
+    "bithumbWithdraw": "0.2"
+  },
+  {
+    "symbol": "AION",
+    "imgsrc": "https://assets.coingecko.com/coins/images/1023/small/Aion_Currency_Symbol_Transparent_PNG.png?1575876687",
+    "totalName": "AION",
+    "bithumbWithdraw": "0.5"
+  },
+  {
+    "symbol": "KLAY",
+    "imgsrc": "https://assets.coingecko.com/coins/images/9672/small/CjbT82vP_400x400.jpg?1570548320",
+    "totalName": "Klaytn",
+    "bithumbWithdraw": "1"
+  },
+  {
+    "symbol": "BURGER",
+    "imgsrc": "https://assets.coingecko.com/coins/images/12563/small/burger.png?1600786553",
+    "totalName": "BURGER",
+    "bithumbWithdraw": "2.7"
+  },
+  {
+    "symbol": "KSM",
+    "imgsrc": "https://assets.coingecko.com/coins/images/9568/small/m4zRhP5e_400x400.jpg?1576190080",
+    "totalName": "KSM",
+    "bithumbWithdraw": "0.01"
+  },
+  {
+    "symbol": "KSM",
+    "imgsrc": "https://assets.coingecko.com/coins/images/9568/small/m4zRhP5e_400x400.jpg?1576190080",
+    "totalName": "KSM",
+    "bithumbWithdraw": "25"
+  },
+  {
+    "symbol": "CTK",
+    "imgsrc": "https://assets.coingecko.com/coins/images/12944/small/CertiK_Foundation_icon_96_96_-_round.png?1603772980",
+    "totalName": "CTK",
+    "bithumbWithdraw": "1"
+  },
+  {
+    "symbol": "BNB",
+    "imgsrc": "https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615",
+    "totalName": "BNB",
+    "bithumbWithdraw": "0.001"
   }
 ]
