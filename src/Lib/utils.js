@@ -456,18 +456,18 @@ const coinReadDataUtils = {
                 } else if (name === 'calKobinanBTC') {
                     price = parseFloat(coinStateDatas[coin].calKobinanBTC);
                     sortExchange.push('binance');
-                    exchange = 1;
+                    exchange = 'binanceWithdraw';
                 } else if (name === 'calKoupbitUSDT') {
                     price = parseFloat(coinStateDatas[coin].calKoupbitUSDT);
                     sortExchange.push('upbit');
                 } else if (name === 'calKoUSDT') {
                     price = parseFloat(coinStateDatas[coin].calKoUSDT);
                     sortExchange.push('binance');
-                    exchange = 1;
+                    exchange = 'binanceWithdraw';
                 } else if (name === 'calKoBUSD') {
                     price = parseFloat(coinStateDatas[coin].calKoBUSD);
                     sortExchange.push('binance');
-                    exchange = 1;
+                    exchange = 'binanceWithdraw';
                 }
                 else if (name === 'calKoupbitBTC') {
                     price = parseFloat(coinStateDatas[coin].calKoupbitBTC);
@@ -485,10 +485,10 @@ const coinReadDataUtils = {
                 }
             })
             sortExchange = Array.from(new Set(sortExchange));
-
-            if (coin === 'MKR') {
-                console.log('MKR price check', minPer, maxPer, lastminExchange, lastmaxExchange);
-            }
+            /*
+                        if (coin === 'MKR') {
+                            console.log('MKR price check', minPer, maxPer, lastminExchange, lastmaxExchange);
+                        }*/
 
             var result = 0.0;
             if (sortExchange.length <= 1) {
@@ -503,7 +503,6 @@ const coinReadDataUtils = {
                             minPer = 0;
                             maxPer = 0;
                             result = 0;
-
                             return;
                         }
                         else if (lastminExchange === 'upbitWithdraw') {
@@ -513,15 +512,20 @@ const coinReadDataUtils = {
                                 minPer = 0;
                                 maxPer = 0;
                                 result = 0;
-
                                 return;
                             }
                         } else if (lastminExchange === 'bithumbWithdraw') {
                             minPer = (parseFloat(name.bithumbWithdraw) * parseFloat(minPer)) + minPer;
-
-                            /*if (coin === 'CHZ') {
-                                console.log('CHZ price cal', minPer, name.bithumbWithdraw, parseFloat(name.bithumbWithdraw), parseFloat(minPer));
-                            }*/
+                        }
+                        else if (lastminExchange === 'binanceWithdraw') {
+                            if (name.upbitWithdraw !== 'NO')
+                                minPer = (parseFloat(name.binanceWithdraw) * parseFloat(minPer)) + minPer;
+                            else {
+                                minPer = 0;
+                                maxPer = 0;
+                                result = 0;
+                                return;
+                            }
                         }
                     }
                 })
@@ -531,10 +535,6 @@ const coinReadDataUtils = {
                     result = 0;
                 }
             }
-            /*
-                        if (coin === 'TUSD') {
-                            console.log('TUSD price check', minPer, maxPer, lastminExchange, result, ((maxPer - minPer) / minPer * 100));
-                        }*/
 
             coinStateDatas[coin] = {
                 ...coinStateDatas[coin],
