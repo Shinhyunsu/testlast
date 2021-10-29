@@ -483,9 +483,9 @@
     "bithumbWithdraw": "77"
   },
   {
-    "symbol": "AREGO",
-    "imgsrc": "https://assets.coingecko.com/coins/images/15477/small/argo.jpeg?1620995773",
-    "totalName": "argo",
+    "symbol": "AERGO",
+    "imgsrc": "https://assets.coingecko.com/coins/images/4490/small/Aergo.png?1558084282",
+    "totalName": "AERGO",
     "upbitWithdraw": "50",
     "bithumbWithdraw": "40"
   },
@@ -1130,7 +1130,7 @@
     "bithumbWithdraw": "270"
   },
   {
-    "symbol": "OCAEN",
+    "symbol": "OCEAN",
     "imgsrc": "https://assets.coingecko.com/coins/images/3687/small/ocean-protocol-logo.jpg?1547038686",
     "totalName": "OCEAN",
     "bithumbWithdraw": "11"
@@ -1200,5 +1200,11 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615",
     "totalName": "BNB",
     "bithumbWithdraw": "0.001"
+  },
+  {
+    "symbol": "REN",
+    "imgsrc": "https://assets.coingecko.com/coins/images/3139/small/REN.png?1589985807",
+    "totalName": "REN",
+    "bithumbWithdraw": "23"
   }
 ]
