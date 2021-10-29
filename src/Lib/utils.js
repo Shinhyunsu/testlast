@@ -484,9 +484,9 @@ const coinReadDataUtils = {
                 }
             })
             sortExchange = Array.from(new Set(sortExchange));
-            /*if (coin === 'SUSHI') {
-                console.log('price check', minPer, maxPer, minExchange);
-            }*/
+            /* if (coin === 'PSG') {
+                 console.log('PSG price check', minPer, maxPer, minExchange);
+             }*/
             var result = 0.0;
             if (sortExchange.length <= 1) {
                 minPer = 0;
