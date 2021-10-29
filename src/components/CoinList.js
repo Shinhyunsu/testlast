@@ -8,6 +8,25 @@ function CoinList({ one_coin, one_coin_Sym }) {
     const upbitimgsrc = CoinMarketData[0].imgsrc;
     const bithumbimgsrc = CoinMarketData[1].imgsrc;
     const binanceimgsrc = CoinMarketData[2].imgsrc;
+
+    var symimg;
+
+    CoinMarketData.find((coinchk) => {
+        if (coinchk.symbol === one_coin_Sym) {
+            //console.log('one_coin_Sym', one_coin_Sym);
+            symimg = coinchk.imgsrc;
+
+            // if (one_coin_Sym === 'CAKE')
+            //     console.log(symimg);
+            return;
+        }
+    })
+
+
+
+    //console.log(one_coin_Sym);
+
+    //const coinImgsrc = CoinMarketData[one_coin].imgsrc;
     /*
         useEffect(() => {
             if (one_coin.upbitSym === "KRW-BTC")
@@ -63,7 +82,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
         <div className='coin-container'>
             <div className="coin-row" >
                 <div className='coin'>
-                    <img src={one_coin.imgsrc} />
+                    <img src={symimg} />
                     <h1>{one_coin_Sym}</h1>
                 </div>
                 <div>{one_coin.testper}</div>
