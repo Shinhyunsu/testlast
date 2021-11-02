@@ -631,7 +631,7 @@ const coinReadDataUtils = {
                 coinStateCount++;
             }
         })
-        TOPmarketString['data'] = coinStringMake
+        TOPmarketString[0] = { 'ALL': coinStringMake }
 
         return coinStateDatas;
     },
