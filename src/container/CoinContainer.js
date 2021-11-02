@@ -112,13 +112,7 @@ function CoinContainer() {
 
 
             </div>
-            <div>
-                {
-                    TOPcoinTotalmain.map((one_coin) => {
-                        return <span>{one_coin[0].MainSym}&nbsp;&nbsp;&nbsp; </span>
-                    })
-                }
-            </div>
+
             {
                 TOPcoinTotalmain.map((one_coin) => {
                     return <CoinList key={`coinlist__${one_coin[0].MainSym}`} one_coin={one_coin} />;
