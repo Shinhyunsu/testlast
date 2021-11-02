@@ -152,7 +152,7 @@ const initialState = {
             },
         },
     },
-    TOPmarketString: "",
+    TOPmarketString: [],
     TOPmarketNames: [],
 };
 

@@ -271,8 +271,13 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                     }
                 }
 
-                yield delay(1500); // 500ms 동안 대기
-
+                yield delay(2000); // 500ms 동안 대기
+                const TOPmarketString = Object.keys(state.Coin.TOPmarketString);
+                axios.post('https://tradingviewslackshin.herokuapp.com/webhook', JSON.stringify({ 'arbitrage': TOPmarketString['data'] }), {
+                    headers: {
+                        "Content-Type": `application/json`,
+                    },
+                });
 
             }
         } catch (e) {

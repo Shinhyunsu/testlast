@@ -75,7 +75,7 @@ const coinReadDataUtils = {
     mixExchangeUpdates: (one_names, two_names, three_names, state) => {
         const coinStateDatas = state.Coin.marketNames.data;
         const TOPmarketNames = state.Coin.TOPmarketNames;
-        var TOPmarketString = "";
+        const TOPmarketString = state.Coin.TOPmarketString;
         //✅ bithumb
         two_names.forEach(name => {
             let shortSym = name.symbol.split("_")[0];
@@ -528,7 +528,7 @@ const coinReadDataUtils = {
         var coinStringMake = "";
         Object.keys(coinStateDatas).forEach((coinOne) => {
             if (coinStateDatas[coinOne].testper > 0) {
-                TOPmarketString += coinOne + ",";
+                coinStringMake += coinOne + ",";
                 var dataFactory = [];
                 var keyread = Object.keys(coinStateDatas[coinOne])
                 var arrCount = 0;
@@ -631,11 +631,8 @@ const coinReadDataUtils = {
                 coinStateCount++;
             }
         })
-        axios.post('https://tradingviewslackshin.herokuapp.com/webhook', JSON.stringify({ 'arbitrage': TOPmarketString }), {
-            headers: {
-                "Content-Type": `application/json`,
-            },
-        });
+        TOPmarketString['data'] = coinStringMake
+
         return coinStateDatas;
     },
     //
