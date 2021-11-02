@@ -28,7 +28,7 @@ const createRequestSaga = (type, api, dataMaker) => {
             });
             //✅ coinString 내용을 복사 해서 api getMarketPriceCodes 에 붙여넣기 함.... ;;
             coinString = coinString.slice(9, -1);
-
+            //console.log(coinString);
             res = yield call(() => axios.get(`https://api.upbit.com/v1/ticker?markets=${coinString}`), action.payload);
         }
         else {
@@ -270,7 +270,16 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                         yield put({ type: SUCCESS, payload: coinReadDataUtils.mixExchangeUpdates(sortedDATA, sortedData, binanceObj.data, state) });
                     }
                 }
-                yield delay(500); // 500ms 동안 대기
+
+                yield delay(1500); // 500ms 동안 대기
+                const state = yield select();
+                //!
+                axios.post('https://tradingviewslackshin.herokuapp.com/webhook', JSON.stringify({ 'arbitrage': state.Coin.TOPmarketString }), {
+                    headers: {
+                        "Content-Type": `application/json`,
+                    },
+                });
+
             }
         } catch (e) {
             console.log(e);

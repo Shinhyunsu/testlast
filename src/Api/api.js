@@ -23,6 +23,7 @@ const geckoObj = () => {
     CoinMarketData.map((name) => {
         if (name.totalName)
             newSymbol.push(name.totalName);
+
     })
 
     return newSymbol;

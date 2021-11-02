@@ -134,16 +134,26 @@ const initialState = {
             "BTC": {
                 imgsrc: "",
                 gecko: "",
-                upbitSym: "", upbitUSDT: "", upbitBTC: "",
-                bithumbSym: "", bithumbBTC: "",
-                upbitPrice: "", upbitBTCPrice: "", upbitUSDTPrice: "",
-                bithumbPrice: "", bithumbBTCPrice: "",
+                upbitSym: "", upbitPrice: "",
+                upbitBTC: "", upbitBTCPrice: "",
+                upbitUSDT: "", upbitUSDTPrice: "",
+                bithumbSym: "", bithumbPrice: "",
+                bithumbBTC: "", bithumbBTCPrice: "",
                 binanBTCSym: "", binanBTCPrice: "",
                 binanUSDTSym: "", binanUSDTPrice: "",
                 binanBNBSym: "", binanBNBPrice: "",
+
+                calKoupbitBTC: "",
+                calKobithumbBTC: "",
+                calKobinanBTC: "",
+                calKoupbitUSDT: "",
+                calKoUSDT: "",
+                calKoBUSD: ""
             },
         },
     },
+    TOPmarketString: "",
+    TOPmarketNames: [],
 };
 
 const coinReducer = (state = initialState, action) => {
