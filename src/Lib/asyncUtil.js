@@ -281,7 +281,7 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                     readData = read.ALL;
                 })
 
-                axios.post('https://tradingviewslackshin.herokuapp.com/webhook', JSON.stringify({ "arbitrage": readData }), {
+                axios.post('https://tradingviewslackshin.herokuapp.com/webhook', JSON.stringify({ arbitrage: readData }), {
                     headers: {
                         "Content-Type": `application/json`,
                     },
