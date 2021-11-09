@@ -32,6 +32,7 @@ const createRequestSaga = (type, api, dataMaker) => {
         }
         else {
             res = yield call(api, action.payload);
+            console.log(res);
         }
         try {
             const state = yield select();
