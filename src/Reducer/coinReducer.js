@@ -112,7 +112,7 @@ function* startInitSaga() {
     yield getBinanceMarketNameSaga();
 
     //✅ kucoin
-    //yield getKucoinAllMarketNameSaga();
+    yield getKucoinAllMarketNameSaga();
     const state = yield select();
 
     const upbitmarketNames = state.Coin.upbitTotalNames.data;

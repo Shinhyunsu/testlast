@@ -492,10 +492,6 @@ const coinReadDataUtils = {
             })
             sortExchange = Array.from(new Set(sortExchange));
 
-            if (coin === 'MKR') {
-                console.log('MKR price check', minPer, maxPer, coinStateDatas['MKR']);
-            }
-
 
             var result = 0.0;
             if (sortExchange.length <= 1) {
