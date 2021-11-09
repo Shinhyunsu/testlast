@@ -4,7 +4,7 @@ const proxy = require('http-proxy-middleware');
 module.exports = function (app) {
     app.use(
         proxy('/api', {
-            target: 'https://api.kucoin.com/', // 비즈니스 서버 URL 설정
+            target: 'https://api.kucoin.com/',
             changeOrigin: true
         })
     );
