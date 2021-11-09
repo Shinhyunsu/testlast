@@ -48,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://api.kucoin.com"
+  "proxy": "https://cryptoprice2finally.herokuapp.com"
 }
