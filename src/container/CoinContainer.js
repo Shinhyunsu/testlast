@@ -19,18 +19,6 @@ function CoinContainer() {
     if (!binanceUsdt) return null;
     if (!coinTotal) return null;
 
-    /*
-        TOPcoinTotal.sort((next, prev) => {
-            var nextsym = TOPcoinTotalmain[next][0].MainSym;
-            var prevsym = TOPcoinTotalmain[prev][0].MainSym;
-    
-            if (parseFloat(coinTotal.data[nextsym].testper) > parseFloat(coinTotal.data[prevsym].testper)) {
-                return -1;
-            }
-            else
-                return 0;
-        });
-    */
     TOPcoinTotalmain.sort((next, prev) => {
         var nextsym = next[0].MainSym;
         var prevsym = prev[0].MainSym;
@@ -112,38 +100,14 @@ function CoinContainer() {
 
 
             </div>
-            {
-                TOPcoinTotalmain.map((one_coin) => {
-                    return <span>{one_coin[0].MainSym}&nbsp;&nbsp;</span>
-                })
-            }
 
             {
                 TOPcoinTotalmain.map((one_coin) => {
-                    return <CoinList key={`coinlist__${one_coin[0].MainSym}`} one_coin={one_coin} />;
+                    return <CoinList key={`cccoinlist__${one_coin[0].MainSym}`} one_coin={one_coin} />;
                 })
             }
         </div>
     )
-    //<CoinList coins={coinTotal.data} />
 }
 
-
-/*
-{
-                TOPcoinTotal.map((coinData) => {
-                    return <CoinList key={`ccoinlist__${coinData.symbol}`} one_coin={coinData} one_coin_Sym={coinData.symbol} />
-                })
-            }
-
-*/
-
 export default CoinContainer;
-/*
-
-{
-                <CoinList key={`coinlist__${TOPcoinTotalmain[0].MainSym}`} one_coin={TOPcoinTotalmain[0]} one_coin_Sym={TOPcoinTotalmain[0].MainSym} />
-            }
-
-
-*/

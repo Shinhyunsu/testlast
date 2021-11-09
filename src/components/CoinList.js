@@ -38,7 +38,17 @@ function CoinList({ one_coin }) {
             <div className="coin-row" >
                 <div className='coin'>
                     <img src={symimg} />
-                    <h1>{one_coin[0].MainSym}</h1>
+                    <h1 classame="coin-data" >{one_coin[0].MainSym}
+
+                        <div>{coinMarket[one_coin[0].MainSym].minExchange}</div>
+                        <div>
+                            ↓
+                        </div>
+                        <div>{coinMarket[one_coin[0].MainSym].maxExchange}</div>
+
+                    </h1>
+
+
                 </div>
 
                 <div>{coinMarket[one_coin[0].MainSym].testper}</div>

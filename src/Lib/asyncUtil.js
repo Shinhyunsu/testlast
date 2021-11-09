@@ -15,7 +15,6 @@ const createRequestSaga = (type, api, dataMaker) => {
     const SUCCESS = `${type}_SUCCESS`;
     const ERROR = `${type}_ERROR`;
 
-
     return function* (action = {}) {
         var res;
 
@@ -26,9 +25,9 @@ const createRequestSaga = (type, api, dataMaker) => {
             Object.keys(state.Coin.upbitTotalNames.data).map((coin) => {
                 coinString += coin + ","
             });
-            //✅ coinString 내용을 복사 해서 api getMarketPriceCodes 에 붙여넣기 함.... ;;
+
             coinString = coinString.slice(9, -1);
-            //console.log(coinString);
+
             res = yield call(() => axios.get(`https://api.upbit.com/v1/ticker?markets=${coinString}`), action.payload);
         }
         else {
@@ -41,6 +40,8 @@ const createRequestSaga = (type, api, dataMaker) => {
             }
             else if (type === "GET_BITHUMB_MARKET_KRW_NAMES" || type === "GET_BITHUMB_MARKET_BTC_NAMES") {
 
+                yield put({ type: SUCCESS, payload: dataMaker(res.data.data, state) });
+            } else if (type === 'GET_KUCOIN_MARKET_NAMES') {
                 yield put({ type: SUCCESS, payload: dataMaker(res.data.data, state) });
             }
         } catch (e) {
@@ -274,18 +275,18 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                 yield delay(2000); // 500ms 동안 대기
 
                 //✅ Server send
-
-                const TOPmarketString = state.Coin.TOPmarketString;
-                var readData = "";
-                TOPmarketString.map((read) => {
-                    readData = read.ALL;
-                })
-
-                axios.post('https://tradingviewslackshin.herokuapp.com/webhook', JSON.stringify({ arbitrage: readData }), {
-                    headers: {
-                        "Content-Type": `application/json`,
-                    },
-                });
+                /*
+                                const TOPmarketString = state.Coin.TOPmarketString;
+                                var readData = "";
+                                TOPmarketString.map((read) => {
+                                    readData = read.ALL;
+                                })
+                
+                                axios.post('https://tradingviewslackshin.herokuapp.com/webhook', JSON.stringify({ arbitrage: readData }), {
+                                    headers: {
+                                        "Content-Type": `application/json`,
+                                    },
+                                });*/
 
             }
         } catch (e) {

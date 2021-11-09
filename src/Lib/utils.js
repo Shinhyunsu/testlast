@@ -13,6 +13,25 @@ const pricereturnFloat = (price) => {
 }
 
 const coinListDataUtils = {
+    kucoinAllNames: (names) => {
+        names.forEach(coinlist => {
+            var coinName = coinlist.symbol.split('-')[0];
+            var type = coinlist.symbol.split('-')[1];
+
+            var newCoin = false;
+            if (type !== 'ETH') {
+                CoinMarketData.find((name) => {
+                    if (name.symbol === coinName) {
+                        newCoin = true;
+                    }
+                });
+                /*if (newCoin === false) {
+                    console.log(coinName, type);
+                }*/
+            }
+        });
+    },
+
     upbitAllNames: (names) => {
         const data = {};
         names.forEach(name => {
@@ -120,10 +139,13 @@ const coinReadDataUtils = {
 
             }
             else if (moneySym === "BTC") {
+
+                var origin = parseFloat(coinStateDatas['BTC'].bithumbPrice);
+                cal = (origin * parseFloat(nowPrice)).toFixed(2);
                 coinStateDatas[shortSym] = {
                     ...coinStateDatas[shortSym],
                     bithumbBTCPrice: nowPrice,
-                    calKobithumbBTC: (parseFloat(coinStateDatas['BTC'].bithumbPrice) * parseFloat(nowPrice)).toFixed(1)
+                    calKobithumbBTC: cal
                 }
             }
         });
@@ -408,6 +430,7 @@ const coinReadDataUtils = {
             var sortExchange = [];
             var exchange;
             var lastminExchange, lastmaxExchange;
+            var minmaxExchange, maxExchange, minExchange;
 
             keyread.forEach((name) => {
                 var price;
@@ -415,59 +438,64 @@ const coinReadDataUtils = {
                     price = parseFloat(coinStateDatas[coin].upbitPrice);
                     sortExchange.push('upbit');
                     exchange = 'upbitWithdraw';
+                    minmaxExchange = 'upbitKRW';
                 }
                 else if (name === 'bithumbPrice') {
                     price = parseFloat(coinStateDatas[coin].bithumbPrice);
                     sortExchange.push('bithumb');
                     exchange = 'bithumbWithdraw';
+                    minmaxExchange = 'bithumbKRW';
                 }
                 else if (name === 'calKoupbitBTC') {
                     price = parseFloat(coinStateDatas[coin].calKoupbitBTC);
                     sortExchange.push('upbit');
                     exchange = 'upbitWithdraw';
+                    minmaxExchange = 'upbitBTC';
                 }
                 else if (name === 'calKobithumbBTC') {
                     price = parseFloat(coinStateDatas[coin].calKobithumbBTC);
                     //ok
                     sortExchange.push('bithumb');
                     exchange = 'bithumbWithdraw';
+                    minmaxExchange = 'bithumbBTC';
                 } else if (name === 'calKobinanBTC') {
                     price = parseFloat(coinStateDatas[coin].calKobinanBTC);
                     sortExchange.push('binance');
                     exchange = 'binanceWithdraw';
+                    minmaxExchange = 'binanceBTC';
                 } else if (name === 'calKoupbitUSDT') {
                     price = parseFloat(coinStateDatas[coin].calKoupbitUSDT);
                     sortExchange.push('upbit');
+                    minmaxExchange = 'upbitUSDT';
                 } else if (name === 'calKoUSDT') {
                     price = parseFloat(coinStateDatas[coin].calKoUSDT);
                     sortExchange.push('binance');
                     exchange = 'binanceWithdraw';
+                    minmaxExchange = 'binanceUSDT';
                 } else if (name === 'calKoBUSD') {
                     price = parseFloat(coinStateDatas[coin].calKoBUSD);
                     sortExchange.push('binance');
                     exchange = 'binanceWithdraw';
-                }
-                else if (name === 'calKoupbitBTC') {
-                    price = parseFloat(coinStateDatas[coin].calKoupbitBTC);
-                    sortExchange.push('upbit');
-                    exchange = 'upbitWithdraw';
+                    minmaxExchange = 'binanceBUSD';
                 }
 
                 if (price > maxPer) {
                     maxPer = price;
+                    maxExchange = minmaxExchange
                     lastmaxExchange = exchange;
                 }
                 if (price < minPer) {
                     minPer = price;
+                    minExchange = minmaxExchange
                     lastminExchange = exchange;
                 }
             })
             sortExchange = Array.from(new Set(sortExchange));
-            /*
+
             if (coin === 'MKR') {
-                console.log('MKR price check', minPer, maxPer, lastminExchange, lastmaxExchange);
+                console.log('MKR price check', minPer, maxPer, coinStateDatas['MKR']);
             }
-            */
+
 
             var result = 0.0;
             if (sortExchange.length <= 1) {
@@ -514,11 +542,12 @@ const coinReadDataUtils = {
                     result = 0;
                 }
             }
-
             coinStateDatas[coin] = {
                 ...coinStateDatas[coin],
                 testper: result,
                 symbol: coin,
+                minExchange: minExchange,
+                maxExchange: maxExchange,
             }
         });
 
@@ -570,7 +599,7 @@ const coinReadDataUtils = {
                             'sym': coinStateDatas[coinOne].bithumbBTC,
                             'exchange': 'bithumb',
                             'OriginPrice': coinStateDatas[coinOne].bithumbBTCPrice,
-                            'KrwPrice': coinStateDatas[coinOne].calKobinanBTC
+                            'KrwPrice': coinStateDatas[coinOne].calKobithumbBTC
                         }
                         arrCount++;
                     }
@@ -626,7 +655,6 @@ const coinReadDataUtils = {
                     }
                 })
 
-
                 TOPmarketNames[coinStateCount] = dataFactory;//coinStateDatas[coinOne]
                 coinStateCount++;
             }
@@ -637,12 +665,11 @@ const coinReadDataUtils = {
     },
     //
     upbitInitNames: (names, state) => {
+
         var stringdd = "";
         CoinMarketData.find((name) => {
             stringdd += name.symbol + " "
         });
-        //console.log(stringdd);
-
         const data = {};
         Object.keys(names).forEach(name => {
             let shortSym = name.split("-")[1];

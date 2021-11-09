@@ -25,7 +25,8 @@
     "totalName": "ethereum",
     "upbitWithdraw": "0.018",
     "bithumbWithdraw": "0.01",
-    "binanceWithdraw": "0.005"
+    "binanceWithdraw": "0.005",
+    "kucoinWithdraw": "0.006"
   },
   {
     "symbol": "LTC",
@@ -33,7 +34,8 @@
     "totalName": "litecoin",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.01",
-    "binanceWithdraw": "0.001"
+    "binanceWithdraw": "0.001",
+    "kucoinWithdraw": "0.001"
   },
   {
     "symbol": "XRP",
@@ -41,7 +43,8 @@
     "totalName": "ripple",
     "upbitWithdraw": "1",
     "bithumbWithdraw": "1",
-    "binanceWithdraw": "0.25"
+    "binanceWithdraw": "0.25",
+    "kucoinWithdraw": "0.25"
   },
   {
     "symbol": "ETC",
@@ -49,7 +52,8 @@
     "totalName": "ethereum-classic",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.01",
-    "binanceWithdraw": "0.01"
+    "binanceWithdraw": "0.01",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "OMG",
@@ -57,21 +61,24 @@
     "totalName": "omisego",
     "upbitWithdraw": "2.5",
     "bithumbWithdraw": "3.7",
-    "binanceWithdraw": "2.64"
+    "binanceWithdraw": "2.64",
+    "kucoinWithdraw": "2"
   },
   {
     "symbol": "CVC",
     "imgsrc": "https://assets.coingecko.com/coins/images/788/small/civic.png?1547034556",
     "totalName": "civic",
     "upbitWithdraw": "30",
-    "binanceWithdraw": "78"
+    "binanceWithdraw": "78",
+    "kucoinWithdraw": "75"
   },
   {
     "symbol": "DGB",
     "imgsrc": "https://assets.coingecko.com/coins/images/63/small/digibyte.png?1547033717",
     "totalName": "digibyte",
     "upbitWithdraw": "0.2",
-    "binanceWithdraw": "0.2"
+    "binanceWithdraw": "0.2",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "SC",
@@ -86,14 +93,16 @@
     "totalName": "status",
     "upbitWithdraw": "130",
     "bithumbWithdraw": "73",
-    "binanceWithdraw": "405"
+    "binanceWithdraw": "405",
+    "kucoinWithdraw": "400"
   },
   {
     "symbol": "WAVES",
     "imgsrc": "https://assets.coingecko.com/coins/images/425/small/waves.png?1548386117",
     "totalName": "waves",
     "upbitWithdraw": "0.002",
-    "binanceWithdraw": "0.002"
+    "binanceWithdraw": "0.002",
+    "kucoinWithdraw": "0.02"
   },
   {
     "symbol": "NMR",
@@ -101,7 +110,8 @@
     "totalName": "numeraire",
     "upbitWithdraw": "0.4",
     "bithumbWithdraw": "0.4",
-    "binanceWithdraw": "0.83"
+    "binanceWithdraw": "0.83",
+    "kucoinWithdraw": "0.6"
   },
   {
     "symbol": "XEM",
@@ -109,7 +119,8 @@
     "totalName": "nem",
     "upbitWithdraw": "4",
     "bithumbWithdraw": "4",
-    "binanceWithdraw": "4"
+    "binanceWithdraw": "4",
+    "kucoinWithdraw": "4"
   },
   {
     "symbol": "QTUM",
@@ -117,7 +128,8 @@
     "totalName": "qtum",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.01",
-    "binanceWithdraw": "0.01"
+    "binanceWithdraw": "0.01",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "BAT",
@@ -125,14 +137,16 @@
     "totalName": "basic-attention-token",
     "upbitWithdraw": "20",
     "bithumbWithdraw": "9.5",
-    "binanceWithdraw": "49"
+    "binanceWithdraw": "49",
+    "kucoinWithdraw": "45"
   },
   {
     "symbol": "LSK",
     "imgsrc": "https://assets.coingecko.com/coins/images/385/small/Lisk_Symbol_-_Blue.png?1573444104",
     "totalName": "lisk",
     "upbitWithdraw": "0.1",
-    "binanceWithdraw": "0.1"
+    "binanceWithdraw": "0.1",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "STEEM",
@@ -140,7 +154,8 @@
     "totalName": "steem",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.01",
-    "binanceWithdraw": "0.01"
+    "binanceWithdraw": "0.01",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "DOGE",
@@ -148,7 +163,8 @@
     "totalName": "dogecoin",
     "upbitWithdraw": "20",
     "bithumbWithdraw": "20",
-    "binanceWithdraw": "5"
+    "binanceWithdraw": "5",
+    "kucoinWithdraw": "20"
   },
   {
     "symbol": "BNT",
@@ -156,7 +172,8 @@
     "totalName": "bancor",
     "upbitWithdraw": "3",
     "bithumbWithdraw": "4.6",
-    "binanceWithdraw": "8.27"
+    "binanceWithdraw": "8.27",
+    "kucoinWithdraw": "5"
   },
   {
     "symbol": "XLM",
@@ -164,7 +181,8 @@
     "totalName": "stellar",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.02",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "0.02"
   },
   {
     "symbol": "ARDR",
@@ -185,7 +203,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/949/small/storj.png?1547034811",
     "totalName": "storj",
     "upbitWithdraw": "5",
-    "binanceWithdraw": "29"
+    "binanceWithdraw": "29",
+    "kucoinWithdraw": "27"
   },
   {
     "symbol": "GRS",
@@ -200,7 +219,8 @@
     "totalName": "augur",
     "upbitWithdraw": "0.045",
     "bithumbWithdraw": "0.3",
-    "binanceWithdraw": "1.53"
+    "binanceWithdraw": "1.53",
+    "kucoinWithdraw": "1.5"
   },
   {
     "symbol": "RLC",
@@ -208,14 +228,16 @@
     "totalName": "iexec-rlc",
     "upbitWithdraw": "6.5",
     "bithumbWithdraw": "3",
-    "binanceWithdraw": "8.62"
+    "binanceWithdraw": "8.62",
+    "kucoinWithdraw": "7"
   },
   {
     "symbol": "NEO",
     "imgsrc": "https://assets.coingecko.com/coins/images/480/small/NEO_512_512.png?1594357361",
     "totalName": "neo",
     "upbitWithdraw": "0.1",
-    "binanceWithdraw": "0"
+    "binanceWithdraw": "0",
+    "kucoinWithdraw": "0"
   },
   {
     "symbol": "MTL",
@@ -223,7 +245,8 @@
     "totalName": "metal",
     "upbitWithdraw": "3",
     "bithumbWithdraw": "2.7",
-    "binanceWithdraw": "11"
+    "binanceWithdraw": "11",
+    "kucoinWithdraw": "10"
   },
   {
     "symbol": "ADA",
@@ -231,7 +254,8 @@
     "totalName": "cardano",
     "upbitWithdraw": "0.5",
     "bithumbWithdraw": "0.5",
-    "binanceWithdraw": "1"
+    "binanceWithdraw": "1",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "MANA",
@@ -239,7 +263,8 @@
     "totalName": "decentraland",
     "upbitWithdraw": "35",
     "bithumbWithdraw": "14",
-    "binanceWithdraw": "34"
+    "binanceWithdraw": "34",
+    "kucoinWithdraw": "20"
   },
   {
     "symbol": "SBD",
@@ -254,7 +279,8 @@
     "totalName": "power-ledger",
     "upbitWithdraw": "28",
     "bithumbWithdraw": "73",
-    "binanceWithdraw": "100"
+    "binanceWithdraw": "100",
+    "kucoinWithdraw": "75"
   },
   {
     "symbol": "BTG",
@@ -277,7 +303,8 @@
     "totalName": "0x",
     "upbitWithdraw": "10",
     "bithumbWithdraw": "19",
-    "binanceWithdraw": "35"
+    "binanceWithdraw": "35",
+    "kucoinWithdraw": "32"
   },
   {
     "symbol": "TRX",
@@ -285,7 +312,8 @@
     "totalName": "tron",
     "upbitWithdraw": "1",
     "bithumbWithdraw": "0",
-    "binanceWithdraw": "1"
+    "binanceWithdraw": "1",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "TUSD",
@@ -301,7 +329,8 @@
     "totalName": "loopring",
     "upbitWithdraw": "30",
     "bithumbWithdraw": "40",
-    "binanceWithdraw": "66"
+    "binanceWithdraw": "66",
+    "kucoinWithdraw": "80"
   },
   {
     "symbol": "ICX",
@@ -317,7 +346,8 @@
     "totalName": "eos",
     "upbitWithdraw": "0",
     "bithumbWithdraw": "0.1",
-    "binanceWithdraw": "0.1"
+    "binanceWithdraw": "0.1",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "POLY",
@@ -332,7 +362,8 @@
     "totalName": "ontology",
     "upbitWithdraw": "0.5",
     "bithumbWithdraw": "1",
-    "binanceWithdraw": "1"
+    "binanceWithdraw": "1",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "ZIL",
@@ -340,7 +371,8 @@
     "totalName": "zilliqa",
     "upbitWithdraw": "0.5",
     "bithumbWithdraw": "0.1",
-    "binanceWithdraw": "0.2"
+    "binanceWithdraw": "0.2",
+    "kucoinWithdraw": "2"
   },
   {
     "symbol": "LOOM",
@@ -348,7 +380,8 @@
     "totalName": "loom-network-new",
     "upbitWithdraw": "90",
     "bithumbWithdraw": "70",
-    "binanceWithdraw": "343"
+    "binanceWithdraw": "343",
+    "kucoinWithdraw": "320"
   },
   {
     "symbol": "BCH",
@@ -356,7 +389,8 @@
     "totalName": "bitcoin-cash",
     "upbitWithdraw": "0.001",
     "bithumbWithdraw": "0.001",
-    "binanceWithdraw": "0.059"
+    "binanceWithdraw": "0.059",
+    "kucoinWithdraw": "0.001"
   },
   {
     "symbol": "MFT",
@@ -371,7 +405,8 @@
     "totalName": "iostoken",
     "upbitWithdraw": "0",
     "bithumbWithdraw": "1",
-    "binanceWithdraw": "1"
+    "binanceWithdraw": "1",
+    "kucoinWithdraw": "10"
   },
   {
     "symbol": "RFR",
@@ -406,7 +441,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/3286/small/GoChain.png?1557381951",
     "totalName": "tron-go",
     "upbitWithdraw": "0.01",
-    "binanceWithdraw": "1"
+    "binanceWithdraw": "1",
+    "kucoinWithdraw": "0"
   },
   {
     "symbol": "UPP",
@@ -421,7 +457,8 @@
     "totalName": "enjincoin",
     "upbitWithdraw": "13",
     "bithumbWithdraw": "5.4",
-    "binanceWithdraw": "14"
+    "binanceWithdraw": "14",
+    "kucoinWithdraw": "18"
   },
   {
     "symbol": "ONG",
@@ -429,14 +466,16 @@
     "totalName": "ong",
     "upbitWithdraw": "1",
     "bithumbWithdraw": "5",
-    "binanceWithdraw": "2.64"
+    "binanceWithdraw": "2.64",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "GAS",
     "imgsrc": "https://assets.coingecko.com/coins/images/858/small/GAS_512_512.png?1594358948",
     "totalName": "gas",
     "upbitWithdraw": "0.5",
-    "binanceWithdraw": "0.005"
+    "binanceWithdraw": "0.005",
+    "kucoinWithdraw": "0.005"
   },
   {
     "symbol": "ELF",
@@ -444,7 +483,8 @@
     "totalName": "aelf",
     "upbitWithdraw": "40",
     "bithumbWithdraw": "10",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "50"
   },
   {
     "symbol": "KNC",
@@ -452,7 +492,8 @@
     "totalName": "kyber-network-crystal",
     "upbitWithdraw": "7",
     "bithumbWithdraw": "3.7",
-    "binanceWithdraw": "4"
+    "binanceWithdraw": "4",
+    "kucoinWithdraw": "15"
   },
   {
     "symbol": "MOC",
@@ -467,21 +508,24 @@
     "totalName": "bitcoin-cash-sv",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.001",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "THETA",
     "imgsrc": "https://static.upbit.com/logos/THETA.png",
     "totalName": "theta-token",
     "upbitWithdraw": "0.5",
-    "binanceWithdraw": "0.12"
+    "binanceWithdraw": "0.12",
+    "kucoinWithdraw": "0.2"
   },
   {
     "symbol": "DENT",
     "imgsrc": "https://assets.coingecko.com/coins/images/1152/small/gLCEA2G.png?1604543239",
     "totalName": "dent",
     "upbitWithdraw": "1500",
-    "binanceWithdraw": "6351"
+    "binanceWithdraw": "6351",
+    "kucoinWithdraw": "6000"
   },
   {
     "symbol": "QKC",
@@ -489,7 +533,8 @@
     "totalName": "quark-chain",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.01",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "500"
   },
   {
     "symbol": "BTT",
@@ -497,21 +542,24 @@
     "totalName": "bittorrent-2",
     "upbitWithdraw": "50",
     "bithumbWithdraw": "100",
-    "binanceWithdraw": "26"
+    "binanceWithdraw": "26",
+    "kucoinWithdraw": "100"
   },
   {
     "symbol": "SOLVE",
     "imgsrc": "https://static.upbit.com/logos/SOLVE.png",
     "totalName": "solve-care",
     "upbitWithdraw": "30",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "222"
   },
   {
     "symbol": "NKN",
     "imgsrc": "https://assets.coingecko.com/coins/images/3375/small/nkn.png?1548329212",
     "totalName": "nkn",
     "upbitWithdraw": "50",
-    "binanceWithdraw": "86"
+    "binanceWithdraw": "86",
+    "kucoinWithdraw": "80"
   },
   {
     "symbol": "META",
@@ -527,7 +575,8 @@
     "totalName": "ankr",
     "upbitWithdraw": "150",
     "bithumbWithdraw": "85",
-    "binanceWithdraw": "383"
+    "binanceWithdraw": "383",
+    "kucoinWithdraw": "350"
   },
   {
     "symbol": "CRO",
@@ -535,7 +584,8 @@
     "totalName": "crypto-com-chain",
     "upbitWithdraw": "10",
     "bithumbWithdraw": "10",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "0.2"
   },
   {
     "symbol": "TFUEL",
@@ -551,7 +601,8 @@
     "totalName": "orbs",
     "upbitWithdraw": "70",
     "bithumbWithdraw": "77",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "240"
   },
   {
     "symbol": "AERGO",
@@ -559,7 +610,8 @@
     "totalName": "AERGO",
     "upbitWithdraw": "50",
     "bithumbWithdraw": "40",
-    "binanceWithdraw": "117"
+    "binanceWithdraw": "117",
+    "kucoinWithdraw": "115"
   },
   {
     "symbol": "ATOM",
@@ -567,14 +619,16 @@
     "totalName": "cosmos",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.1",
-    "binanceWithdraw": "0.01"
+    "binanceWithdraw": "0.01",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "TT",
     "imgsrc": "https://static.upbit.com/logos/TT.png",
     "totalName": "thunder-token",
     "upbitWithdraw": "1",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "CRE",
@@ -605,7 +659,8 @@
     "totalName": "terra-luna",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.02",
-    "binanceWithdraw": "0.02"
+    "binanceWithdraw": "0.02",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "DAI",
@@ -613,7 +668,8 @@
     "totalName": "dai",
     "upbitWithdraw": "15",
     "bithumbWithdraw": "15",
-    "binanceWithdraw": "15"
+    "binanceWithdraw": "15",
+    "kucoinWithdraw": "30"
   },
   {
     "symbol": "MKR",
@@ -621,7 +677,8 @@
     "totalName": "maker",
     "upbitWithdraw": "0.005",
     "bithumbWithdraw": "0.004",
-    "binanceWithdraw": "0.014"
+    "binanceWithdraw": "0.014",
+    "kucoinWithdraw": "0.015"
   },
   {
     "symbol": "BORA",
@@ -637,14 +694,16 @@
     "totalName": "wax",
     "upbitWithdraw": "0",
     "bithumbWithdraw": "5",
-    "binanceWithdraw": "1.5"
+    "binanceWithdraw": "1.5",
+    "kucoinWithdraw": "30"
   },
   {
     "symbol": "HBAR",
     "imgsrc": "https://static.upbit.com/logos/LUNA.png",
     "totalName": "hedera-hashgraph",
     "upbitWithdraw": "0.01",
-    "binanceWithdraw": "1"
+    "binanceWithdraw": "1",
+    "kucoinWithdraw": "3"
   },
   {
     "symbol": "MED",
@@ -658,7 +717,8 @@
     "imgsrc": "https://static.upbit.com/logos/MLK.png",
     "totalName": "milk-alliance",
     "upbitWithdraw": "0.05",
-    "bithumbWithdraw": "3"
+    "bithumbWithdraw": "3",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "VET",
@@ -666,7 +726,8 @@
     "totalName": "vechain",
     "upbitWithdraw": "100",
     "bithumbWithdraw": "100",
-    "binanceWithdraw": "20"
+    "binanceWithdraw": "20",
+    "kucoinWithdraw": "30"
   },
   {
     "symbol": "CHZ",
@@ -674,7 +735,8 @@
     "totalName": "chiliz",
     "upbitWithdraw": "50",
     "bithumbWithdraw": "27",
-    "binanceWithdraw": "105"
+    "binanceWithdraw": "105",
+    "kucoinWithdraw": "130"
   },
   {
     "symbol": "FX",
@@ -682,14 +744,16 @@
     "totalName": "fx-coin",
     "upbitWithdraw": "30",
     "bithumbWithdraw": "32",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "30"
   },
   {
     "symbol": "OGN",
     "imgsrc": "https://static.upbit.com/logos/OGN.png",
     "totalName": "origin-protocol",
     "upbitWithdraw": "10",
-    "binanceWithdraw": "43"
+    "binanceWithdraw": "43",
+    "kucoinWithdraw": "35"
   },
   {
     "symbol": "XTZ",
@@ -697,7 +761,8 @@
     "totalName": "tezos",
     "upbitWithdraw": "0.1",
     "bithumbWithdraw": "0.3",
-    "binanceWithdraw": "0.1"
+    "binanceWithdraw": "0.1",
+    "kucoinWithdraw": "0.5"
   },
   {
     "symbol": "HIVE",
@@ -734,7 +799,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/1369/small/StormX.png?1603113002",
     "totalName": "storm",
     "upbitWithdraw": "310",
-    "binanceWithdraw": "1207"
+    "binanceWithdraw": "1207",
+    "kucoinWithdraw": "1200"
   },
   {
     "symbol": "AHT",
@@ -757,7 +823,8 @@
     "totalName": "chainlink",
     "upbitWithdraw": "0.6",
     "bithumbWithdraw": "4",
-    "binanceWithdraw": "0.512"
+    "binanceWithdraw": "0.512",
+    "kucoinWithdraw": "1.2"
   },
   {
     "symbol": "KAVA",
@@ -772,7 +839,8 @@
     "totalName": "just",
     "upbitWithdraw": "30",
     "bithumbWithdraw": "25",
-    "binanceWithdraw": "50"
+    "binanceWithdraw": "50",
+    "kucoinWithdraw": "30"
   },
   {
     "symbol": "CHR",
@@ -803,7 +871,8 @@
     "totalName": "cartesi",
     "upbitWithdraw": "45",
     "bithumbWithdraw": "27",
-    "binanceWithdraw": "47"
+    "binanceWithdraw": "47",
+    "kucoinWithdraw": "44"
   },
   {
     "symbol": "DOT",
@@ -811,7 +880,8 @@
     "totalName": "polkadot",
     "upbitWithdraw": "0.25",
     "bithumbWithdraw": "0.15",
-    "binanceWithdraw": "0.1"
+    "binanceWithdraw": "0.1",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "COMP",
@@ -819,7 +889,8 @@
     "totalName": "compound-coin",
     "upbitWithdraw": "0.04",
     "bithumbWithdraw": "0.03",
-    "binanceWithdraw": "0.11"
+    "binanceWithdraw": "0.11",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "SXP",
@@ -827,7 +898,8 @@
     "totalName": "swipe",
     "upbitWithdraw": "5",
     "bithumbWithdraw": "2.7",
-    "binanceWithdraw": "16"
+    "binanceWithdraw": "16",
+    "kucoinWithdraw": "16"
   },
   {
     "symbol": "HUNT",
@@ -848,7 +920,8 @@
     "imgsrc": "https://static.upbit.com/logos/CRV.png",
     "totalName": "curve-dao-token",
     "upbitWithdraw": "5",
-    "binanceWithdraw": "7.18"
+    "binanceWithdraw": "7.18",
+    "kucoinWithdraw": "11"
   },
   {
     "symbol": "ALGO",
@@ -856,7 +929,8 @@
     "totalName": "algorand",
     "upbitWithdraw": "0.1",
     "bithumbWithdraw": "0.1",
-    "binanceWithdraw": "0.01"
+    "binanceWithdraw": "0.01",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "RSR",
@@ -872,7 +946,8 @@
     "totalName": "orchid-protocol",
     "upbitWithdraw": "25",
     "bithumbWithdraw": "18",
-    "binanceWithdraw": "82"
+    "binanceWithdraw": "82",
+    "kucoinWithdraw": "100"
   },
   {
     "symbol": "PLA",
@@ -894,7 +969,8 @@
     "totalName": "the-sandbox",
     "upbitWithdraw": "30",
     "bithumbWithdraw": "22",
-    "binanceWithdraw": "35"
+    "binanceWithdraw": "35",
+    "kucoinWithdraw": "20"
   },
   {
     "symbol": "SUN",
@@ -902,7 +978,8 @@
     "totalName": "sun",
     "upbitWithdraw": "1.8",
     "bithumbWithdraw": "20",
-    "binanceWithdraw": "2.94"
+    "binanceWithdraw": "2.94",
+    "kucoinWithdraw": "100"
   },
   {
     "symbol": "SRM",
@@ -949,7 +1026,8 @@
     "totalName": "axie-infinity",
     "upbitWithdraw": "1",
     "bithumbWithdraw": "0.3",
-    "binanceWithdraw": "0.27"
+    "binanceWithdraw": "0.27",
+    "kucoinWithdraw": "0.35"
   },
   {
     "symbol": "STRAX",
@@ -987,7 +1065,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/12817/small/filecoin.png?1602753933",
     "totalName": "filecoin",
     "upbitWithdraw": "0.15",
-    "binanceWithdraw": "0.001"
+    "binanceWithdraw": "0.001",
+    "kucoinWithdraw": "0.001"
   },
   {
     "symbol": "UNI",
@@ -995,7 +1074,8 @@
     "totalName": "unicorn-token",
     "upbitWithdraw": "0.6",
     "bithumbWithdraw": "0.4",
-    "binanceWithdraw": "1.37"
+    "binanceWithdraw": "1.37",
+    "kucoinWithdraw": "1.5"
   },
   {
     "symbol": "BASIC",
@@ -1003,21 +1083,24 @@
     "totalName": "basic",
     "upbitWithdraw": "1000",
     "bithumbWithdraw": "1500",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "80"
   },
   {
     "symbol": "INJ",
     "imgsrc": "https://static.upbit.com/logos/INJ.png",
     "totalName": "injective-protocol",
     "upbitWithdraw": "1.2",
-    "binanceWithdraw": "1.13"
+    "binanceWithdraw": "1.13",
+    "kucoinWithdraw": "2"
   },
   {
     "symbol": "PROM",
     "imgsrc": "https://assets.coingecko.com/coins/images/8825/small/promlogofinal.png?1633713982",
     "totalName": "prometeus",
     "upbitWithdraw": "1.5",
-    "binanceWithdraw": "1.93"
+    "binanceWithdraw": "1.93",
+    "kucoinWithdraw": "1.5"
   },
   {
     "symbol": "VAL",
@@ -1082,21 +1165,24 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/11090/small/icon-celo-CELO-color-500.png?1592293590",
     "totalName": "celo",
     "upbitWithdraw": "2",
-    "binanceWithdraw": "0.001"
+    "binanceWithdraw": "0.001",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "STX",
     "imgsrc": "https://static.upbit.com/logos/STX.png",
     "totalName": "stox",
     "upbitWithdraw": "10",
-    "binanceWithdraw": "1.5"
+    "binanceWithdraw": "1.5",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "NEAR",
     "imgsrc": "https://assets.coingecko.com/coins/images/10365/small/near_icon.png?1601359077",
     "totalName": "near",
     "upbitWithdraw": "2",
-    "binanceWithdraw": "0.2"
+    "binanceWithdraw": "0.2",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "AUCTION",
@@ -1117,14 +1203,16 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/13446/small/5f6294c0c7a8cda55cb1c936_Flow_Wordmark.png?1631696776",
     "totalName": "flow",
     "upbitWithdraw": "0.3",
-    "binanceWithdraw": "0.01"
+    "binanceWithdraw": "0.01",
+    "kucoinWithdraw": "0.05"
   },
   {
     "symbol": "STRK",
     "imgsrc": "https://assets.coingecko.com/coins/images/14607/small/Jw-36llq_400x400.jpg?1617243607",
     "totalName": "strike",
     "upbitWithdraw": "0.011",
-    "binanceWithdraw": "NO"
+    "binanceWithdraw": "NO",
+    "kucoinWithdraw": "0.5"
   },
   {
     "symbol": "PUNDIX",
@@ -1132,7 +1220,8 @@
     "totalName": "pundi-x-2",
     "upbitWithdraw": "3",
     "bithumbWithdraw": "2",
-    "binanceWithdraw": "23"
+    "binanceWithdraw": "23",
+    "kucoinWithdraw": "20"
   },
   {
     "symbol": "GRT",
@@ -1140,7 +1229,8 @@
     "totalName": "",
     "upbitWithdraw": "4",
     "bithumbWithdraw": "7.3",
-    "binanceWithdraw": "36"
+    "binanceWithdraw": "36",
+    "kucoinWithdraw": "45"
   },
   {
     "symbol": "SNX",
@@ -1148,7 +1238,8 @@
     "totalName": "the-graph",
     "upbitWithdraw": "1.2",
     "bithumbWithdraw": "0.7",
-    "binanceWithdraw": "6.18"
+    "binanceWithdraw": "6.18",
+    "kucoinWithdraw": "8"
   },
   {
     "symbol": "USDP",
@@ -1171,7 +1262,8 @@
     "totalName": "solana",
     "upbitWithdraw": "0.01",
     "bithumbWithdraw": "0.03",
-    "binanceWithdraw": "0.01"
+    "binanceWithdraw": "0.01",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "MATIC",
@@ -1179,7 +1271,7 @@
     "totalName": "matic-network",
     "upbitWithdraw": "15",
     "bithumbWithdraw": "8",
-    "binanceWithdraw": "9.72"
+    "binanceWithdraw": "18"
   },
   {
     "symbol": "NU",
@@ -1195,7 +1287,8 @@
     "totalName": "aave",
     "upbitWithdraw": "0.2",
     "bithumbWithdraw": "0.04",
-    "binanceWithdraw": "0.2"
+    "binanceWithdraw": "0.2",
+    "kucoinWithdraw": "0.25"
   },
   {
     "symbol": "1INCH",
@@ -1203,7 +1296,8 @@
     "totalName": "1INCH",
     "upbitWithdraw": "25",
     "bithumbWithdraw": "25",
-    "binanceWithdraw": "6.9"
+    "binanceWithdraw": "6.9",
+    "kucoinWithdraw": "8"
   },
   {
     "symbol": "MASK",
@@ -1211,7 +1305,8 @@
     "totalName": "MASK",
     "upbitWithdraw": "2",
     "bithumbWithdraw": "25",
-    "binanceWithdraw": "2.97"
+    "binanceWithdraw": "2.97",
+    "kucoinWithdraw": "4"
   },
   {
     "symbol": "CTXC",
@@ -1225,7 +1320,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/1093/small/ggx6nnW.png?1604815811",
     "totalName": "WTC",
     "bithumbWithdraw": "0.7",
-    "binanceWithdraw": "72"
+    "binanceWithdraw": "72",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "COS",
@@ -1239,28 +1335,32 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/8506/small/9u0a23XY_400x400.jpg?1559027357",
     "totalName": "ARPA",
     "bithumbWithdraw": "120",
-    "binanceWithdraw": "283"
+    "binanceWithdraw": "283",
+    "kucoinWithdraw": "200"
   },
   {
     "symbol": "YFI",
     "imgsrc": "https://assets.coingecko.com/coins/images/11849/small/yfi-192x192.png?1598325330",
     "totalName": "YFI",
     "bithumbWithdraw": "0.003",
-    "binanceWithdraw": "0.001"
+    "binanceWithdraw": "0.001",
+    "kucoinWithdraw": "0.001"
   },
   {
     "symbol": "UMA",
     "imgsrc": "https://assets.coingecko.com/coins/images/10951/small/UMA.png?1586307916",
     "totalName": "UMA",
     "bithumbWithdraw": "0.6",
-    "binanceWithdraw": "3.04"
+    "binanceWithdraw": "3.04",
+    "kucoinWithdraw": "3"
   },
   {
     "symbol": "BAL",
     "imgsrc": "https://assets.coingecko.com/coins/images/11683/small/Balancer.png?1592792958",
     "totalName": "BAL",
     "bithumbWithdraw": "0.9",
-    "binanceWithdraw": "1.32"
+    "binanceWithdraw": "1.32",
+    "kucoinWithdraw": "0.9"
   },
   {
     "symbol": "BEL",
@@ -1273,21 +1373,24 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/13295/small/mirror_logo_transparent.png?1611554658",
     "totalName": "MIR",
     "bithumbWithdraw": "1.6",
-    "binanceWithdraw": "34"
+    "binanceWithdraw": "34",
+    "kucoinWithdraw": "16"
   },
   {
     "symbol": "LPT",
     "imgsrc": "https://assets.coingecko.com/coins/images/7137/small/logo-circle-green.png?1619593365",
     "totalName": "LPT",
     "bithumbWithdraw": "0.4",
-    "binanceWithdraw": "1.46"
+    "binanceWithdraw": "1.46",
+    "kucoinWithdraw": "1.66"
   },
   {
     "symbol": "SUSHI",
     "imgsrc": "https://assets.coingecko.com/coins/images/12271/small/512x512_Logo_no_chop.png?1606986688",
     "totalName": "SUSHI",
     "bithumbWithdraw": "0.8",
-    "binanceWithdraw": "3.1"
+    "binanceWithdraw": "3.1",
+    "kucoinWithdraw": "3"
   },
   {
     "symbol": "CELR",
@@ -1301,28 +1404,32 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/3687/small/ocean-protocol-logo.jpg?1547038686",
     "totalName": "OCEAN",
     "bithumbWithdraw": "11",
-    "binanceWithdraw": "41"
+    "binanceWithdraw": "41",
+    "kucoinWithdraw": "40"
   },
   {
     "symbol": "ALICE",
     "imgsrc": "https://assets.coingecko.com/coins/images/14375/small/alice_logo.jpg?1615782968",
     "totalName": "ALICE",
     "bithumbWithdraw": "1",
-    "binanceWithdraw": "3.04"
+    "binanceWithdraw": "3.04",
+    "kucoinWithdraw": "2"
   },
   {
     "symbol": "CAKE",
     "imgsrc": "https://assets.coingecko.com/coins/images/12632/small/pancakeswap-cake-logo_%281%29.png?1629359065",
     "totalName": "CAKE",
     "bithumbWithdraw": "0.8",
-    "binanceWithdraw": "0.014"
+    "binanceWithdraw": "0.014",
+    "kucoinWithdraw": "0.05"
   },
   {
     "symbol": "XVS",
     "imgsrc": "https://assets.coingecko.com/coins/images/12677/small/venus.png?1618319812",
     "totalName": "XVS",
     "bithumbWithdraw": "0.6",
-    "binanceWithdraw": "0.27"
+    "binanceWithdraw": "0.27",
+    "kucoinWithdraw": "0.1"
   },
   {
     "symbol": "BAKE",
@@ -1336,7 +1443,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/1023/small/Aion_Currency_Symbol_Transparent_PNG.png?1575876687",
     "totalName": "AION",
     "bithumbWithdraw": "0.5",
-    "binanceWithdraw": "0.1"
+    "binanceWithdraw": "0.1",
+    "kucoinWithdraw": "0.2"
   },
   {
     "symbol": "KLAY",
@@ -1357,7 +1465,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/9568/small/m4zRhP5e_400x400.jpg?1576190080",
     "totalName": "KSM",
     "bithumbWithdraw": "0.01",
-    "binanceWithdraw": "1.01"
+    "binanceWithdraw": "1.01",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "CTK",
@@ -1371,13 +1480,15 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/825/small/binance-coin-logo.png?1547034615",
     "totalName": "BNB",
     "bithumbWithdraw": "0.001",
-    "binanceWithdraw": "0.0005"
+    "binanceWithdraw": "0.0005",
+    "kucoinWithdraw": "0.01"
   },
   {
     "symbol": "REN",
     "imgsrc": "https://assets.coingecko.com/coins/images/3139/small/REN.png?1589985807",
     "totalName": "REN",
     "bithumbWithdraw": "23",
-    "binanceWithdraw": "33"
+    "binanceWithdraw": "33",
+    "kucoinWithdraw": "30"
   }
 ]

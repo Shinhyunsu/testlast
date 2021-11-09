@@ -1,10 +1,15 @@
 import { takeEvery, select, } from "redux-saga/effects";
-import { upbitoinApi, bithumbcoinApi, binancecoinApi } from "../Api/api";
+import { upbitoinApi, bithumbcoinApi, binancecoinApi, kucoinApi } from "../Api/api";
 import { createConnectSocketSaga, createRequestSaga, requestActions, createInitRequestSaga } from '../Lib/asyncUtil';
 import { coinListDataUtils, coinReadDataUtils } from '../Lib/utils';
 
 const START_INIT = "START_INIT";
 const START_INIT_ASYNC = "START_INIT_ASYNC";
+
+
+const GET_KUCOIN_MARKET_NAMES = "GET_KUCOIN_MARKET_NAMES";
+const GET_KUCOIN_MARKET_NAMES_SUCCESS = "GET_KUCOIN_MARKET_NAMES_SUCCESS";
+const GET_KUCOIN_MARKET_NAMES_ERROR = "GET_KUCOIN_MARKET_NAMES_ERROR";
 
 const GET_UPBIT_MARKET_NAMES = "GET_UPBIT_MARKET_NAMES";
 const GET_UPBIT_MARKET_NAMES_SUCCESS = "GET_UPBIT_MARKET_NAMES_SUCCESS";
@@ -42,21 +47,22 @@ const GET_BINANCE_MARKET_NAMES_ERROR = "GET_BINANCE_MARKET_NAMES_ERROR";
 const startInitAsync = () => ({ type: START_INIT_ASYNC });
 const startInit = () => ({ type: START_INIT });
 
-const getBinanceMarketNameSaga = createRequestSaga(
-    GET_BINANCE_MARKET_NAMES,
-    binancecoinApi.getMarketCodes,
-    coinListDataUtils.binanceNames
+//✅ Kucoin
+const getKucoinAllMarketNameSaga = createRequestSaga(
+    GET_KUCOIN_MARKET_NAMES,
+    kucoinApi.getMarketCodes,
+    coinListDataUtils.kucoinAllNames
 );
 
-const getUpbitMarketPriceInitSaga = createRequestSaga(
-    GET_UPBIT_MARKET_PRICE_INIT,
-    upbitoinApi.getMarketPriceCodes,
-    coinListDataUtils.upbitPriceNames
-);
 const getUpbitAllMarketNameSaga = createRequestSaga(
     GET_UPBIT_MARKET_NAMES,
     upbitoinApi.getMarketCodes,
     coinListDataUtils.upbitAllNames
+);
+const getBinanceMarketNameSaga = createRequestSaga(
+    GET_BINANCE_MARKET_NAMES,
+    binancecoinApi.getMarketCodes,
+    coinListDataUtils.binanceNames
 );
 const getBithumbKRWMarketNameSaga = createRequestSaga(
     GET_BITHUMB_MARKET_KRW_NAMES,
@@ -68,6 +74,13 @@ const getBithumbBTCMarketNameSaga = createRequestSaga(
     bithumbcoinApi.getBTCMarketCodes,
     coinListDataUtils.bithumbBTCNames
 );
+
+const getUpbitMarketPriceInitSaga = createRequestSaga(
+    GET_UPBIT_MARKET_PRICE_INIT,
+    upbitoinApi.getMarketPriceCodes,
+    coinListDataUtils.upbitPriceNames
+);
+
 
 
 
@@ -82,7 +95,7 @@ const createUpbitInitSocketSaga = createInitRequestSaga(
     CREATE_UPBIT_INIT,
     coinReadDataUtils.upbitInitNames
 );
-
+//✅ 빗썸 소켓 연결
 const createBithumbInitSocketSaga = createInitRequestSaga(
     CREATE_BITHUMB_INIT,
     coinReadDataUtils.bithumbInitNames
@@ -97,8 +110,11 @@ function* startInitSaga() {
     yield getBithumbBTCMarketNameSaga();
 
     yield getBinanceMarketNameSaga();
+
+    //✅ kucoin
+    yield getKucoinAllMarketNameSaga();
     const state = yield select();
-    //const upbitmarketNames = Object.keys(state.Coin.upbitTotalNames.data);
+
     const upbitmarketNames = state.Coin.upbitTotalNames.data;
     yield createUpbitInitSocketSaga({ payload: upbitmarketNames });
 
