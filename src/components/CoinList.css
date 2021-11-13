@@ -14,17 +14,15 @@
  padding-right: 100px;
 }
 
-
-
 .coin{
     display: flex;
     align-items: center;
     
-    width: 150px;
+    width: 120px;
 }
 .coin h1{
     font-size: 16px;
-    width: 150px;
+    width: 80px;
 }
 .coin img {
     height: 30px;
@@ -46,12 +44,12 @@
     text-align: center;
 }
 .coin-price{
-    width: 130px;
+    width: 80px;
     
 }
 
 .coin-pair-one{
-    border-bottom: 5px solid #F6D7A7;
+    border-bottom: 5px solid #0c0a08;
 }
 .coin-pair-two{
     border-bottom: 5px solid #C8E3D4;
@@ -61,53 +59,53 @@
 }
 
 .plus-per{
-    width: 130px;
+    
     color: #00e5ff;
 }
 .minus-per{
-    width: 130px;
+    
     color: red;
 }
 
 .BTCplus-per{
-    width: 130px;
+    
     color: #00e5ff;
 }
 .BTCminus-per{
-    width: 130px;
+    
     color: red;
 }
 
 .USDTplus-per{
-    width: 130px;
+    
     color: #00e5ff;
 }
 .USDTminus-per{
-    width: 130px;
+    
     color: red;
 }
 .BINplus-per{
-    width: 130px;
+    
     color: #00e5ff;
 }
 .BINminus-per{
-    width: 130px;
+    
     color: red;
 }
 
 .BINBUSDTplus-per{
-    width: 130px;
+    
     color: #00e5ff;
 }
 .BINBUSDTminus-per{
-    width: 130px;
+    
     color: red;
 }
 .BITHUMBKRWplus-per{
-    width: 130px;
+    
     color: #00e5ff;
 }
 .BITHUMBKRWminus-per{
-    width: 130px;
+    
     color: red;
 }
