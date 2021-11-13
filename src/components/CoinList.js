@@ -402,7 +402,7 @@ function CoinList({ one_coin, one_coin_Sym }) {
                 <div className="coin-data coin-pair-three">
                     {one_coin.upbitUSDTSym ?
                         <p className="coin-price">
-                            {one_coin.upbitUSDTPrice}
+                            {one_coin.upbitUSDTSym}
                         </p> :
                         <span>
                         </span>
