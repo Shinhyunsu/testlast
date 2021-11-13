@@ -266,15 +266,15 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                             (data) => sortedObj[data]
                         );
                         var binanceObj = yield call(binancecoinApi.getMarketCodes);
-                        yield delay(50);
+                        yield delay(100);
                         var kucoinObj = yield call(kucoinApi.getMarketCodes);
-                        yield delay(50);
+                        yield delay(100);
                         var coinoneObj = yield call(coinoneApi.getMarketCodes);
-                        yield delay(50);
+                        yield delay(100);
                         var huobiObj = yield call(huobiApi.getMarketCodes);
-                        yield delay(50);
+                        yield delay(100);
                         var gateioObj = yield call(gateioApi.getMarketCodes);
-                        yield delay(50);
+                        yield delay(100);
 
                         var Allobj = {};
 
@@ -284,10 +284,11 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
 
                                     Object.keys(sortedData).filter((bitumbsym) => {
                                         var saveSym = '', saveCoinName = '';
+
                                         var shortSym = sortedData[bitumbsym].symbol.split("_")[0];
                                         var moneySym = sortedData[bitumbsym].symbol.split("_")[1];
                                         var nowPrice = parseFloat(sortedData[bitumbsym].closePrice);
-                                        //console.log(sortedData[bitumbsym])
+
                                         if (shortSym === name.symbol) {
                                             if (moneySym === "KRW") {
                                                 saveSym = "bithumbKRWPrice";
@@ -598,7 +599,7 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                     }
                 }
 
-                yield delay(2000); // 500ms 동안 대기
+                yield delay(1500); // 500ms 동안 대기
 
                 //✅ Server send
                 /*

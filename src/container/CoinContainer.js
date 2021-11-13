@@ -18,9 +18,14 @@ function CoinContainer() {
     if (!TOPcoinTotalmain) return null;
     if (!binanceUsdt) return null;
     if (!coinTotal) return null;
-    //console.log("11", TOPcoinTotalmain)
 
-    TOPcoinTotalmain.sort((next, prev) => {
+    var test = TOPcoinTotalmain.filter((name, idx, arr) => {
+        return arr.findIndex((item) => item.MainSym === name.MainSym) === idx
+    })
+    //console.log('test', test)
+
+    //console.log('test', test)
+    test.sort((next, prev) => {
         //console.log(next);
         if (parseFloat(next.per) > parseFloat(prev.per)) {
             return -1;
@@ -28,17 +33,17 @@ function CoinContainer() {
         else
             return 0;
     });
+    //console.log(TOPcoinTotalmain);
     //console.log(TOPcoinTotalmain['PNT'])
     /*
         var test = '';
         TOPcoinTotalmain.forEach((name) => {
             test += name.MainSym + " "
             //console.log(name)
-            if (name.MainSym === 'IOTA') {
-                console.log(name)
-            }
+    
         })*/
-    //console.log('main', test);
+
+    //console.log('main', TOPcoinTotalmain);
     return (
         <div>
             <div className='coin-container'>
@@ -108,7 +113,7 @@ function CoinContainer() {
             </div>
 
             {
-                TOPcoinTotalmain.map((one_coin) => {
+                test.map((one_coin) => {
                     return <CoinList key={`coinlist_${one_coin.MainSym}`} one_coin={one_coin} one_coin_Sym={one_coin.MainSym} />;
                 })
             }
@@ -120,10 +125,6 @@ function CoinContainer() {
 export default CoinContainer;
 /*
 
-{
-                TOPcoinTotalmain.map((one_coin) => {
-                    return <CoinList key={`coinlist_${one_coin.MainSym}`} one_coin={one_coin} one_coin_Sym={one_coin.MainSym} />;
-                })
-            }
+
 
 */

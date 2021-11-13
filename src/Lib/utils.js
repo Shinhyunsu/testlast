@@ -468,17 +468,19 @@ const coinReadDataUtils = {
             }
         });
         var coinStateCount = 0;
-        var coinStringMake = "";
-        var test = "";
+        //var coinStringMake = "";
+        //var test = "";
+        //var dataFactory = [];
         Object.keys(coinStateDatas).forEach((coinOne) => {
             if (coinStateDatas[coinOne].per > 2) {
                 TOPmarketNames[coinStateCount] = coinStateDatas[coinOne];//coinStateDatas[coinOne]
                 coinStateCount++;
 
-                test += coinOne + " ";
+                //test += coinOne + " ";
             }
         })
-        TOPmarketNames.pop();
+        //TOPmarketNames = dataFactory;
+        //TOPmarketNames.pop();
 
 
         return coinStateDatas;
