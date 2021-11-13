@@ -368,7 +368,7 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                                             'ERDBTC', 'ERDUSDT', 'ERDBUSD', 'MCOBTC', 'MCOUSDT', 'STRATBTC', 'STRATUSDT', 'STRATBUSD',
                                             'VTHOBUSD', 'DCRBUSD', 'NPXSBTC', 'NPXSUSDT', 'BLZBUSD', 'WNXMBUSD', 'AIONBUSD', 'KMDBUSD',
                                             'XZCBT', 'XZCUSDT', 'IRISBUSD', 'HCBTC', 'HCUSDT', 'KEYBTC', 'KEYUSDT', 'TROYBTC', 'SUSDBTC',
-                                            'PPTBTC', 'RCNBTC', 'DGDBTC', 'OSTBTC', 'BCHABUSD', 'SALTBTC', 'CHATBTC', 'TRUBUSD', 'BOOTBTC', 'BOTBUSD', 'PXGBUSD', 'BTSBUSD', 'RENBTCBTC', 'RENBTCETH'
+                                            'NBSBTC', 'PPTBTC', 'RCNBTC', 'DGDBTC', 'OSTBTC', 'BCHABUSD', 'SALTBTC', 'CHATBTC', 'TRUBUSD', 'BOOTBTC', 'BOTBUSD', 'PXGBUSD', 'BTSBUSD', 'RENBTCBTC', 'RENBTCETH'
                                         ];
                                         exceptionflag = false;
                                         exceptionArr.find((symbolName) => {
