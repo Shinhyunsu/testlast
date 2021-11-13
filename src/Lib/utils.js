@@ -1,5 +1,6 @@
 
 import axios from "axios";
+import { Children } from "react";
 import CoinMarketData from "../Api/CoinMarketData.json";
 
 const pricereturnFloat = (price) => {
@@ -13,6 +14,10 @@ const pricereturnFloat = (price) => {
 }
 
 const coinListDataUtils = {
+    coinoneAllNames: (names) => {
+
+    },
+
     kucoinAllNames: (names) => {
         names.forEach(coinlist => {
             var coinName = coinlist.symbol.split('-')[0];
@@ -25,9 +30,9 @@ const coinListDataUtils = {
                         newCoin = true;
                     }
                 });
-                /*if (newCoin === false) {
+                if (newCoin === false) {
                     console.log(coinName, type);
-                }*/
+                }
             }
         });
     },
@@ -91,571 +96,390 @@ const coinListDataUtils = {
 };
 
 const coinReadDataUtils = {
-    mixExchangeUpdates: (one_names, two_names, three_names, state) => {
+    mixExchangeUpdates: (all_coin, state) => {
         const coinStateDatas = state.Coin.marketNames.data;
         const TOPmarketNames = state.Coin.TOPmarketNames;
         const TOPmarketString = state.Coin.TOPmarketString;
-        //✅ bithumb
-        two_names.forEach(name => {
-            let shortSym = name.symbol.split("_")[0];
-            let moneySym = name.symbol.split("_")[1];
-            let nowPrice = pricereturnFloat(name.closePrice);
-            var sortOrder = [];
-            var cal, calper;
-
-            if (coinStateDatas[shortSym]) {
-                Object.keys(coinStateDatas[shortSym]).filter((list) => {
-                    if (list === 'upbitSym') {
-                        sortOrder[0] = 'upbitSym';
-                        return sortOrder;
-                    } else if (list === 'upbitUSDT') {
-                        sortOrder[1] = 'upbitUSDT';
-                        return sortOrder;
-                    }
-                    else if (list === 'upbitBTC') {
-                        sortOrder[2] = 'upbitBTC';
-                        return sortOrder;
-                    }
-                })
-                if (!sortOrder[0]) {
-                    sortOrder.splice(0, 1);
-                }
-                else if (!sortOrder[1]) {
-                    sortOrder.splice(1, 1);
-                }
-            }
-
-            if (moneySym === "KRW") {
-
-                if (sortOrder[0] === 'upbitSym') {
-                    calper = ((nowPrice - parseFloat(coinStateDatas[shortSym].upbitPrice)) / nowPrice * 100).toFixed(2)
-                }
-
-                coinStateDatas[shortSym] = {
-                    ...coinStateDatas[shortSym],
-                    bithumbPrice: nowPrice,
-                    bithumbKRW_start_per: calper
-                }
-
-            }
-            else if (moneySym === "BTC") {
-
-                var origin = parseFloat(coinStateDatas['BTC'].bithumbPrice);
-                cal = (origin * parseFloat(nowPrice)).toFixed(2);
-                coinStateDatas[shortSym] = {
-                    ...coinStateDatas[shortSym],
-                    bithumbBTCPrice: nowPrice,
-                    calKobithumbBTC: cal
-                }
+        var priceithdraw = [], minExchange = '', maxExchange = '';
+        Object.keys(all_coin).forEach((coin) => {
+            coinStateDatas[coin] = {
+                ...coinStateDatas[coin],
+                ...all_coin[coin]
             }
         });
-        //✅ upbit
-        one_names.forEach(name => {
-            let shortSym = name.code.split("-")[1];
-            let moneySym = name.code.split("-")[0];
-            let nowPrice = pricereturnFloat(name.trade_price);
-            var sortOrder = [];
-            var cal, calper;
-
-            if (coinStateDatas[shortSym]) {
-                Object.keys(coinStateDatas[shortSym]).filter((list) => {
-                    if (list === 'upbitSym') {
-                        sortOrder[0] = 'upbitSym';
-                        return sortOrder;
-                    } else if (list === 'upbitUSDT') {
-                        sortOrder[1] = 'upbitUSDT';
-                        return sortOrder;
-                    }
-                    else if (list === 'upbitBTC') {
-                        sortOrder[2] = 'upbitBTC';
-                        return sortOrder;
-                    }
-                })
-                if (!sortOrder[0] && !sortOrder[1]) {
-                    sortOrder.splice(0, 2);
-                }
-                else if (!sortOrder[0]) {
-                    sortOrder.splice(0, 1);
-                }
-                else if (!sortOrder[1]) {
-                    sortOrder.splice(1, 1);
-                }
-            }
+        var cal = (parseFloat(coinStateDatas['BTC'].upbitKRWPrice) / parseFloat(coinStateDatas['BTC'].upbitUSDTPrice)).toFixed(1)
+        coinStateDatas['USDTKRW'] = {
+            ...coinStateDatas['USDTKRW'],
+            "USDTsym": "USDT-KRW",
+            "USDTKRWPrice": cal
+        }
 
 
-            if (moneySym === "KRW") {
-                coinStateDatas[shortSym] = {
-                    ...coinStateDatas[shortSym],
-                    upbitPrice: nowPrice
-                }
-            } else if (moneySym === "USDT") {
-                cal = (parseFloat(coinStateDatas['USDT'].upbitUSDTPrice) * parseFloat(nowPrice)).toFixed(1)
 
-                if (sortOrder[0] === 'upbitSym') {
-                    calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2)
-                } else if (sortOrder[0] === 'upbitUSDT') {
-                    calper = ((cal - parseFloat(coinStateDatas[shortSym].calKoupbitBTC)) / cal * 100).toFixed(2)
-                } else if (sortOrder[1] === 'upbitBTC') {
-                    calper = ((cal - parseFloat(coinStateDatas[shortSym].calKoupbitBTC)) / cal * 100).toFixed(2)
-                } else {
-                    calper = "Prepare";
-                }
-
-                coinStateDatas[shortSym] = {
-                    ...coinStateDatas[shortSym],
-                    upbitUSDTPrice: nowPrice,
-
-                    upbitUSDT_start_per: calper,
-                    calKoupbitUSDT: cal
-                }
-            } else if (moneySym === "BTC") {
-                var origin = parseFloat(coinStateDatas['BTC'].upbitPrice);
-                cal = (origin * parseFloat(nowPrice)).toFixed(2);
-
-                if (sortOrder[0] === 'upbitBTC') {
-                    calper = 'prepare';
-
-                } else if (sortOrder[0] === 'upbitSym') {
-                    calper = ((cal - parseFloat(coinStateDatas[shortSym].upbitPrice)) / cal * 100).toFixed(2);
-                }
-
-                coinStateDatas[shortSym] = {
-                    ...coinStateDatas[shortSym],
-                    upbitBTCPrice: nowPrice,
-                    //!
-                    calKoupbitBTC: cal,
-                    upbitBTC_start_per: calper
-                }
-            }
-
-            if (coinStateDatas['BTC'].upbitPrice) {
-                //@
-                var upbitusdtkrw = (coinStateDatas['BTC'].upbitPrice / coinStateDatas['BTC'].upbitUSDTPrice).toFixed(1);
-
-                coinStateDatas['USDT'] = {
-                    ...coinStateDatas['USDT'],
-
-                    upbitUSDT: 'USDTKRW',
-                    upbitUSDTPrice: upbitusdtkrw
-                }
-            }
-        });
-
-
-        //✅ binance
-        three_names.forEach(name => {
-            let nowPrice = pricereturnFloat(name.price);
-            var sortOrder = [];
-            var len, cal, calper, coin;
-            let moneySym;
-            let exceptionArr = ['VENUSDT', 'VENBTC', , 'MBLBTC',
-                'TUSDBTC', 'DAIBTC', 'REPBUSD', 'STORJBUSD', 'DENTBTC', 'MFTBTC',
-                'SUNBTC', 'BTTBTC', 'COCOSBTC', 'PAXBTC', 'PAXUSDT', 'PAXBUSD',
-                'BCHSVBTC', 'BCHSVUSDT', 'BCCBTC', 'BCCUSDT', 'HOTBTC', 'BCHABCBTC',
-                'BCHABCUSDT', 'BCHABCBUSD', 'STORMBTC', 'STORMUSDT', 'LENDBTC', 'LENDUSDT', 'LENDBUSD',
-                'ERDBTC', 'ERDUSDT', 'ERDBUSD', 'MCOBTC', 'MCOUSDT', 'STRATBTC', 'STRATUSDT', 'STRATBUSD',
-                'VTHOBUSD', 'DCRBUSD', 'NPXSBTC', 'NPXSUSDT', 'BLZBUSD', 'WNXMBUSD', 'AIONBUSD', 'KMDBUSD',
-                'XZCBT', 'XZCUSDT', 'IRISBUSD', 'HCBTC', 'HCUSDT', 'KEYBTC', 'KEYUSDT', 'TROYBTC', 'SUSDBTC',
-                'TRUBUSD', 'BOOTBTC', 'BOTBUSD', 'PXGBUSD', 'BTSBUSD', 'RENBTCBTC', 'RENBTCETH'
-            ];
-            let exceptionflag = false;
-            exceptionArr.map((symbolName) => {
-                if (name.symbol === symbolName) {
-                    exceptionflag = true
-                    return;
-                }
-            })
-            if (exceptionflag === true)
-                return coinStateDatas;
-
-            if (name.symbol.lastIndexOf('BTC') !== -1) {
-                len = name.symbol.indexOf('BTC');
-                moneySym = 'BTC';
-            } else if (name.symbol.lastIndexOf('USDT') !== -1) {
-                len = name.symbol.indexOf('USDT');
-                moneySym = 'USDT';
-            } else if (name.symbol.lastIndexOf('BUSD') !== -1) {
-                len = name.symbol.indexOf('BUSD');
-                moneySym = 'BUSD';
-            }
-            coin = name.symbol.slice(0, len);
-
-            if (coinStateDatas[coin]) {
-                Object.keys(coinStateDatas[coin]).filter((list) => {
-                    if (list === 'upbitSym') {
-                        sortOrder[0] = 'upbitSym';
-                        return sortOrder;
-                    } else if (list === 'upbitUSDT') {
-                        sortOrder[1] = 'upbitUSDT';
-                        return sortOrder;
-                    }
-                    else if (list === 'upbitBTC') {
-                        sortOrder[2] = 'upbitBTC';
-                        return sortOrder;
-                    }
-                })
-                if (!sortOrder[0] && !sortOrder[1]) {
-                    sortOrder.splice(0, 2);
-                }
-                else if (!sortOrder[0]) {
-                    sortOrder.splice(0, 1);
-                }
-                else if (!sortOrder[1]) {
-                    sortOrder.splice(1, 1);
-                }
-            }
-
-            if (moneySym === 'BTC') {
-                cal = (parseFloat(coinStateDatas['BTC'].upbitPrice) * parseFloat(nowPrice)).toFixed(1)
-
-                if (sortOrder[0] === 'upbitBTC')
-                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
-                else if (sortOrder[0] === "upbitUSDT")
-                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
-                else if (sortOrder[0] === 'upbitSym')
-                    calper = ((cal - parseFloat(coinStateDatas[coin].upbitPrice)) / cal * 100).toFixed(2)
-
-                if (coin !== "") {
-                    coinStateDatas[coin] = {
-                        ...coinStateDatas[coin],
-                        binanBTCSym: name.symbol,
-                        binanBTCPrice: nowPrice,
-                        calKobinanBTC: cal,
-                        binBTC_start_per: calper
-                    }
-                }
-            } else if (moneySym === 'USDT') {
-                cal = (parseFloat(coinStateDatas['USDT'].upbitUSDTPrice) * parseFloat(nowPrice)).toFixed(1);
-
-                if (sortOrder[0] === 'upbitBTC')
-                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
-                else if (sortOrder[0] === "upbitUSDT")
-                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitUSDT)) / cal * 100).toFixed(2)
-                else if (sortOrder[0] === 'upbitSym')
-                    calper = ((cal - parseFloat(coinStateDatas[coin].upbitPrice)) / cal * 100).toFixed(2)
-
-                if (coin !== "") {
-                    coinStateDatas[coin] = {
-                        ...coinStateDatas[coin],
-                        binanUSDTSym: name.symbol,
-                        binanUSDTPrice: nowPrice,
-                        calKoUSDT: cal,
-                        binUSDT_start_per: calper,
-                    }
-                }
-            } else if (moneySym === 'BUSD') {
-                cal = (parseFloat(coinStateDatas['USDT'].upbitUSDTPrice) * parseFloat(nowPrice)).toFixed(1);
-
-                if (sortOrder[0] === 'upbitBTC')
-                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitBTC)) / cal * 100).toFixed(2)
-                else if (sortOrder[0] === "upbitUSDT")
-                    calper = ((cal - parseFloat(coinStateDatas[coin].calKoupbitUSDT)) / cal * 100).toFixed(2)
-                else if (sortOrder[0] === 'upbitSym')
-                    calper = ((cal - parseFloat(coinStateDatas[coin].upbitPrice)) / cal * 100).toFixed(2)
-
-                if (coin !== "") {
-                    coinStateDatas[coin] = {
-                        ...coinStateDatas[coin],
-                        binanBNBSym: name.symbol,
-                        binanBNBPrice: nowPrice,
-                        calKoBUSD: cal,
-                        binBUSD_start_per: calper,
-                    }
-                }
-            }
-            //📌 EXCEPTION
-            if (name.symbol === 'BTCBUSD') {
-                coinStateDatas['BTC'] = {
-                    ...coinStateDatas['BTC'],
-                    binanBNBSym: name.symbol,
-                    binanBNBPrice: nowPrice
-                }
-            } else if (name.symbol === 'BTCUSDT') {
-                cal = (parseFloat(coinStateDatas['USDT'].upbitUSDTPrice) * parseFloat(nowPrice)).toFixed(1)
-                coinStateDatas['BTC'] = {
-                    ...coinStateDatas['BTC'],
-                    binanUSDTSym: name.symbol,
-                    binanUSDTPrice: nowPrice,
-                    calKoUSDT: cal,
-                    per: ((cal - parseFloat(coinStateDatas['BTC'].upbitPrice)) / cal * 100).toFixed(2)
-                }
-            }
-        });
-
-        //✅ Max per search
         Object.keys(coinStateDatas).forEach((coin) => {
             var read = coinStateDatas[coin];
             var keyread = Object.keys(read);
-            var maxPer = 0.0;
-            var minPer = 0.0;
+            var saveName = '', saveNamee = '';
+            var withdraw_cal = '';
+            var maxGap = 0, minGap = Number.MAX_SAFE_INTEGER;
+            cal = 0;
             keyread.forEach((name) => {
-                var per;
-                if (name === 'bithumbKRW_start_per') {
-                    per = parseFloat(coinStateDatas[coin].bithumbKRW_start_per);
-                }
-                else if (name === 'binBUSD_start_per') {
-                    per = parseFloat(coinStateDatas[coin].binBUSD_start_per);
-                } else if (name === 'upbitBTC_start_per') {
-                    per = parseFloat(coinStateDatas[coin].upbitBTC_start_per);
-                } else if (name === 'upbitUSDT_start_per') {
-                    per = parseFloat(coinStateDatas[coin].upbitUSDT_start_per);
-                } else if (name === 'BTCper') {
-                    per = parseFloat(coinStateDatas[coin].BTCper);
-                } else if (name === 'binUSDT_start_per') {
-                    per = parseFloat(coinStateDatas[coin].binUSDT_start_per);
-                }
-                else if (name === 'binBTC_start_per') {
-                    per = parseFloat(coinStateDatas[coin].binBTC_start_per);
-                }
-                if (per > maxPer) {
-                    maxPer = per;
-                }
-                if (per < minPer) {
-                    minPer = per;
-                }
-            })
-            coinStateDatas[coin] = {
-                ...coinStateDatas[coin],
-                totalPer: maxPer,
-                totalminPer: minPer
-            }
-        });
+                if (name === 'bithumbKRWSym') {
+                    cal = parseFloat(coinStateDatas[coin].bithumbKRWPrice);// * parseFloat(coinStateDatas[coin].upbitUSDTPrice)).toFixed(1)
+                    saveName = 'calKobithumbKRW';
 
-        //📦 v2
-        Object.keys(coinStateDatas).forEach((coin) => {
-            var read = coinStateDatas[coin];
-            var keyread = Object.keys(read);
-            var maxPer = 0.0;
-            var minPer = Number.MAX_SAFE_INTEGER;
-            var sortExchange = [];
-            var exchange;
-            var lastminExchange, lastmaxExchange;
-            var minmaxExchange, maxExchange, minExchange;
+                    var withdrawCheck = coinStateDatas[coin].bithumbWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
 
-            keyread.forEach((name) => {
-                var price;
-                if (name === 'upbitPrice') {
-                    price = parseFloat(coinStateDatas[coin].upbitPrice);
-                    sortExchange.push('upbit');
-                    exchange = 'upbitWithdraw';
-                    minmaxExchange = 'upbitKRW';
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKobithumbKRW'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
                 }
-                else if (name === 'bithumbPrice') {
-                    price = parseFloat(coinStateDatas[coin].bithumbPrice);
-                    sortExchange.push('bithumb');
-                    exchange = 'bithumbWithdraw';
-                    minmaxExchange = 'bithumbKRW';
-                }
-                else if (name === 'calKoupbitBTC') {
-                    price = parseFloat(coinStateDatas[coin].calKoupbitBTC);
-                    sortExchange.push('upbit');
-                    exchange = 'upbitWithdraw';
-                    minmaxExchange = 'upbitBTC';
-                }
-                else if (name === 'calKobithumbBTC') {
-                    price = parseFloat(coinStateDatas[coin].calKobithumbBTC);
-                    //ok
-                    sortExchange.push('bithumb');
-                    exchange = 'bithumbWithdraw';
-                    minmaxExchange = 'bithumbBTC';
-                } else if (name === 'calKobinanBTC') {
-                    price = parseFloat(coinStateDatas[coin].calKobinanBTC);
-                    sortExchange.push('binance');
-                    exchange = 'binanceWithdraw';
-                    minmaxExchange = 'binanceBTC';
-                } else if (name === 'calKoupbitUSDT') {
-                    price = parseFloat(coinStateDatas[coin].calKoupbitUSDT);
-                    sortExchange.push('upbit');
-                    minmaxExchange = 'upbitUSDT';
-                } else if (name === 'calKoUSDT') {
-                    price = parseFloat(coinStateDatas[coin].calKoUSDT);
-                    sortExchange.push('binance');
-                    exchange = 'binanceWithdraw';
-                    minmaxExchange = 'binanceUSDT';
-                } else if (name === 'calKoBUSD') {
-                    price = parseFloat(coinStateDatas[coin].calKoBUSD);
-                    sortExchange.push('binance');
-                    exchange = 'binanceWithdraw';
-                    minmaxExchange = 'binanceBUSD';
+                else if (name === 'upbitKRWSym') {
+                    cal = parseFloat(coinStateDatas[coin].upbitKRWPrice)// * parseFloat(coinStateDatas[coin].upbitUSDTPrice)).toFixed(1)
+                    saveName = 'calKoupbitKRW';
+
+                    var withdrawCheck = coinStateDatas[coin].upbitWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKoupbitKRW'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
                 }
 
-                if (price > maxPer) {
-                    maxPer = price;
-                    maxExchange = minmaxExchange
-                    lastmaxExchange = exchange;
-                }
-                if (price < minPer) {
-                    minPer = price;
-                    minExchange = minmaxExchange
-                    lastminExchange = exchange;
-                }
-            })
-            sortExchange = Array.from(new Set(sortExchange));
+                else if (name === 'coinoneKRWSym') {
+                    cal = parseFloat(coinStateDatas[coin].coinoneKRWPrice)// * parseFloat(coinStateDatas[coin].upbitUSDTPrice)).toFixed(1)
+                    saveName = 'calKocoinoneKRW';
+
+                    var withdrawCheck = coinStateDatas[coin].coinoneWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
 
 
-            var result = 0.0;
-            if (sortExchange.length <= 1) {
-                minPer = 0;
-                maxPer = 0;
-                result = 0;
-            }
-            else {
-                CoinMarketData.find((name) => {
-                    if (name.symbol === coin) {
-                        if (lastminExchange === 'bithumbWithdraw' && lastmaxExchange === 'bithumbWithdraw') {
-                            minPer = 0;
-                            maxPer = 0;
-                            result = 0;
-                            return;
-                        }
-                        else if (lastminExchange === 'upbitWithdraw') {
-                            if (name.upbitWithdraw !== 'NO')
-                                minPer = (parseFloat(name.upbitWithdraw) * parseFloat(minPer)) + minPer;
-                            else {
-                                minPer = 0;
-                                maxPer = 0;
-                                result = 0;
-                                return;
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKocoinoneKRW'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+
+                else if (name === 'upbitUSDTSym') {
+                    cal = (parseFloat(coinStateDatas['USDTKRW'].USDTKRWPrice) * parseFloat(coinStateDatas[coin].upbitUSDTPrice)).toFixed(1)
+                    saveName = 'calKoupbitUSDT';
+
+                    var withdrawCheck = coinStateDatas[coin].upbitWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKoupbitUSDT'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                // upbit BTC
+                else if (name === 'upbitBTCSym') {
+                    cal = (parseFloat(coinStateDatas['BTC'].upbitKRWPrice) * parseFloat(coinStateDatas[coin].upbitBTCPrice)).toFixed(1)
+                    saveName = 'calKoupbitBTC';
+
+                    var withdrawCheck = coinStateDatas[coin].upbitWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = parseFloat(coinStateDatas[coin].withdrawCheck) * parseFloat(cal);
+                    priceithdraw['calKoupbitBTC'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                // binance USDT
+                else if (name === 'binanceUSDTSym') {
+                    cal = (parseFloat(coinStateDatas['USDTKRW'].USDTKRWPrice) * parseFloat(coinStateDatas[coin].binanceUSDTPrice)).toFixed(1)
+                    saveName = 'calKobinanceUSDT';
+
+                    var withdrawCheck = coinStateDatas[coin].binanceWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKobinanceUSDT'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                // binance BTC
+                else if (name === 'binanceBTCSym') {
+                    //if (coin === 'XRP')
+                    //    console.log(coinStateDatas['BTC'].upbitKRWPrice, coinStateDatas[coin].binanceBTCPrice);
+                    cal = (parseFloat(coinStateDatas['BTC'].upbitKRWPrice) * parseFloat(coinStateDatas[coin].binanceBTCPrice)).toFixed(1)
+                    saveName = 'calKobinanceBTC';
+
+                    var withdrawCheck = coinStateDatas[coin].binanceWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKobinanceBTC'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                // binance BUSD
+                else if (name === 'binanceBUSDSym') {
+                    cal = (parseFloat(coinStateDatas['USDTKRW'].USDTKRWPrice) * parseFloat(coinStateDatas[coin].binanceBUSDPrice)).toFixed(1)
+                    saveName = 'calKobinanceBUSD';
+
+                    var withdrawCheck = coinStateDatas[coin].binanceWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKobinanceBUSD'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                // gateIO BTC
+                else if (name === 'gateioBTCSym') {
+                    cal = (parseFloat(coinStateDatas['BTC'].upbitKRWPrice) * parseFloat(coinStateDatas[coin].gateioBTCPrice)).toFixed(1)
+                    saveName = 'calKogateioBTC';
+
+
+                    var withdrawCheck = coinStateDatas[coin].gateioWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKogateioBTC'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                // gateIO USDT
+                else if (name === 'gateioUSDTSym') {
+                    cal = (parseFloat(coinStateDatas['USDTKRW'].USDTKRWPrice) * parseFloat(coinStateDatas[coin].gateioUSDTPrice)).toFixed(1)
+                    saveName = 'calKogateioUSDT';
+
+
+                    var withdrawCheck = coinStateDatas[coin].gateioWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+
+                    priceithdraw['calKogateioUSDT'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                //huobi BTC
+                else if (name === 'huobiBTCSym') {
+                    cal = (parseFloat(coinStateDatas['BTC'].upbitKRWPrice) * parseFloat(coinStateDatas[coin].huobiBTCPrice)).toFixed(1)
+                    saveName = 'calKohuobiBTC';
+
+                    var withdrawCheck = coinStateDatas[coin].huobiWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKohuobiBTC'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                //huobi USDT
+                else if (name === 'huobiUSDTSym') {
+                    cal = (parseFloat(coinStateDatas['USDTKRW'].USDTKRWPrice) * parseFloat(coinStateDatas[coin].huobiUSDTPrice)).toFixed(1)
+                    saveName = 'calKohuobiUSDT';
+
+                    var withdrawCheck = coinStateDatas[coin].huobiWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKohuobiUSDT'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                //kucoin USDT
+                else if (name === 'kucoinUSDTSym') {
+                    cal = (parseFloat(coinStateDatas['USDTKRW'].USDTKRWPrice) * parseFloat(coinStateDatas[coin].kucoinUSDTPrice)).toFixed(1)
+                    saveName = 'calKokucoinUSDT';
+
+                    var withdrawCheck = coinStateDatas[coin].kucoinWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKokucoinUSDT'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                else if (name === 'kucoinBTCSym') {
+                    cal = (parseFloat(coinStateDatas['BTC'].upbitKRWPrice) * parseFloat(coinStateDatas[coin].kucoinBTCPrice)).toFixed(1)
+                    saveName = 'calKokucoinBTC';
+                    var withdrawCheck = coinStateDatas[coin].kucoinWithdraw;
+                    if (withdrawCheck === 'NO')
+                        withdrawCheck = 1;
+                    else if (withdrawCheck === '0')
+                        withdrawCheck = 1;
+                    else
+                        withdrawCheck = parseFloat(withdrawCheck);
+
+                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    priceithdraw['calKokucoinBTC'] = {
+                        'withdrawlCal': withdraw_cal,
+                        'Cal': cal
+                    }
+                }
+                if (cal != 0) {
+                    if (parseFloat(cal) > maxGap) {
+                        maxGap = parseFloat(cal);
+                        maxExchange = saveName;
+                    }
+                    if (parseFloat(cal) < minGap) {
+                        minGap = parseFloat(cal);
+                        minExchange = saveName;
+                    }
+                }
+                coinStateDatas[coin] = {
+                    ...coinStateDatas[coin],
+                    [saveName]: cal
+                }
+            });
+
+            var result = ((maxGap - minGap) / minGap * 100).toFixed(1);
+
+
+
+            if (maxExchange) {
+                var maxprice = priceithdraw[maxExchange].Cal;
+
+                keyread.forEach((name) => {
+                    if (name === 'calKoupbitUSDT' ||
+                        name === 'calKoupbitBTC' ||
+                        name === 'calKobinanceUSDT' ||
+                        name === 'calKobinanceBTC' ||
+                        name === 'calKobinanceBUSD' ||
+                        name === 'calKogateioBTC' ||
+                        name === 'calKogateioUSDT' ||
+                        name === 'calKohuobiBTC' ||
+                        name === 'calKohuobiUSDT' ||
+                        name === 'calKokucoinUSDT' ||
+                        name === 'calKokucoinBTC' ||
+                        name === 'calKocoinoneKRW' ||
+                        name === 'calKoupbitKRW' ||
+                        name === 'calKobithumbKRW'
+                    ) {
+                        var calcc = '';
+                        if (name !== maxExchange) {
+                            //if (coin === 'EDEN')
+                            //    console.log('max', maxprice, priceithdraw[name])
+                            if (maxprice > priceithdraw[name].withdrawlCal) {
+                                calcc = ((maxprice - priceithdraw[name].withdrawlCal) / priceithdraw[name].withdrawlCal * 100).toFixed(1)
                             }
-                        } else if (lastminExchange === 'bithumbWithdraw') {
-                            minPer = (parseFloat(name.bithumbWithdraw) * parseFloat(minPer)) + minPer;
-                        }
-                        else if (lastminExchange === 'binanceWithdraw') {
-                            if (name.upbitWithdraw !== 'NO')
-                                minPer = (parseFloat(name.binanceWithdraw) * parseFloat(minPer)) + minPer;
                             else {
-                                minPer = 0;
-                                maxPer = 0;
-                                result = 0;
-                                return;
+                                calcc = 0;
                             }
+                            if (calcc < 0) {
+                                calcc = 0;
+                            }
+                            saveName = 'with_' + name
+                        } else {
+                            if (calcc != '0')
+                                calcc = "MAX " + calcc;
+                            else
+                                calcc = '0';
+                            saveName = 'with_' + name
+                        }
+
+                        if (name === minExchange) {
+                            calcc = "MIN" + calcc;
+                        }
+
+                        coinStateDatas[coin] = {
+                            ...coinStateDatas[coin],
+                            [saveName]: calcc,
+                            'per': result,
+                            'MainSym': coin
                         }
                     }
                 })
-                if (!(minPer <= 0 || maxPer === 0))
-                    result = ((maxPer - minPer) / minPer * 100).toFixed(1);
-                else {
-                    result = 0;
-                }
-            }
-            coinStateDatas[coin] = {
-                ...coinStateDatas[coin],
-                testper: result,
-                symbol: coin,
-                minExchange: minExchange,
-                maxExchange: maxExchange,
             }
         });
-
-        //!
-        TOPmarketNames.splice(0);
         var coinStateCount = 0;
         var coinStringMake = "";
+        var test = "";
         Object.keys(coinStateDatas).forEach((coinOne) => {
-            if (coinStateDatas[coinOne].testper > 0) {
-                coinStringMake += coinOne + ",";
-                var dataFactory = [];
-                var keyread = Object.keys(coinStateDatas[coinOne])
-                var arrCount = 0;
-                keyread.forEach((name) => {
-                    if (name === 'upbitPrice') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].upbitSym,
-                            'exchange': 'upbit',
-                            'OriginPrice': coinStateDatas[coinOne].upbitPrice,
-                            'KrwPrice': coinStateDatas[coinOne].upbitPrice
-
-                        }
-                        arrCount++;
-                    }
-                    else if (name === 'bithumbSym') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].bithumbSym,
-                            'exchange': 'bithumb',
-                            'OriginPrice': coinStateDatas[coinOne].bithumbPrice,
-                            'KrwPrice': coinStateDatas[coinOne].bithumbPrice
-                        }
-                        arrCount++;
-                    }
-                    else if (name === 'calKoupbitBTC') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].upbitBTC,
-                            'exchange': 'upbit',
-                            'OriginPrice': coinStateDatas[coinOne].upbitBTCPrice,
-                            'KrwPrice': coinStateDatas[coinOne].calKoupbitBTC
-                        }
-                        arrCount++;
-                    }
-                    else if (name === 'calKobithumbBTC') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].bithumbBTC,
-                            'exchange': 'bithumb',
-                            'OriginPrice': coinStateDatas[coinOne].bithumbBTCPrice,
-                            'KrwPrice': coinStateDatas[coinOne].calKobithumbBTC
-                        }
-                        arrCount++;
-                    }
-                    else if (name === 'calKoupbitUSDT') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].upbitUSDT,
-                            'exchange': 'upbit',
-                            'OriginPrice': coinStateDatas[coinOne].upbitUSDTPrice,
-                            'KrwPrice': coinStateDatas[coinOne].calKoupbitUSDT
-                        }
-                        arrCount++;
-                    }
-                    else if (name === 'calKobinanBTC') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].binanBTCSym,
-                            'exchange': 'binance',
-                            'OriginPrice': coinStateDatas[coinOne].binanBTCPrice,
-                            'KrwPrice': coinStateDatas[coinOne].calKobinanBTC
-                        }
-                        arrCount++;
-                    }
-                    else if (name === 'calKoUSDT') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].binanUSDTSym,
-                            'exchange': 'binance',
-                            'OriginPrice': coinStateDatas[coinOne].binanUSDTPrice,
-                            'KrwPrice': coinStateDatas[coinOne].calKoUSDT
-                        }
-                        arrCount++;
-                    }
-                    else if (name === 'calKoBUSD') {
-                        dataFactory[arrCount] = {
-                            'MainSym': coinOne,
-                            'sym': coinStateDatas[coinOne].binanBNBSym,
-                            'exchange': 'binance',
-                            'OriginPrice': coinStateDatas[coinOne].binanBNBPrice,
-                            'KrwPrice': coinStateDatas[coinOne].calKoBUSD
-                        }
-                        arrCount++;
-                    }
-
-                });
-                //console.log('before', dataFactory); //1 2 3 4 5 
-                dataFactory = dataFactory.sort((next, prev) => {
-
-                    if (parseFloat(next.KrwPrice) > parseFloat(prev.KrwPrice)) {
-                        return -1;
-                    } else {
-                        return 0;
-                    }
-                })
-
-                TOPmarketNames[coinStateCount] = dataFactory;//coinStateDatas[coinOne]
+            if (coinStateDatas[coinOne].per > 2) {
+                TOPmarketNames[coinStateCount] = coinStateDatas[coinOne];//coinStateDatas[coinOne]
                 coinStateCount++;
+
+                test += coinOne + " ";
             }
         })
-        TOPmarketString[0] = { 'ALL': coinStringMake }
+        TOPmarketNames.pop();
+
 
         return coinStateDatas;
     },
@@ -674,7 +498,7 @@ const coinReadDataUtils = {
             if (shortSym === "BTC" && moneySym === "KRW") {
                 data[shortSym] = {
                     ...data[shortSym],
-                    upbitPrice: names[name].korean,
+                    upbitKRWPrice: names[name].korean,
                     upbitSym: name,
                 }
             } else if (shortSym === "BTC" && moneySym === "USDT") {
@@ -687,7 +511,7 @@ const coinReadDataUtils = {
         })
         data['USDT'] = {
             ...data['USDT'],
-            upbitUSDTPrice: (data['BTC'].upbitPrice / data['BTC'].upbitUSDTPrice).toFixed(1),
+            upbitUSDTPrice: (data['BTC'].upbitKRWPrice / data['BTC'].upbitUSDTPrice).toFixed(1),
             upbitUSDT: 'USDTKRW',
         }
 
@@ -704,19 +528,17 @@ const coinReadDataUtils = {
             if (moneySym === "KRW") {
                 data[shortSym] = {
                     ...data[shortSym],
-                    upbitPrice: names[name].korean,
+                    upbitKRWPrice: names[name].korean,
                     upbitSym: name,
                     imgsrc: imgsrc
                 }
             } else if (moneySym === "USDT") {
-
-
                 data[shortSym] = {
                     ...data[shortSym],
                     upbitUSDTPrice: names[name].korean,
                     upbitUSDT: name,
                     imgsrc: imgsrc,
-                    calKoupbitUSDT: (parseFloat(data['USDT'].upbitUSDTPrice) * parseFloat(names[name].korean)).toFixed(1)
+                    //calKoupbitUSDT: (parseFloat(data['USDT'].upbitUSDTPrice) * parseFloat(names[name].korean)).toFixed(1)
                 }
             } else if (moneySym === "BTC") {
                 data[shortSym] = {
@@ -724,7 +546,7 @@ const coinReadDataUtils = {
                     upbitBTCPrice: names[name].korean,
                     upbitBTC: name,
                     imgsrc: imgsrc,
-                    calKoupbitBTC: (parseFloat(data['BTC'].upbitPrice) * parseFloat(names[name].korean)).toFixed(2)
+                    //calKoupbitBTC: (parseFloat(data['BTC'].upbitKRWPrice) * parseFloat(names[name].korean)).toFixed(2)
                 }
             }
         });
@@ -748,7 +570,7 @@ const coinReadDataUtils = {
                     ...coinStateDatas[shortSym],
                     bithumbBTCPrice: names[name].korean,
                     bithumbBTC: name,
-                    calKobithumbBTC: (parseFloat(coinStateDatas['BTC'].upbitPrice) * parseFloat(names[name].korean)).toFixed(2)
+                    calKobithumbBTC: (parseFloat(coinStateDatas['BTC'].upbitKRWPrice) * parseFloat(names[name].korean)).toFixed(2)
                 }
             }
         })

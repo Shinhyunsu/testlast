@@ -9,28 +9,36 @@ function CoinContainer() {
 
     var TOPcoinTotalmain = useSelector((state) => state.Coin.TOPmarketNames);
     //console.log(TOPcoinTotalmain);
-    const TOPcoinTotal = Object.keys(TOPcoinTotalmain);
+    // const TOPcoinTotal = Object.keys(TOPcoinTotalmain);
 
-    const binanceUsdt = coinTotal.data['USDT'];
+    const binanceUsdt = coinTotal.data['USDTKRW'];
     const BTCdata = coinTotal.data['BTC'];
 
 
     if (!TOPcoinTotalmain) return null;
     if (!binanceUsdt) return null;
     if (!coinTotal) return null;
+    //console.log("11", TOPcoinTotalmain)
 
     TOPcoinTotalmain.sort((next, prev) => {
-        var nextsym = next[0].MainSym;
-        var prevsym = prev[0].MainSym;
-
-        if (parseFloat(coinTotal.data[nextsym].testper) > parseFloat(coinTotal.data[prevsym].testper)) {
+        //console.log(next);
+        if (parseFloat(next.per) > parseFloat(prev.per)) {
             return -1;
         }
         else
             return 0;
     });
-
-
+    //console.log(TOPcoinTotalmain['PNT'])
+    /*
+        var test = '';
+        TOPcoinTotalmain.forEach((name) => {
+            test += name.MainSym + " "
+            //console.log(name)
+            if (name.MainSym === 'IOTA') {
+                console.log(name)
+            }
+        })*/
+    //console.log('main', test);
     return (
         <div>
             <div className='coin-container'>
@@ -38,10 +46,10 @@ function CoinContainer() {
                     <img className="exchange-img" src={CoinMarketData[0].imgsrc} />
                     <div classame="coin-data">
                         <p className="coin-price">
-                            {binanceUsdt.upbitUSDT}
+                            {binanceUsdt.USDTsym}
                         </p>
                         <p className="coin-price">
-                            {binanceUsdt.upbitUSDTPrice}
+                            {binanceUsdt.USDTKRWPrice}
                         </p>
                     </div>
 
@@ -52,14 +60,14 @@ function CoinContainer() {
                             {BTCdata.upbitSym}
                         </p>
                         <p className="coin-price">
-                            {BTCdata.upbitPrice}
+                            {BTCdata.upbitKRWPrice}
                         </p>
                     </div>
 
                     <img className="exchange-img" src={CoinMarketData[0].imgsrc} />
                     <div classame="coin-data">
                         <p className="coin-price">
-                            {BTCdata.upbitUSDT}
+                            {BTCdata.upbitUSDTSym}
                         </p>
                         <p className="coin-price">
                             {BTCdata.upbitUSDTPrice}
@@ -81,33 +89,41 @@ function CoinContainer() {
                     <img className="exchange-img" src={CoinMarketData[2].imgsrc} />
                     <div classame="coin-data">
                         <p className="coin-price">
-                            {BTCdata.binanUSDTSym}
+                            {BTCdata.binanceUSDTSym}
                         </p>
                         <p className="coin-price">
-                            {BTCdata.binanUSDTPrice}
+                            {BTCdata.binanceUSDTPrice}
                         </p>
                     </div>
                     <img className="exchange-img" src={CoinMarketData[2].imgsrc} />
                     <div classame="coin-data">
                         <p className="coin-price">
-                            {BTCdata.binanBNBSym}
+                            {BTCdata.binanceBUSDSym}
                         </p>
                         <p className="coin-price">
-                            {BTCdata.binanBNBPrice}
+                            {BTCdata.binanceBUSDPrice}
                         </p>
                     </div>
                 </div>
-
-
             </div>
 
             {
                 TOPcoinTotalmain.map((one_coin) => {
-                    return <CoinList key={`cccoinlist__${one_coin[0].MainSym}`} one_coin={one_coin} />;
+                    return <CoinList key={`coinlist_${one_coin.MainSym}`} one_coin={one_coin} one_coin_Sym={one_coin.MainSym} />;
                 })
             }
+
         </div>
     )
 }
 
 export default CoinContainer;
+/*
+
+{
+                TOPcoinTotalmain.map((one_coin) => {
+                    return <CoinList key={`coinlist_${one_coin.MainSym}`} one_coin={one_coin} one_coin_Sym={one_coin.MainSym} />;
+                })
+            }
+
+*/

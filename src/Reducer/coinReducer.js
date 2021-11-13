@@ -1,11 +1,14 @@
 import { takeEvery, select, } from "redux-saga/effects";
-import { upbitoinApi, bithumbcoinApi, binancecoinApi, kucoinApi } from "../Api/api";
+import { upbitoinApi, bithumbcoinApi, binancecoinApi, kucoinApi, coinoneApi } from "../Api/api";
 import { createConnectSocketSaga, createRequestSaga, requestActions, createInitRequestSaga } from '../Lib/asyncUtil';
 import { coinListDataUtils, coinReadDataUtils } from '../Lib/utils';
 
 const START_INIT = "START_INIT";
 const START_INIT_ASYNC = "START_INIT_ASYNC";
 
+const GET_COINONE_MARKET_NAMES = "GET_COINONE_MARKET_NAMES";
+const GET_COINONE_MARKET_NAMES_SUCCESS = "GET_COINONE_MARKET_NAMES_SUCCESS";
+const GET_COINEONE_MARKET_NAMES_ERROR = "GET_COINONE_MARKET_NAMES_ERROR";
 
 const GET_KUCOIN_MARKET_NAMES = "GET_KUCOIN_MARKET_NAMES";
 const GET_KUCOIN_MARKET_NAMES_SUCCESS = "GET_KUCOIN_MARKET_NAMES_SUCCESS";
@@ -46,6 +49,14 @@ const GET_BINANCE_MARKET_NAMES_ERROR = "GET_BINANCE_MARKET_NAMES_ERROR";
 
 const startInitAsync = () => ({ type: START_INIT_ASYNC });
 const startInit = () => ({ type: START_INIT });
+
+
+//✅ coinOne
+const getcoinOneAllMarketNameSaga = createRequestSaga(
+    GET_COINONE_MARKET_NAMES,
+    coinoneApi.getMarketCodes,
+    coinListDataUtils.coinoneAllNames
+);
 
 //✅ Kucoin
 const getKucoinAllMarketNameSaga = createRequestSaga(
@@ -112,7 +123,9 @@ function* startInitSaga() {
     yield getBinanceMarketNameSaga();
 
     //✅ kucoin
-    yield getKucoinAllMarketNameSaga();
+    //yield getKucoinAllMarketNameSaga();
+    //✅ coinone
+    //yield getcoinOneAllMarketNameSaga();
     const state = yield select();
 
     const upbitmarketNames = state.Coin.upbitTotalNames.data;
@@ -150,7 +163,7 @@ const initialState = {
             "BTC": {
                 imgsrc: "",
                 gecko: "",
-                upbitSym: "", upbitPrice: "",
+                upbitSym: "", upbitKRWPrice: "",
                 upbitBTC: "", upbitBTCPrice: "",
                 upbitUSDT: "", upbitUSDTPrice: "",
                 bithumbSym: "", bithumbPrice: "",
