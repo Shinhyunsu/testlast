@@ -617,7 +617,7 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
 
             }
         } catch (e) {
-            console.log(e);
+            console.log(coin, e);
             yield put({ type: ERROR, payload: e });
         } finally {
             clientChannel.close();
