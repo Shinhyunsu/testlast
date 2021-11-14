@@ -48,24 +48,157 @@
     
 }
 
-.coin-pair-one{
-    border-bottom: 5px solid #0c0a08;
-}
-.coin-pair-two{
-    border-bottom: 5px solid #C8E3D4;
-}
-.coin-pair-three{
-    border-bottom: 5px solid #664E88;
-}
-
-.plus-per{
-    
+.minmaxwith_with_calKoupbitKRW{
     color: #00e5ff;
 }
-.minus-per{
-    
+.pluswith_with_calKoupbitKRW{
     color: red;
 }
+.goldwith_with_calKoupbitKRW{
+    color: yellow;
+}
+
+.minmaxwith_with_calKobithumbKRW{
+    color: #00e5ff;
+}
+.pluswith_with_calKobithumbKRW{
+    color: red;
+}
+.goldwith_with_calKobithumbKRW{
+    color: yellow;
+}
+
+.minmaxwith_with_calKocoinoneKRW{
+    color: #00e5ff;
+}
+.pluswith_with_calKocoinoneKRW{
+    color: red;
+}
+.goldwith_with_calKocoinoneKRW{
+    color: yellow;
+}
+
+.minmaxwith_with_calKoupbitBTC{
+    color: #00e5ff;
+}
+.pluswith_with_calKoupbitBTC{
+    color: red;
+}
+.goldwith_with_calKoupbitBTC{
+    color: yellow;
+}
+
+.minmaxwith_with_calKobithumbBTC{
+    color: #00e5ff;
+}
+.pluswith_with_calKobithumbBTC{
+    color: red;
+}
+.goldwith_with_calKobithumbBTC{
+    color: yellow;
+}
+
+.minmaxwith_with_calKobinanceBTC{
+    color: #00e5ff;
+}
+.pluswith_with_calKobinanceBTC{
+    color: red;
+}
+.goldwith_with_calKobinanceBTC{
+    color: yellow;
+}
+
+.minmaxwith_with_calKogateioBTC{
+    color: #00e5ff;
+}
+.pluswith_with_calKogateioBTC{
+    color: red;
+}
+.goldwith_with_calKogateioBTC{
+    color: yellow;
+}
+
+.minmaxwith_with_calKohuobiBTC{
+    color: #00e5ff;
+}
+.pluswith_with_calKohuobiBTC{
+    color: red;
+}
+.goldwith_with_calKohuobiBTC{
+    color: yellow;
+}
+
+.minmaxwith_with_calKokucoinBTC{
+    color: #00e5ff;
+}
+.pluswith_with_calKokucoinBTC{
+    color: red;
+}
+.goldwith_with_calKokucoinBTC{
+    color: yellow;
+}
+
+.minmaxwith_with_calKoupbitUSDT{
+    color: #00e5ff;
+}
+.pluswith_with_calKoupbitUSDT{
+    color: red;
+}
+.goldwith_with_calKoupbitUSDT{
+    color: yellow;
+}
+
+.minmaxwith_with_calKobinanceUSDT{
+    color: #00e5ff;
+}
+.pluswith_with_calKobinanceUSDT{
+    color: red;
+}
+.goldwith_with_calKobinanceUSDT{
+    color: yellow;
+}
+
+.minmaxwith_with_calKogateioUSDT{
+    color: #00e5ff;
+}
+.pluswith_with_calKogateioUSDT{
+    color: red;
+}
+.goldwith_with_calKogateioUSDT{
+    color: yellow;
+}
+
+.minmaxwith_with_calKohuobiUSDT{
+    color: #00e5ff;
+}
+.pluswith_with_calKohuobiUSDT{
+    color: red;
+}
+.goldwith_with_calKohuobiUSDT{
+    color: yellow;
+}
+
+.minmaxwith_with_calKokucoinUSDT{
+    color: #00e5ff;
+}
+.pluswith_with_calKokucoinUSDT{
+    color: red;
+}
+.goldwith_with_calKokucoinUSDT{
+    color: yellow;
+}
+
+.minmaxwith_with_calKobinanceBUSD{
+    color: #00e5ff;
+}
+.pluswith_with_calKobinanceBUSD{
+    color: red;
+}
+.goldwith_with_calKobinanceBUSD{
+    color: yellow;
+}
+
+
 
 .BTCplus-per{
     
