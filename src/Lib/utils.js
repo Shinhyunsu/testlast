@@ -136,7 +136,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKobithumbKRW'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -154,7 +154,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKoupbitKRW'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -174,7 +174,7 @@ const coinReadDataUtils = {
                         withdrawCheck = parseFloat(withdrawCheck);
 
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKocoinoneKRW'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -193,7 +193,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKoupbitUSDT'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -212,7 +212,9 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = parseFloat(coinStateDatas[coin].withdrawCheck) * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
+
+
                     priceithdraw['calKoupbitBTC'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -231,7 +233,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKobinanceUSDT'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -252,7 +254,10 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
+
+
+
                     priceithdraw['calKobinanceBTC'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -271,7 +276,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKobinanceBUSD'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -291,11 +296,14 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = (withdrawCheck * parseFloat(cal)) + parseFloat(cal);
                     priceithdraw['calKogateioBTC'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
                     }
+
+
+
                 }
                 // gateIO USDT
                 else if (name === 'gateioUSDTSym') {
@@ -311,7 +319,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
 
                     priceithdraw['calKogateioUSDT'] = {
                         'withdrawlCal': withdraw_cal,
@@ -331,7 +339,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKohuobiBTC'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -350,7 +358,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKohuobiUSDT'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -369,7 +377,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKokucoinUSDT'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -386,7 +394,7 @@ const coinReadDataUtils = {
                     else
                         withdrawCheck = parseFloat(withdrawCheck);
 
-                    withdraw_cal = withdrawCheck * parseFloat(cal);
+                    withdraw_cal = withdrawCheck * parseFloat(cal) + parseFloat(cal);
                     priceithdraw['calKokucoinBTC'] = {
                         'withdrawlCal': withdraw_cal,
                         'Cal': cal
@@ -433,10 +441,10 @@ const coinReadDataUtils = {
                     ) {
                         var calcc = '';
                         if (name !== maxExchange) {
-                            //if (coin === 'EDEN')
-                            //    console.log('max', maxprice, priceithdraw[name])
-                            if (maxprice > priceithdraw[name].withdrawlCal) {
-                                calcc = ((maxprice - priceithdraw[name].withdrawlCal) / priceithdraw[name].withdrawlCal * 100).toFixed(1)
+
+
+                            if (maxprice > parseFloat(priceithdraw[name].withdrawlCal)) {
+                                calcc = ((maxprice - parseFloat(priceithdraw[name].withdrawlCal)) / parseFloat(priceithdraw[name].withdrawlCal) * 100).toFixed(1)
                             }
                             else {
                                 calcc = 0;
@@ -445,6 +453,9 @@ const coinReadDataUtils = {
                                 calcc = 0;
                             }
                             saveName = 'with_' + name
+
+
+
                         } else {
                             if (calcc != '0')
                                 calcc = "MAX " + calcc;
