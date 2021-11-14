@@ -209,7 +209,7 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
             upbitTotalNames,
             buffers.expanding(500)
         );
-
+        var err_coin = '';
         //✅ new
         bitclientChannel = yield call(
             bitconnectSocekt,
@@ -279,6 +279,7 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                         var Allobj = {};
 
                         CoinMarketData.forEach((name) => {
+                            err_coin = name;
                             Object.keys(name).forEach((checksym) => {
                                 if (checksym === 'bithumbWithdraw') {
 
@@ -617,7 +618,7 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
 
             }
         } catch (e) {
-            console.log(coin, e);
+            console.log(err_coin, e);
             yield put({ type: ERROR, payload: e });
         } finally {
             clientChannel.close();
