@@ -37,20 +37,22 @@ function CoinList({ one_coin, one_coin_Sym }) {
             doubleperPlus[cnt] = one_coin[data].slice(3, one_coin[data].length);
 
             if (doubleperPlus[cnt] === " ") {
-                doubleperPlus[cnt] = 0;
-            } else if (doubleperPlus[0] === "0") {
-                doubleperPlus[cnt] = 0;
+                doubleperPlus[cnt] = 'none';
+            } else if (doubleperPlus[cnt] === "0") {
+                doubleperPlus[cnt] = 'none';
+            } else if (doubleperPlus[cnt] === 0) {
+                doubleperPlus[cnt] = 'none';
             }
         }
         if (doubleperPlus[cnt] === 0 && parseFloat(one_coin[data]) > 0) {
             perPlus[cnt] = 'pluswith_' + data;
         }
-        else if (doubleperPlus[cnt] !== 0 && doubleperPlus[cnt] !== "0") {
+        else if (doubleperPlus[cnt] !== '0' && doubleperPlus[cnt] !== "none" && doubleperPlus[cnt] !== 0) {
             perPlus[cnt] = 'goldwith_' + data;
+        } else if (doubleperPlus[cnt] === 'none') {
+            perPlus[cnt] = "minmaxwith_" + data;
         } else if (doubleperPlus[cnt] === 0) {
-            perPlus[cnt] = "minmaxwith_" + data;
-        } else if (doubleperPlus[cnt] === "0") {
-            perPlus[cnt] = "minmaxwith_" + data;
+            perPlus[cnt] = 'none';
         }
         cnt++;
     })
