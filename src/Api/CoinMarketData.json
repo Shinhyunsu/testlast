@@ -75,7 +75,7 @@
     "binanceWithdraw": "0.25",
     "kucoinWithdraw": "0.25",
     "coinoneWithdraw": "1",
-    "bittrexWithdraw": "1.00000000",
+    "bittrexWithdraw": "1.0",
     "huobiWithdraw": "0.1",
     "gateioWithdraw": "1.6"
   },
@@ -5662,12 +5662,6 @@
     "bittrexWithdraw": "12.64000000"
   },
   {
-    "symbol": "ADABULL",
-    "imgsrc": " ",
-    "totalName": "ADABULL",
-    "bittrexWithdraw": "0.06820000"
-  },
-  {
     "symbol": "ADK",
     "imgsrc": " ",
     "totalName": "ADK",
@@ -5779,12 +5773,6 @@
     "bittrexWithdraw": "16.00000000"
   },
   {
-    "symbol": "ATOMBULL",
-    "imgsrc": " ",
-    "totalName": "ATOMBULL",
-    "bittrexWithdraw": "734.94000000"
-  },
-  {
     "symbol": "B2M",
     "imgsrc": " ",
     "totalName": "B2M",
@@ -5807,12 +5795,6 @@
     "imgsrc": " ",
     "totalName": "BBC",
     "bittrexWithdraw": "0.01000000"
-  },
-  {
-    "symbol": "BCHBULL",
-    "imgsrc": " ",
-    "totalName": "BCHBULL",
-    "bittrexWithdraw": "2541.67000000"
   },
   {
     "symbol": "BCPT",
@@ -6171,12 +6153,6 @@
     "bittrexWithdraw": "0.01000000"
   },
   {
-    "symbol": "DOGEBULL",
-    "imgsrc": " ",
-    "totalName": "DOGEBULL",
-    "bittrexWithdraw": "0.94610000"
-  },
-  {
     "symbol": "DRCM",
     "imgsrc": " ",
     "totalName": "DRCM",
@@ -6253,12 +6229,6 @@
     "imgsrc": " ",
     "totalName": "ETHBEAR",
     "bittrexWithdraw": "100.00000000"
-  },
-  {
-    "symbol": "ETHBULL",
-    "imgsrc": " ",
-    "totalName": "ETHBULL",
-    "bittrexWithdraw": "0.02260000"
   },
   {
     "symbol": "ETM",
@@ -6637,12 +6607,6 @@
     "bittrexWithdraw": "113.34000000"
   },
   {
-    "symbol": "LINKBULL",
-    "imgsrc": " ",
-    "totalName": "LINKBULL",
-    "bittrexWithdraw": "38.12000000"
-  },
-  {
     "symbol": "LMCH",
     "imgsrc": " ",
     "totalName": "LMCH",
@@ -6672,12 +6636,6 @@
     "imgsrc": " ",
     "totalName": "MARS4",
     "bittrexWithdraw": "1245.00000000"
-  },
-  {
-    "symbol": "MATICBULL",
-    "imgsrc": " ",
-    "totalName": "MATICBULL",
-    "bittrexWithdraw": "82.13000000"
   },
   {
     "symbol": "MDT",
@@ -7742,12 +7700,6 @@
     "bittrexWithdraw": "2666.00000000"
   },
   {
-    "symbol": "XRPBULL",
-    "imgsrc": " ",
-    "totalName": "XRPBULL",
-    "bittrexWithdraw": "5545.45000000"
-  },
-  {
     "symbol": "XSILV",
     "imgsrc": " ",
     "totalName": "XSILV",
@@ -7764,12 +7716,6 @@
     "imgsrc": " ",
     "totalName": "XTP",
     "bittrexWithdraw": "99575.00000000"
-  },
-  {
-    "symbol": "XTZBULL",
-    "imgsrc": " ",
-    "totalName": "XTZBULL",
-    "bittrexWithdraw": "342.70000000"
   },
   {
     "symbol": "XUC",
@@ -8704,7 +8650,7 @@
     "symbol": "BAGS",
     "imgsrc": " ",
     "totalName": "BAGS",
-    "huobiWithdraw": "0.00470802",
+    "huobiWithdraw": "0.00482815",
     "gateioWithdraw": "0.25"
   },
   {
@@ -8939,5 +8885,337 @@
     "imgsrc": " ",
     "totalName": "STF",
     "huobiWithdraw": "28.687"
+  },
+  {
+    "symbol": "RAY",
+    "imgsrc": " ",
+    "totalName": "RAT",
+    "binanceWithdraw": "0.21",
+    "gateioWithdraw": "0.5"
+  },
+  {
+    "symbol": "CHESS",
+    "imgsrc": " ",
+    "totalName": "CHESS",
+    "binanceWithdraw": "0.14",
+    "gateioWithdraw": "3.2"
+  },
+  {
+    "symbol": "PHB",
+    "imgsrc": " ",
+    "totalName": "PHB",
+    "binanceWithdraw": "0.39"
+  },
+  {
+    "symbol": "FARM",
+    "imgsrc": " ",
+    "totalName": "FARM",
+    "binanceWithdraw": "0.25",
+    "gateioWithdraw": "0.36"
+  },
+  {
+    "symbol": "GXS",
+    "imgsrc": " ",
+    "totalName": "GXS",
+    "binanceWithdraw": "0.3"
+  },
+  {
+    "symbol": "BEAM",
+    "imgsrc": " ",
+    "totalName": "BEAM",
+    "binanceWithdraw": "0.1"
+  },
+  {
+    "symbol": "AUD",
+    "imgsrc": " ",
+    "totalName": "AUD",
+    "binanceWithdraw": "NO"
+  },
+  {
+    "symbol": "PERL",
+    "imgsrc": " ",
+    "totalName": "PERL",
+    "binanceWithdraw": "408",
+    "gateioWithdraw": "730"
+  },
+  {
+    "symbol": "VTHO",
+    "imgsrc": " ",
+    "totalName": "GXS",
+    "binanceWithdraw": "200"
+  },
+  {
+    "symbol": "GTC",
+    "imgsrc": " ",
+    "totalName": "GTC",
+    "binanceWithdraw": "7.24",
+    "kucoinWithdraw": "3"
+  },
+  {
+    "symbol": "OM",
+    "imgsrc": " ",
+    "totalName": "OM",
+    "binanceWithdraw": "1.22",
+    "kucoinWithdraw": "150",
+    "bithumbWithdraw": "NO"
+  },
+  {
+    "symbol": "AUTO",
+    "imgsrc": " ",
+    "totalName": "AUTO",
+    "binanceWithdraw": "0.00028"
+  },
+  {
+    "symbol": "WABI",
+    "imgsrc": " ",
+    "totalName": "WABI",
+    "binanceWithdraw": "177",
+    "bithumbWithdraw": "NO"
+  },
+  {
+    "symbol": "ATM",
+    "imgsrc": " ",
+    "totalName": "ATM",
+    "binanceWithdraw": "NO"
+  },
+  {
+    "symbol": "OG",
+    "imgsrc": " ",
+    "totalName": "OG",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "YOYO",
+    "imgsrc": " ",
+    "totalName": "YOYO",
+    "binanceWithdraw": "1"
+  },
+  {
+    "symbol": "PAXG",
+    "imgsrc": " ",
+    "totalName": "PAXG",
+    "binanceWithdraw": "0.018",
+    "kucoinWithdraw": "0",
+    "bithumbWithdraw": "0"
+  },
+  {
+    "symbol": "ACM",
+    "imgsrc": " ",
+    "totalName": "ACM",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "MTH",
+    "imgsrc": " ",
+    "totalName": "MTH",
+    "binanceWithdraw": "1003"
+  },
+  {
+    "symbol": "KP3R",
+    "imgsrc": " ",
+    "totalName": "KP3R",
+    "binanceWithdraw": "0.024"
+  },
+  {
+    "symbol": "LAZIO",
+    "imgsrc": " ",
+    "totalName": "LAZIO",
+    "binanceWithdraw": "0.042",
+    "gateioWithdraw": "0.98"
+  },
+  {
+    "symbol": "PORTO",
+    "imgsrc": " ",
+    "totalName": "PORTO",
+    "binanceWithdraw": "0.5"
+  },
+  {
+    "symbol": "TCT",
+    "imgsrc": " ",
+    "totalName": "TCT",
+    "binanceWithdraw": "8.8",
+    "gateioWithdraw": "1500"
+  },
+  {
+    "symbol": "HOT",
+    "imgsrc": " ",
+    "totalName": "HOT",
+    "binanceWithdraw": "2731"
+  },
+  {
+    "symbol": "MINA",
+    "imgsrc": " ",
+    "totalName": "MINA",
+    "binanceWithdraw": "0.5",
+    "gateioWithdraw": "0.44"
+  },
+  {
+    "symbol": "FIDA",
+    "imgsrc": " ",
+    "totalName": "FIDA",
+    "binanceWithdraw": "0.25",
+    "gateioWithdraw": "0.61"
+  },
+  {
+    "symbol": "TWT",
+    "imgsrc": " ",
+    "totalName": "TWT",
+    "binanceWithdraw": "0.25",
+    "gateioWithdraw": "1.8",
+    "kucoinWithdraw": "0"
+  },
+  {
+    "symbol": "AUDIO",
+    "imgsrc": " ",
+    "totalName": "AUDIO",
+    "binanceWithdraw": "15",
+    "gateioWithdraw": "21",
+    "kucoinWithdraw": "17",
+    "upbitWithdraw": "15"
+  },
+  {
+    "symbol": "CFX",
+    "imgsrc": " ",
+    "totalName": "CFX",
+    "binanceWithdraw": "1.04",
+    "gateioWithdraw": "0.01"
+  },
+  {
+    "symbol": "TORN",
+    "imgsrc": " ",
+    "totalName": "TORN",
+    "binanceWithdraw": "0.66",
+    "gateioWithdraw": "1.2"
+  },
+  {
+    "symbol": "ATA",
+    "imgsrc": " ",
+    "totalName": "ATA",
+    "binanceWithdraw": "0.27",
+    "gateioWithdraw": "8.6"
+  },
+  {
+    "symbol": "RARE",
+    "imgsrc": " ",
+    "totalName": "RARE",
+    "binanceWithdraw": "22",
+    "gateioWithdraw": "32"
+  },
+  {
+    "symbol": "COCOS",
+    "imgsrc": " ",
+    "totalName": "COCOS",
+    "binanceWithdraw": "0.39",
+    "gateioWithdraw": "12"
+  },
+  {
+    "symbol": "ASR",
+    "imgsrc": " ",
+    "totalName": "ASR",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "DREP",
+    "imgsrc": " ",
+    "totalName": "DREP",
+    "binanceWithdraw": "50",
+    "gateioWithdraw": "98"
+  },
+  {
+    "symbol": "FLM",
+    "imgsrc": " ",
+    "totalName": "FLM",
+    "binanceWithdraw": "0.5"
+  },
+  {
+    "symbol": "CITY",
+    "imgsrc": " ",
+    "totalName": "CITY",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "BAR",
+    "imgsrc": " ",
+    "totalName": "BAR",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "DAR",
+    "imgsrc": " ",
+    "totalName": "DAR",
+    "binanceWithdraw": "14"
+  },
+  {
+    "symbol": "ENS",
+    "imgsrc": " ",
+    "totalName": "ENS",
+    "binanceWithdraw": "0.7",
+    "gateioWithdraw": "1.4",
+    "kucoinWithdraw": "0.5"
+  },
+  {
+    "symbol": "TROY",
+    "imgsrc": " ",
+    "totalName": "TROY",
+    "binanceWithdraw": "2514",
+    "gateioWithdraw": "4300"
+  },
+  {
+    "symbol": "ERN",
+    "imgsrc": " ",
+    "totalName": "ERN",
+    "binanceWithdraw": "2.34",
+    "gateioWithdraw": "3.4",
+    "kucoinWithdraw": "2.2"
+  },
+  {
+    "symbol": "PAXG",
+    "imgsrc": " ",
+    "totalName": "PAXG",
+    "binanceWithdraw": "0.018",
+    "kucoinWithdraw": "0.02",
+    "bithumbWithdraw": "NO"
+  },
+  {
+    "symbol": "FIO",
+    "imgsrc": " ",
+    "totalName": "FIO",
+    "binanceWithdraw": "5",
+    "gateioWithdraw": "12",
+    "bithumbWithdraw": "NO"
+  },
+  {
+    "symbol": "MITH",
+    "imgsrc": " ",
+    "totalName": "MITH",
+    "binanceWithdraw": "672",
+    "gateioWithdraw": "940"
+  },
+  {
+    "symbol": "BNX",
+    "imgsrc": " ",
+    "totalName": "BNX",
+    "binanceWithdraw": "0.0015",
+    "gateioWithdraw": "0.031"
+  },
+  {
+    "symbol": "BETA",
+    "imgsrc": " ",
+    "totalName": "BETA",
+    "binanceWithdraw": "29"
+  },
+  {
+    "symbol": "IDEX",
+    "imgsrc": " ",
+    "totalName": "IDEX",
+    "binanceWithdraw": "124",
+    "gateioWithdraw": "220"
+  },
+  {
+    "symbol": "HNT",
+    "imgsrc": " ",
+    "totalName": "HNT",
+    "binanceWithdraw": "0.05",
+    "gateioWithdraw": "0.15"
   }
 ]
