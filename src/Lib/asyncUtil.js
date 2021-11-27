@@ -283,6 +283,9 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                             Object.keys(name).forEach((checksym) => {
                                 if (checksym === 'bithumbWithdraw') {
 
+
+
+
                                     Object.keys(sortedData).filter((bitumbsym) => {
                                         var saveSym = '', saveCoinName = '';
 

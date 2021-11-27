@@ -373,7 +373,7 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/878/small/decentraland-mana.png?1550108745",
     "totalName": "decentraland",
     "upbitWithdraw": "35",
-    "bithumbWithdraw": "14",
+    "bithumbWithdraw": "5",
     "binanceWithdraw": "34",
     "kucoinWithdraw": "20",
     "bittrexWithdraw": "22.00000000",
@@ -393,7 +393,7 @@
     "imgsrc": "https://static.upbit.com/logos/POWR.png",
     "totalName": "power-ledger",
     "upbitWithdraw": "28",
-    "bithumbWithdraw": "73",
+    "bithumbWithdraw": "30",
     "binanceWithdraw": "100",
     "kucoinWithdraw": "75",
     "bittrexWithdraw": "159.00000000",
@@ -461,7 +461,7 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/913/small/LRC.png?1572852344",
     "totalName": "loopring",
     "upbitWithdraw": "30",
-    "bithumbWithdraw": "40",
+    "bithumbWithdraw": "7",
     "binanceWithdraw": "66",
     "kucoinWithdraw": "80",
     "bittrexWithdraw": "46.00000000",
@@ -941,7 +941,7 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/7646/small/LDqRyofe_400x400.jpg?1548926877",
     "totalName": "bora",
     "upbitWithdraw": "50",
-    "bithumbWithdraw": "0",
+    "bithumbWithdraw": "0.2",
     "binanceWithdraw": "NO",
     "coinoneWithdraw": "13.70"
   },
@@ -1148,7 +1148,7 @@
     "imgsrc": "https://static.upbit.com/logos/CHR.png",
     "totalName": "chromaway",
     "upbitWithdraw": "NO",
-    "bithumbWithdraw": "36",
+    "bithumbWithdraw": "17",
     "binanceWithdraw": "98",
     "kucoinWithdraw": "90",
     "bittrexWithdraw": "188.00000000",
@@ -1305,7 +1305,7 @@
     "imgsrc": "https://static.upbit.com/logos/SAND.png",
     "totalName": "the-sandbox",
     "upbitWithdraw": "30",
-    "bithumbWithdraw": "22",
+    "bithumbWithdraw": "4",
     "binanceWithdraw": "35",
     "kucoinWithdraw": "20",
     "coinoneWithdraw": "10.5919",
@@ -1377,7 +1377,7 @@
     "imgsrc": "https://static.upbit.com/logos/AXS.png",
     "totalName": "axie-infinity",
     "upbitWithdraw": "1",
-    "bithumbWithdraw": "0.3",
+    "bithumbWithdraw": "0.15",
     "binanceWithdraw": "0.27",
     "kucoinWithdraw": "0.35",
     "coinoneWithdraw": "0.1798",
@@ -1993,7 +1993,7 @@
     "symbol": "WEMIX",
     "imgsrc": "",
     "totalName": "WEMIX",
-    "bithumbWithdraw": "4",
+    "bithumbWithdraw": "0.05",
     "gateioWithdraw": "4"
   },
   {
@@ -2030,7 +2030,7 @@
     "symbol": "CYCLUB",
     "imgsrc": "",
     "totalName": "CYCLUB",
-    "bithumbWithdraw": "540",
+    "bithumbWithdraw": "80",
     "bittrexWithdraw": "1497.67000000"
   },
   {
@@ -2093,7 +2093,7 @@
     "symbol": "MIX",
     "imgsrc": "",
     "totalName": "MIX",
-    "bithumbWithdraw": "1200",
+    "bithumbWithdraw": "500",
     "gateioWithdraw": "8300"
   },
   {
@@ -2120,7 +2120,7 @@
     "symbol": "DVI",
     "imgsrc": " ",
     "totalName": "DVI",
-    "bithumbWithdraw": "27",
+    "bithumbWithdraw": "8",
     "coinoneWithdraw": "23.326",
     "bittrexWithdraw": "49.00000000",
     "gateioWithdraw": "66"
@@ -4796,7 +4796,7 @@
     "imgsrc": " ",
     "totalName": "VRA",
     "kucoinWithdraw": "600",
-    "bithumbWithdraw": "950",
+    "bithumbWithdraw": "400",
     "bittrexWithdraw": "881.00000000",
     "gateioWithdraw": "2000"
   },
