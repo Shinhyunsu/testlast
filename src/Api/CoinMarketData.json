@@ -561,7 +561,8 @@
     "upbitWithdraw": "600",
     "binanceWithdraw": "2840",
     "bittrexWithdraw": "4742.00000000",
-    "gateioWithdraw": "6000"
+    "gateioWithdraw": "6000",
+    "kucoinWithdraw": "2666"
   },
   {
     "symbol": "IOST",
@@ -1129,7 +1130,8 @@
     "binanceWithdraw": "0.001",
     "coinoneWithdraw": "0.1",
     "huobiWithdraw": "0.001",
-    "gateioWithdraw": "0.34"
+    "gateioWithdraw": "0.34",
+    "kucoinWithdraw": "0.3"
   },
   {
     "symbol": "JST",
@@ -1270,7 +1272,8 @@
     "binanceWithdraw": "900",
     "bittrexWithdraw": "1422.00000000",
     "huobiWithdraw": "423.54797085",
-    "gateioWithdraw": "1700"
+    "gateioWithdraw": "1700",
+    "kucoinWithdraw": "800"
   },
   {
     "symbol": "OXT",
@@ -1289,7 +1292,6 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/14316/small/54023228.png?1615366911",
     "totalName": "plair",
     "upbitWithdraw": "30",
-    "binanceWithdraw": "NO",
     "bittrexWithdraw": "9957.00000000",
     "gateioWithdraw": "49"
   },
@@ -1334,7 +1336,8 @@
     "binanceWithdraw": "4.9",
     "coinoneWithdraw": "3.60990",
     "huobiWithdraw": "4.6677",
-    "gateioWithdraw": "10"
+    "gateioWithdraw": "10",
+    "kucoinWithdraw": "0.5"
   },
   {
     "symbol": "QTCON",
@@ -1403,7 +1406,8 @@
     "binanceWithdraw": "68",
     "bittrexWithdraw": "112.00000000",
     "huobiWithdraw": "32.46661584",
-    "gateioWithdraw": "200"
+    "gateioWithdraw": "200",
+    "kucoinWithdraw": "66"
   },
   {
     "symbol": "FCT2",
@@ -1697,7 +1701,8 @@
     "coinoneWithdraw": "15.0707",
     "bittrexWithdraw": "33.00000000",
     "huobiWithdraw": "9.63896825",
-    "gateioWithdraw": "1.1"
+    "gateioWithdraw": "1.1",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "NU",
@@ -1910,7 +1915,8 @@
     "totalName": "BAKE",
     "bithumbWithdraw": "0.2",
     "binanceWithdraw": "0.13",
-    "gateioWithdraw": "5"
+    "gateioWithdraw": "5",
+    "kucoinWithdraw": "1"
   },
   {
     "symbol": "AION",
@@ -1935,7 +1941,8 @@
     "imgsrc": "https://assets.coingecko.com/coins/images/12563/small/burger.png?1600786553",
     "totalName": "BURGER",
     "bithumbWithdraw": "2.7",
-    "binanceWithdraw": "0.064"
+    "binanceWithdraw": "0.064",
+    "kucoinWithdraw": "0.7"
   },
   {
     "symbol": "KSM",
@@ -2261,7 +2268,8 @@
     "imgsrc": " ",
     "totalName": "IOI",
     "kucoinWithdraw": "15",
-    "gateioWithdraw": "31"
+    "gateioWithdraw": "31",
+    "huobiWithdraw": "9.574"
   },
   {
     "symbol": "HERO",
@@ -2946,7 +2954,8 @@
     "totalName": "RNDR",
     "kucoinWithdraw": "28",
     "huobiWithdraw": "11.63992646",
-    "gateioWithdraw": "57"
+    "gateioWithdraw": "57",
+    "binanceWithdraw": "6.87"
   },
   {
     "symbol": "OXEN",
@@ -3105,7 +3114,8 @@
     "bittrexWithdraw": "341.00000000",
     "huobiWithdraw": "0.1",
     "binanceWithdraw": "0",
-    "gateioWithdraw": "20"
+    "gateioWithdraw": "20",
+    "upbitWithdraw": "110"
   },
   {
     "symbol": "FCL",
@@ -3228,7 +3238,8 @@
     "totalName": "GALAX",
     "kucoinWithdraw": "400",
     "binanceWithdraw": "413",
-    "gateioWithdraw": "1100"
+    "gateioWithdraw": "1100",
+    "huobiWithdraw": "59.663"
   },
   {
     "symbol": "SHA",
@@ -3466,7 +3477,9 @@
     "totalName": "PYR",
     "kucoinWithdraw": "22.2",
     "bittrexWithdraw": "3.00000000",
-    "gateioWithdraw": "5.3"
+    "gateioWithdraw": "1",
+    "binanceWithdraw": "0.0057",
+    "huobiWithdraw": "0.8385"
   },
   {
     "symbol": "UBXT",
@@ -3698,7 +3711,8 @@
     "imgsrc": " ",
     "totalName": "PNT",
     "kucoinWithdraw": "30",
-    "binanceWithdraw": "35"
+    "binanceWithdraw": "35",
+    "huobiWithdraw": "617035.54"
   },
   {
     "symbol": "DORA",
@@ -3760,7 +3774,8 @@
     "imgsrc": " ",
     "totalName": "QI",
     "kucoinWithdraw": "0.1",
-    "gateioWithdraw": "10"
+    "gateioWithdraw": "8.2",
+    "binanceWithdraw": "5"
   },
   {
     "symbol": "SCLP",
@@ -3901,11 +3916,6 @@
     "kucoinWithdraw": "40"
   },
   {
-    "symbol": "TIME",
-    "imgsrc": " ",
-    "totalName": "TIME"
-  },
-  {
     "symbol": "TOWER",
     "imgsrc": " ",
     "totalName": "TOWER",
@@ -3950,7 +3960,8 @@
     "totalName": "JASMY",
     "kucoinWithdraw": "260",
     "bittrexWithdraw": "260.59000000",
-    "gateioWithdraw": "470"
+    "gateioWithdraw": "470",
+    "binanceWithdraw": "219"
   },
   {
     "symbol": "SWINGBY",
@@ -3968,7 +3979,8 @@
     "coinoneWithdraw": "12",
     "bittrexWithdraw": "432.00000000",
     "binanceWithdraw": "12",
-    "gateioWithdraw": "1"
+    "gateioWithdraw": "1",
+    "huobiWithdraw": "0.1"
   },
   {
     "symbol": "FLY",
@@ -3997,7 +4009,8 @@
     "imgsrc": " ",
     "totalName": "SDN",
     "kucoinWithdraw": "0.2",
-    "gateioWithdraw": "2"
+    "gateioWithdraw": "2",
+    "huobiWithdraw": "0.2"
   },
   {
     "symbol": "DOCK",
@@ -5030,7 +5043,8 @@
     "totalName": "LIT",
     "coinoneWithdraw": "5.825",
     "binanceWithdraw": "7.42",
-    "gateioWithdraw": "14"
+    "gateioWithdraw": "14",
+    "kucoinWithdraw": "8"
   },
   {
     "symbol": "ISDT",
@@ -5256,7 +5270,8 @@
     "imgsrc": " ",
     "totalName": "SOC",
     "coinoneWithdraw": "2573.1246",
-    "bithumbWithdraw": "150"
+    "bithumbWithdraw": "150",
+    "huobiWithdraw": "10"
   },
   {
     "symbol": "MTA",
@@ -5322,7 +5337,8 @@
     "imgsrc": " ",
     "totalName": "TEMCO",
     "coinoneWithdraw": "280",
-    "bittrexWithdraw": "10.00000000"
+    "bittrexWithdraw": "10.00000000",
+    "bithumbWithdraw": "200"
   },
   {
     "symbol": "WIKEN",
@@ -5681,7 +5697,8 @@
     "bittrexWithdraw": "74.00000000",
     "huobiWithdraw": "21.66316483",
     "binanceWithdraw": "49",
-    "gateioWithdraw": "96"
+    "gateioWithdraw": "96",
+    "kucoinWithdraw": "50"
   },
   {
     "symbol": "AEON",
@@ -5725,7 +5742,8 @@
     "imgsrc": " ",
     "totalName": "AMP",
     "bittrexWithdraw": "3149.00000000",
-    "gateioWithdraw": "3400"
+    "gateioWithdraw": "3400",
+    "binanceWithdraw": "623"
   },
   {
     "symbol": "AMZN",
@@ -5740,7 +5758,8 @@
     "bittrexWithdraw": "13.00000000",
     "huobiWithdraw": "3.67661751",
     "binanceWithdraw": "14",
-    "gateioWithdraw": "14"
+    "gateioWithdraw": "14",
+    "kucoinWithdraw": "6"
   },
   {
     "symbol": "APHA",
@@ -5820,7 +5839,7 @@
     "totalName": "BIFI",
     "bittrexWithdraw": "727.00000000",
     "huobiWithdraw": "999",
-    "gateioWithdraw": "960"
+    "binanceWithdraw": "0"
   },
   {
     "symbol": "BILI",
@@ -6277,7 +6296,8 @@
     "symbol": "FCT",
     "imgsrc": " ",
     "totalName": "FCT",
-    "bittrexWithdraw": "0.01000000"
+    "bittrexWithdraw": "0.01000000",
+    "bithumbWithdraw": "64"
   },
   {
     "symbol": "FIRO",
@@ -6292,7 +6312,8 @@
     "symbol": "FIT",
     "imgsrc": " ",
     "totalName": "FIT",
-    "bittrexWithdraw": "99575.00000000"
+    "bittrexWithdraw": "99575.00000000",
+    "bithumbWithdraw": "2300"
   },
   {
     "symbol": "FLIXX",
@@ -6354,7 +6375,8 @@
     "totalName": "FXS",
     "bittrexWithdraw": "3.96000000",
     "binanceWithdraw": "1.63",
-    "gateioWithdraw": "7.6"
+    "gateioWithdraw": "7.6",
+    "kucoinWithdraw": "1.5"
   },
   {
     "symbol": "GAME",
@@ -6604,7 +6626,8 @@
     "symbol": "LF",
     "imgsrc": " ",
     "totalName": "LF",
-    "bittrexWithdraw": "113.34000000"
+    "bittrexWithdraw": "113.34000000",
+    "bithumbWithdraw": "0.8"
   },
   {
     "symbol": "LMCH",
@@ -6694,7 +6717,8 @@
     "imgsrc": " ",
     "totalName": "MNW",
     "bittrexWithdraw": "17.00000000",
-    "gateioWithdraw": "22"
+    "gateioWithdraw": "22",
+    "kucoinWithdraw": "8"
   },
   {
     "symbol": "MOBI",
@@ -7131,7 +7155,8 @@
     "imgsrc": " ",
     "totalName": "RGT",
     "bittrexWithdraw": "1.25000000",
-    "gateioWithdraw": "2.1"
+    "gateioWithdraw": "2.1",
+    "binanceWithdraw": "1.41"
   },
   {
     "symbol": "RNB",
@@ -7592,7 +7617,8 @@
     "symbol": "VLX",
     "imgsrc": " ",
     "totalName": "VLX",
-    "bittrexWithdraw": "0.01000000"
+    "bittrexWithdraw": "0.01000000",
+    "kucoinWithdraw": "30"
   },
   {
     "symbol": "VRC",
@@ -8538,7 +8564,8 @@
     "totalName": "WNXM",
     "huobiWithdraw": "0.26510065",
     "binanceWithdraw": "0.51",
-    "gateioWithdraw": "0.9"
+    "gateioWithdraw": "0.9",
+    "kucoinWithdraw": "0.38"
   },
   {
     "symbol": "YFII",
@@ -8852,7 +8879,8 @@
     "imgsrc": " ",
     "totalName": "IMX",
     "huobiWithdraw": "9.347",
-    "gateioWithdraw": "26"
+    "gateioWithdraw": "26",
+    "kucoinWithdraw": "4.5"
   },
   {
     "symbol": "MGO",
@@ -8878,7 +8906,8 @@
     "imgsrc": " ",
     "totalName": "CERE",
     "huobiWithdraw": "1019.5321",
-    "gateioWithdraw": "400"
+    "gateioWithdraw": "400",
+    "kucoinWithdraw": "200"
   },
   {
     "symbol": "STF",
@@ -8948,8 +8977,8 @@
     "symbol": "GTC",
     "imgsrc": " ",
     "totalName": "GTC",
-    "binanceWithdraw": "7.24",
-    "kucoinWithdraw": "3"
+    "kucoinWithdraw": "3",
+    "binanceWithdraw": "4.07"
   },
   {
     "symbol": "OM",
@@ -8989,14 +9018,6 @@
     "imgsrc": " ",
     "totalName": "YOYO",
     "binanceWithdraw": "1"
-  },
-  {
-    "symbol": "PAXG",
-    "imgsrc": " ",
-    "totalName": "PAXG",
-    "binanceWithdraw": "0.018",
-    "kucoinWithdraw": "0",
-    "bithumbWithdraw": "0"
   },
   {
     "symbol": "ACM",
@@ -9040,7 +9061,8 @@
     "symbol": "HOT",
     "imgsrc": " ",
     "totalName": "HOT",
-    "binanceWithdraw": "2731"
+    "binanceWithdraw": "2731",
+    "huobiWithdraw": "3141.3"
   },
   {
     "symbol": "MINA",
@@ -9092,7 +9114,8 @@
     "imgsrc": " ",
     "totalName": "ATA",
     "binanceWithdraw": "0.27",
-    "gateioWithdraw": "8.6"
+    "gateioWithdraw": "8.6",
+    "kucoinWithdraw": "30"
   },
   {
     "symbol": "RARE",
@@ -9151,7 +9174,8 @@
     "totalName": "ENS",
     "binanceWithdraw": "0.7",
     "gateioWithdraw": "1.4",
-    "kucoinWithdraw": "0.5"
+    "kucoinWithdraw": "0.5",
+    "huobiWithdraw": "0.539"
   },
   {
     "symbol": "TROY",
@@ -9217,5 +9241,305 @@
     "totalName": "HNT",
     "binanceWithdraw": "0.05",
     "gateioWithdraw": "0.15"
+  },
+  {
+    "symbol": "MBOX",
+    "imgsrc": " ",
+    "totalName": "MBOX",
+    "binanceWithdraw": "0.03"
+  },
+  {
+    "symbol": "VGX",
+    "imgsrc": " ",
+    "totalName": "VGX",
+    "binanceWithdraw": "7.82"
+  },
+  {
+    "symbol": "SSV",
+    "imgsrc": " ",
+    "totalName": "SSV",
+    "binanceWithdraw": "3.02"
+  },
+  {
+    "symbol": "SCRT",
+    "imgsrc": " ",
+    "totalName": "SCRT",
+    "binanceWithdraw": "0.1"
+  },
+  {
+    "symbol": "SANTOS",
+    "imgsrc": " ",
+    "totalName": "SANTOS",
+    "binanceWithdraw": "0.031"
+  },
+  {
+    "symbol": "FUN",
+    "imgsrc": " ",
+    "totalName": "FUN",
+    "binanceWithdraw": "1834"
+  },
+  {
+    "symbol": "SNM",
+    "imgsrc": " ",
+    "totalName": "SNM",
+    "binanceWithdraw": "82"
+  },
+  {
+    "symbol": "MDA",
+    "imgsrc": " ",
+    "totalName": "MDA",
+    "binanceWithdraw": "56",
+    "gateioWithdraw": "78"
+  },
+  {
+    "symbol": "OAX",
+    "imgsrc": " ",
+    "totalName": "OAX",
+    "binanceWithdraw": "147",
+    "gateioWithdraw": "230"
+  },
+  {
+    "symbol": "MOD",
+    "imgsrc": " ",
+    "totalName": "MOD",
+    "binanceWithdraw": "5"
+  },
+  {
+    "symbol": "DLP",
+    "imgsrc": " ",
+    "totalName": "DLP",
+    "binanceWithdraw": "903"
+  },
+  {
+    "symbol": "GVT",
+    "imgsrc": " ",
+    "totalName": "GVT",
+    "binanceWithdraw": "35"
+  },
+  {
+    "symbol": "POA",
+    "imgsrc": " ",
+    "totalName": "POA",
+    "binanceWithdraw": "0.01"
+  },
+  {
+    "symbol": "SKY",
+    "imgsrc": " ",
+    "totalName": "SKY",
+    "binanceWithdraw": "0.04"
+  },
+  {
+    "symbol": "CREAM",
+    "imgsrc": " ",
+    "totalName": "CREAM",
+    "binanceWithdraw": "0.0089",
+    "kucoinWithdraw": "0.07"
+  },
+  {
+    "symbol": "HEGIC",
+    "imgsrc": " ",
+    "totalName": "HEGIC",
+    "binanceWithdraw": "302",
+    "kucoinWithdraw": "240"
+  },
+  {
+    "symbol": "BTCST",
+    "imgsrc": " ",
+    "totalName": "BTCST",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "SFP",
+    "imgsrc": " ",
+    "totalName": "SFP",
+    "binanceWithdraw": "0",
+    "kucoinWithdraw": "1"
+  },
+  {
+    "symbol": "UFT",
+    "imgsrc": " ",
+    "totalName": "UFT",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "EZ",
+    "imgsrc": " ",
+    "totalName": "EZ",
+    "binanceWithdraw": "0"
+  },
+  {
+    "symbol": "ALCX",
+    "imgsrc": " ",
+    "totalName": "ALCX",
+    "binanceWithdraw": "0.1"
+  },
+  {
+    "symbol": "SUTER",
+    "imgsrc": " ",
+    "totalName": "SUTER",
+    "kucoinWithdraw": "5200"
+  },
+  {
+    "symbol": "NUM",
+    "imgsrc": " ",
+    "totalName": "NUM",
+    "kucoinWithdraw": "2"
+  },
+  {
+    "symbol": "CWAR",
+    "imgsrc": " ",
+    "totalName": "CWAR",
+    "kucoinWithdraw": "0.5"
+  },
+  {
+    "symbol": "MONI",
+    "imgsrc": " ",
+    "totalName": "CWAR",
+    "kucoinWithdraw": "1"
+  },
+  {
+    "symbol": "FTG",
+    "imgsrc": " ",
+    "totalName": "FTG",
+    "kucoinWithdraw": "60"
+  },
+  {
+    "symbol": "UDOO",
+    "imgsrc": " ",
+    "totalName": "UDOO",
+    "kucoinWithdraw": "1800"
+  },
+  {
+    "symbol": "DPR",
+    "imgsrc": " ",
+    "totalName": "DRP",
+    "kucoinWithdraw": "200"
+  },
+  {
+    "symbol": "XTAG",
+    "imgsrc": " ",
+    "totalName": "XTAG",
+    "kucoinWithdraw": "0.5"
+  },
+  {
+    "symbol": "TIME",
+    "imgsrc": " ",
+    "totalName": "TIME",
+    "kucoinWithdraw": "1"
+  },
+  {
+    "symbol": "SHILL",
+    "imgsrc": " ",
+    "totalName": "SHILL",
+    "kucoinWithdraw": "2"
+  },
+  {
+    "symbol": "POLC",
+    "imgsrc": " ",
+    "totalName": "POLC",
+    "kucoinWithdraw": "16"
+  },
+  {
+    "symbol": "1EARTH",
+    "imgsrc": " ",
+    "totalName": "1EARTH",
+    "kucoinWithdraw": "90"
+  },
+  {
+    "symbol": "GODS",
+    "imgsrc": " ",
+    "totalName": "GODS",
+    "kucoinWithdraw": "6.6"
+  },
+  {
+    "symbol": "KMA",
+    "imgsrc": " ",
+    "totalName": "KMA",
+    "kucoinWithdraw": "20",
+    "huobiWithdraw": "1"
+  },
+  {
+    "symbol": "TRADE",
+    "imgsrc": " ",
+    "totalName": "TRADE",
+    "kucoinWithdraw": "2"
+  },
+  {
+    "symbol": "KIN",
+    "imgsrc": " ",
+    "totalName": "KIN",
+    "kucoinWithdraw": "10000"
+  },
+  {
+    "symbol": "PBR",
+    "imgsrc": " ",
+    "totalName": "PBR",
+    "kucoinWithdraw": "11"
+  },
+  {
+    "symbol": "SWP",
+    "imgsrc": " ",
+    "totalName": "SWP",
+    "kucoinWithdraw": "0.5"
+  },
+  {
+    "symbol": "ILA",
+    "imgsrc": " ",
+    "totalName": "ILA",
+    "kucoinWithdraw": "2"
+  },
+  {
+    "symbol": "XTM",
+    "imgsrc": " ",
+    "totalName": "XTM",
+    "kucoinWithdraw": "2"
+  },
+  {
+    "symbol": "VXV",
+    "imgsrc": " ",
+    "totalName": "VXV",
+    "kucoinWithdraw": "0.01"
+  },
+  {
+    "symbol": "LIKE",
+    "imgsrc": " ",
+    "totalName": "LIKE",
+    "kucoinWithdraw": "2"
+  },
+  {
+    "symbol": "BICO",
+    "imgsrc": " ",
+    "totalName": "BICO",
+    "huobiWithdraw": "1"
+  },
+  {
+    "symbol": "WAR",
+    "imgsrc": " ",
+    "totalName": "WAR",
+    "huobiWithdraw": "0.3242"
+  },
+  {
+    "symbol": "MONO",
+    "imgsrc": " ",
+    "totalName": "MONO",
+    "huobiWithdraw": "7.86"
+  },
+  {
+    "symbol": "PAX",
+    "imgsrc": " ",
+    "totalName": "PAX",
+    "huobiWithdraw": "17"
+  },
+  {
+    "symbol": "NGL",
+    "imgsrc": " ",
+    "totalName": "NGL",
+    "huobiWithdraw": "4.476"
+  },
+  {
+    "symbol": "UNIC",
+    "imgsrc": " ",
+    "totalName": "UNIC",
+    "huobiWithdraw": "0.281"
   }
 ]
