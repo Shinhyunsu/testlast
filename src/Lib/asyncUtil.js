@@ -297,10 +297,11 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
                             console.log(bithumbKrw, bithumbKRWObj.data.data[bithumbKrw]);
                         }
 
+
                         Allobj[bithumbKrw] = {
                             ...Allobj[bithumbKrw],
-                            bithumbKRWPrice: bithumbKrw.closing_price,
-                            bithumbKRWSym: bithumbKrw,
+                            bithumbKRWPrice: bithumbKRWObj.data.data[bithumbKrw].closing_price,
+                            bithumbKRWSym: bithumbKrw + "KRW",
                             "bithumbWithdraw": withdrawCheck
                         };
                     })
@@ -314,8 +315,8 @@ const createConnectSocketSaga = (type, connectType, dataMaker) => {
 
                         Allobj[bithumbBtc] = {
                             ...Allobj[bithumbBtc],
-                            bithumbBTCPrice: bithumbBtc.closing_price,
-                            bithumbBTCSym: bithumbBtc,
+                            bithumbBTCPrice: bithumbBTCObj.data.data[bithumbBtc].closing_price,
+                            bithumbBTCSym: bithumbBtc + "BTC",
                             "bithumbWithdraw": withdrawCheck
                         };
                     })
